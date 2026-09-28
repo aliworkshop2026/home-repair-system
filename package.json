@@ -1,1 +1,15 @@
-ewogICJuYW1lIjogImhvbWUtcmVwYWlyLXN5c3RlbSIsCiAgInZlcnNpb24iOiAiMS4wLjAiLAogICJkZXNjcmlwdGlvbiI6ICLln7rkuo5Ob2RlLmpz55qE5a6255So6K6+5aSH5LiK6Zeo5qOA5L+u6aKE57qm57O757uf77yIRXhwcmVzcyArIOWOn+eUn0hUTUwvQ1NTL0pTICsg5YaF572uU1FMaXRl77yJIiwKICAibWFpbiI6ICJzZXJ2ZXIuanMiLAogICJlbmdpbmVzIjogewogICAgIm5vZGUiOiAiPj0yMi41LjAiCiAgfSwKICAic2NyaXB0cyI6IHsKICAgICJzdGFydCI6ICJub2RlIHNlcnZlci5qcyIKICB9LAogICJkZXBlbmRlbmNpZXMiOiB7CiAgICAiZXhwcmVzcyI6ICJeNC4yMi4zIgogIH0KfQo=
+{
+  "name": "home-repair-system",
+  "version": "1.0.0",
+  "description": "基于Node.js的家用设备上门检修预约系统（Express + 原生HTML/CSS/JS + 内置SQLite）",
+  "main": "server.js",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.22.3"
+  }
+}

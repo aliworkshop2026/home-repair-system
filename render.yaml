@@ -1,1 +1,11 @@
-IyBSZW5kZXIg5LiA6ZSu6YOo572y6JOd5Zu+77yI5YWN6LS55aWX6aSQ77yM6ZW/5pyf5pyJ5pWI77yM5YWN5aSH5qGI77yJCiMg5paH5qGj77yaaHR0cHM6Ly9yZW5kZXIuY29tL2RvY3MvYmx1ZXByaW50LXNwZWMKc2VydmljZXM6CiAgLSB0eXBlOiB3ZWIKICAgIG5hbWU6IGhvbWUtcmVwYWlyLXN5c3RlbQogICAgcnVudGltZTogZG9ja2VyCiAgICBwbGFuOiBmcmVlCiAgICBkb2NrZXJmaWxlUGF0aDogLi9Eb2NrZXJmaWxlCiAgICBkb2NrZXJDb250ZXh0OiAuCiAgICBoZWFsdGhDaGVja1BhdGg6IC9hcGkvaGVhbHRoCiAgICBhdXRvRGVwbG95OiB0cnVlCg==
+# Render 一键部署蓝图（免费套餐，长期有效，免备案）
+# 文档：https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: home-repair-system
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    autoDeploy: true

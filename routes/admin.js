@@ -1,1 +1,177 @@
-LyoqCiAqIOeuoeeQhuWRmOWQjuWPsOaOpeWPowogKiDmlbDmja7mpoLop4ggLyDnlKjmiLfnrqHnkIYgLyDluIjlgoXnrqHnkIYgLyDorqLljZXnrqHnkIYgLyDor4Tku7fnrqHnkIYgLyDnlZnoqIDlkqjor6LnrqHnkIYKICovCmNvbnN0IGV4cHJlc3MgPSByZXF1aXJlKCdleHByZXNzJyk7CmNvbnN0IHsgZGIsIGhhc2hQYXNzd29yZCwgbm93IH0gPSByZXF1aXJlKCcuLi9kYi9kYXRhYmFzZScpOwpjb25zdCB7IHJlcXVpcmVBZG1pbiB9ID0gcmVxdWlyZSgnLi4vbWlkZGxld2FyZS9hdXRoJyk7Cgpjb25zdCByb3V0ZXIgPSBleHByZXNzLlJvdXRlcigpOwpyb3V0ZXIudXNlKHJlcXVpcmVBZG1pbik7IC8vIOaJgOacieeuoeeQhuaOpeWPo+Wdh+mcgOeuoeeQhuWRmOeZu+W9lQoKLy8gPT09PT09PT09PT09PT09PT09PT09IOaVsOaNruamguiniCA9PT09PT09PT09PT09PT09PT09PT0Kcm91dGVyLmdldCgnL3N0YXRzJywgKHJlcSwgcmVzKSA9PiB7CiAgY29uc3QgY291bnQgPSAoc3FsLCAuLi5wKSA9PiBkYi5wcmVwYXJlKHNxbCkuZ2V0KC4uLnApLmM7CiAgcmVzLmpzb24oewogICAgY29kZTogMCwKICAgIGRhdGE6IHsKICAgICAgdXNlcl9jb3VudDogY291bnQoJ1NFTEVDVCBDT1VOVCgqKSBjIEZST00gdXNlcnMnKSwKICAgICAgd29ya2VyX2NvdW50OiBjb3VudCgnU0VMRUNUIENPVU5UKCopIGMgRlJPTSB3b3JrZXJzIFdIRVJFIHN0YXR1cyA9IDEnKSwKICAgICAgb3JkZXJfY291bnQ6IGNvdW50KCdTRUxFQ1QgQ09VTlQoKikgYyBGUk9NIG9yZGVycycpLAogICAgICBwYWlkX2NvdW50OiBjb3VudCgnU0VMRUNUIENPVU5UKCopIGMgRlJPTSBvcmRlcnMgV0hFUkUgcGF5X3N0YXR1cyA9IDEnKSwKICAgICAgZG9uZV9jb3VudDogY291bnQoJ1NFTEVDVCBDT1VOVCgqKSBjIEZST00gb3JkZXJzIFdIRVJFIHN0YXR1cyA9IDMnKSwKICAgICAgcGVuZGluZ19jb3VudDogY291bnQoJ1NFTEVDVCBDT1VOVCgqKSBjIEZST00gb3JkZXJzIFdIRVJFIHN0YXR1cyA9IDAnKSwKICAgICAgcmV2aWV3X2NvdW50OiBjb3VudCgnU0VMRUNUIENPVU5UKCopIGMgRlJPTSByZXZpZXdzJyksCiAgICAgIHJldmVudWU6IGRiLnByZXBhcmUoJ1NFTEVDVCBJRk5VTEwoU1VNKHByaWNlKSwwKSBzIEZST00gb3JkZXJzIFdIRVJFIHBheV9zdGF0dXMgPSAxJykuZ2V0KCkucwogICAgfQogIH0pOwp9KTsKCi8vID09PT09PT09PT09PT09PT09PT09PSDnlKjmiLfnrqHnkIYgPT09PT09PT09PT09PT09PT09PT09CnJvdXRlci5nZXQoJy91c2VycycsIChyZXEsIHJlcykgPT4gewogIGNvbnN0IHsga2V5d29yZCB9ID0gcmVxLnF1ZXJ5OwogIGxldCBzcWwgPSBgU0VMRUNUIHUuKiwgKFNFTEVDVCBDT1VOVCgqKSBGUk9NIG9yZGVycyBvIFdIRVJFIG8udXNlcl9pZCA9IHUuaWQpIEFTIG9yZGVyX2NvdW50CiAgICAgICAgICAgICBGUk9NIHVzZXJzIHUgV0hFUkUgMT0xYDsKICBjb25zdCBwYXJhbXMgPSBbXTsKICBpZiAoa2V5d29yZCkgeyBzcWwgKz0gJyBBTkQgKHUudXNlcm5hbWUgTElLRSA/IE9SIHUubmlja25hbWUgTElLRSA/IE9SIHUucGhvbmUgTElLRSA/KSc7IHBhcmFtcy5wdXNoKCclJyArIGtleXdvcmQgKyAnJScsICclJyArIGtleXdvcmQgKyAnJScsICclJyArIGtleXdvcmQgKyAnJScpOyB9CiAgc3FsICs9ICcgT1JERVIgQlkgdS5pZCBERVNDJzsKICByZXMuanNvbih7IGNvZGU6IDAsIGRhdGE6IGRiLnByZXBhcmUoc3FsKS5hbGwoLi4ucGFyYW1zKSB9KTsKfSk7CgovLyDmlrDlop7nlKjmiLcKcm91dGVyLnBvc3QoJy91c2VycycsIChyZXEsIHJlcykgPT4gewogIGNvbnN0IHsgdXNlcm5hbWUsIHBhc3N3b3JkLCBuaWNrbmFtZSwgcGhvbmUgfSA9IHJlcS5ib2R5IHx8IHt9OwogIGlmICghdXNlcm5hbWUgfHwgIXBhc3N3b3JkKSByZXR1cm4gcmVzLmpzb24oeyBjb2RlOiAxLCBtc2c6ICfotKblj7flr4bnoIHkuI3og73kuLrnqbonIH0pOwogIGlmIChkYi5wcmVwYXJlKCdTRUxFQ1QgaWQgRlJPTSB1c2VycyBXSEVSRSB1c2VybmFtZSA9ID8nKS5nZXQodXNlcm5hbWUpKSByZXR1cm4gcmVzLmpzb24oeyBjb2RlOiAxLCBtc2c6ICfotKblj7flt7LlrZjlnKgnIH0pOwogIGRiLnByZXBhcmUoJ0lOU0VSVCBJTlRPIHVzZXJzICh1c2VybmFtZSxwYXNzd29yZCxuaWNrbmFtZSxwaG9uZSxjcmVhdGVkX2F0KSBWQUxVRVMgKD8sPyw/LD8sPyknKQogICAgLnJ1bih1c2VybmFtZSwgaGFzaFBhc3N3b3JkKHBhc3N3b3JkKSwgbmlja25hbWUgfHwgdXNlcm5hbWUsIHBob25lIHx8ICcnLCBub3coKSk7CiAgcmVzLmpzb24oeyBjb2RlOiAwLCBtc2c6ICfmt7vliqDmiJDlip8nIH0pOwp9KTsKCi8vIOe8lui+keeUqOaIt++8iOaYteensC/miYvmnLrlj7cv54q25oCBL+mHjee9ruWvhuegge+8iQpyb3V0ZXIucHV0KCcvdXNlcnMvOmlkJywgKHJlcSwgcmVzKSA9PiB7CiAgY29uc3QgeyBuaWNrbmFtZSwgcGhvbmUsIHN0YXR1cywgcGFzc3dvcmQgfSA9IHJlcS5ib2R5IHx8IHt9OwogIGNvbnN0IHVzZXIgPSBkYi5wcmVwYXJlKCdTRUxFQ1QgKiBGUk9NIHVzZXJzIFdIRVJFIGlkID0gPycpLmdldChyZXEucGFyYW1zLmlkKTsKICBpZiAoIXVzZXIpIHJldHVybiByZXMuanNvbih7IGNvZGU6IDEsIG1zZzogJ+eUqOaIt+S4jeWtmOWcqCcgfSk7CiAgZGIucHJlcGFyZSgnVVBEQVRFIHVzZXJzIFNFVCBuaWNrbmFtZT0/LCBwaG9uZT0/LCBzdGF0dXM9PyBXSEVSRSBpZD0/JykKICAgIC5ydW4obmlja25hbWUgPz8gdXNlci5uaWNrbmFtZSwgcGhvbmUgPz8gdXNlci5waG9uZSwgc3RhdHVzID8/IHVzZXIuc3RhdHVzLCB1c2VyLmlkKTsKICBpZiAocGFzc3dvcmQpIGRiLnByZXBhcmUoJ1VQREFURSB1c2VycyBTRVQgcGFzc3dvcmQ9PyBXSEVSRSBpZD0/JykucnVuKGhhc2hQYXNzd29yZChwYXNzd29yZCksIHVzZXIuaWQpOwogIHJlcy5qc29uKHsgY29kZTogMCwgbXNnOiAn5L+d5a2Y5oiQ5YqfJyB9KTsKfSk7CgovLyDliKDpmaTnlKjmiLcKcm91dGVyLmRlbGV0ZSgnL3VzZXJzLzppZCcsIChyZXEsIHJlcykgPT4gewogIGRiLnByZXBhcmUoJ0RFTEVURSBGUk9NIHVzZXJzIFdIRVJFIGlkID0gPycpLnJ1bihyZXEucGFyYW1zLmlkKTsKICByZXMuanNvbih7IGNvZGU6IDAsIG1zZzogJ+W3suWIoOmZpCcgfSk7Cn0pOwoKLy8gPT09PT09PT09PT09PT09PT09PT09IOe7tOS/ruW4iOWCheeuoeeQhiA9PT09PT09PT09PT09PT09PT09PT0Kcm91dGVyLmdldCgnL3dvcmtlcnMnLCAocmVxLCByZXMpID0+IHsKICBjb25zdCB7IGtleXdvcmQgfSA9IHJlcS5xdWVyeTsKICBsZXQgc3FsID0gJ1NFTEVDVCAqIEZST00gd29ya2VycyBXSEVSRSAxPTEnOwogIGNvbnN0IHBhcmFtcyA9IFtdOwogIGlmIChrZXl3b3JkKSB7IHNxbCArPSAnIEFORCAobmFtZSBMSUtFID8gT1Igc2tpbGwgTElLRSA/IE9SIHBob25lIExJS0UgPyknOyBwYXJhbXMucHVzaCgnJScgKyBrZXl3b3JkICsgJyUnLCAnJScgKyBrZXl3b3JkICsgJyUnLCAnJScgKyBrZXl3b3JkICsgJyUnKTsgfQogIHNxbCArPSAnIE9SREVSIEJZIGlkIERFU0MnOwogIHJlcy5qc29uKHsgY29kZTogMCwgZGF0YTogZGIucHJlcGFyZShzcWwpLmFsbCguLi5wYXJhbXMpIH0pOwp9KTsKCnJvdXRlci5wb3N0KCcvd29ya2VycycsIChyZXEsIHJlcykgPT4gewogIGNvbnN0IHsgbmFtZSwgcGhvbmUsIGF2YXRhciwgc2tpbGwsIHllYXJzLCByYXRpbmcgfSA9IHJlcS5ib2R5IHx8IHt9OwogIGlmICghbmFtZSkgcmV0dXJuIHJlcy5qc29uKHsgY29kZTogMSwgbXNnOiAn5biI5YKF5aeT5ZCN5LiN6IO95Li656m6JyB9KTsKICBkYi5wcmVwYXJlKGBJTlNFUlQgSU5UTyB3b3JrZXJzIChuYW1lLCBwaG9uZSwgYXZhdGFyLCBza2lsbCwgeWVhcnMsIHJhdGluZywgc3RhdHVzLCBjcmVhdGVkX2F0KQogICAgVkFMVUVTICg/LD8sPyw/LD8sMSw/LD8pYCkKICAgIC5ydW4obmFtZSwgcGhvbmUgfHwgJycsIGF2YXRhciB8fCAn8J+RqOKAjfCflKcnLCBza2lsbCB8fCAnJywgTnVtYmVyKHllYXJzKSB8fCA1LCBOdW1iZXIocmF0aW5nKSB8fCA1LjAsIG5vdygpKTsKICByZXMuanNvbih7IGNvZGU6IDAsIG1zZzogJ+a3u+WKoOaIkOWKnycgfSk7Cn0pOwoKcm91dGVyLnB1dCgnL3dvcmtlcnMvOmlkJywgKHJlcSwgcmVzKSA9PiB7CiAgY29uc3QgeyBuYW1lLCBwaG9uZSwgYXZhdGFyLCBza2lsbCwgeWVhcnMsIHJhdGluZywgc3RhdHVzIH0gPSByZXEuYm9keSB8fCB7fTsKICBjb25zdCB3ID0gZGIucHJlcGFyZSgnU0VMRUNUICogRlJPTSB3b3JrZXJzIFdIRVJFIGlkID0gPycpLmdldChyZXEucGFyYW1zLmlkKTsKICBpZiAoIXcpIHJldHVybiByZXMuanNvbih7IGNvZGU6IDEsIG1zZzogJ+W4iOWCheS4jeWtmOWcqCcgfSk7CiAgZGIucHJlcGFyZShgVVBEQVRFIHdvcmtlcnMgU0VUIG5hbWU9PywgcGhvbmU9PywgYXZhdGFyPT8sIHNraWxsPT8sIHllYXJzPT8sIHJhdGluZz0/LCBzdGF0dXM9PyBXSEVSRSBpZD0/YCkKICAgIC5ydW4obmFtZSA/PyB3Lm5hbWUsIHBob25lID8/IHcucGhvbmUsIGF2YXRhciA/PyB3LmF2YXRhciwgc2tpbGwgPz8gdy5za2lsbCwKICAgICAgeWVhcnMgPz8gdy55ZWFycywgcmF0aW5nID8/IHcucmF0aW5nLCBzdGF0dXMgPz8gdy5zdGF0dXMsIHcuaWQpOwogIHJlcy5qc29uKHsgY29kZTogMCwgbXNnOiAn5L+d5a2Y5oiQ5YqfJyB9KTsKfSk7Cgpyb3V0ZXIuZGVsZXRlKCcvd29ya2Vycy86aWQnLCAocmVxLCByZXMpID0+IHsKICBkYi5wcmVwYXJlKCdERUxFVEUgRlJPTSB3b3JrZXJzIFdIRVJFIGlkID0gPycpLnJ1bihyZXEucGFyYW1zLmlkKTsKICByZXMuanNvbih7IGNvZGU6IDAsIG1zZzogJ+W3suWIoOmZpCcgfSk7Cn0pOwoKLy8gPT09PT09PT09PT09PT09PT09PT09IOiuouWNleeuoeeQhiA9PT09PT09PT09PT09PT09PT09PT0Kcm91dGVyLmdldCgnL29yZGVycycsIChyZXEsIHJlcykgPT4gewogIGNvbnN0IHsgc3RhdHVzLCBrZXl3b3JkIH0gPSByZXEucXVlcnk7CiAgbGV0IHNxbCA9IGBTRUxFQ1Qgby4qLCB1Lm5pY2tuYW1lLCB1LnBob25lIEFTIHVzZXJfcGhvbmUsCiAgICAgICAgICAgICB3Lm5hbWUgQVMgd29ya2VyX25hbWUKICAgICAgICAgICAgIEZST00gb3JkZXJzIG8KICAgICAgICAgICAgIExFRlQgSk9JTiB1c2VycyB1IE9OIG8udXNlcl9pZCA9IHUuaWQKICAgICAgICAgICAgIExFRlQgSk9JTiB3b3JrZXJzIHcgT04gby53b3JrZXJfaWQgPSB3LmlkIFdIRVJFIDE9MWA7CiAgY29uc3QgcGFyYW1zID0gW107CiAgaWYgKHN0YXR1cyAhPT0gdW5kZWZpbmVkICYmIHN0YXR1cyAhPT0gJycpIHsgc3FsICs9ICcgQU5EIG8uc3RhdHVzID0gPyc7IHBhcmFtcy5wdXNoKE51bWJlcihzdGF0dXMpKTsgfQogIGlmIChrZXl3b3JkKSB7CiAgICBzcWwgKz0gJyBBTkQgKG8ub3JkZXJfbm8gTElLRSA/IE9SIHUubmlja25hbWUgTElLRSA/IE9SIG8uc2VydmljZV9uYW1lIExJS0UgPyBPUiBvLmRldmljZV9uYW1lIExJS0UgPyknOwogICAgcGFyYW1zLnB1c2goJyUnICsga2V5d29yZCArICclJywgJyUnICsga2V5d29yZCArICclJywgJyUnICsga2V5d29yZCArICclJywgJyUnICsga2V5d29yZCArICclJyk7CiAgfQogIHNxbCArPSAnIE9SREVSIEJZIG8uaWQgREVTQyc7CiAgcmVzLmpzb24oeyBjb2RlOiAwLCBkYXRhOiBkYi5wcmVwYXJlKHNxbCkuYWxsKC4uLnBhcmFtcykgfSk7Cn0pOwoKLy8g5L+u5pS56K6i5Y2V5qOA5L+u54q25oCB77yI5aaC5qCH6K6w5bey5a6M5oiQ77yJCnJvdXRlci5wdXQoJy9vcmRlcnMvOmlkL3N0YXR1cycsIChyZXEsIHJlcykgPT4gewogIGNvbnN0IHsgc3RhdHVzIH0gPSByZXEuYm9keSB8fCB7fTsKICBjb25zdCBvcmRlciA9IGRiLnByZXBhcmUoJ1NFTEVDVCAqIEZST00gb3JkZXJzIFdIRVJFIGlkID0gPycpLmdldChyZXEucGFyYW1zLmlkKTsKICBpZiAoIW9yZGVyKSByZXR1cm4gcmVzLmpzb24oeyBjb2RlOiAxLCBtc2c6ICforqLljZXkuI3lrZjlnKgnIH0pOwogIGlmICghWzAsIDEsIDIsIDMsIDRdLmluY2x1ZGVzKE51bWJlcihzdGF0dXMpKSkgcmV0dXJuIHJlcy5qc29uKHsgY29kZTogMSwgbXNnOiAn54q25oCB5LiN5ZCI5rOVJyB9KTsKICBjb25zdCBleHRyYSA9IE51bWJlcihzdGF0dXMpID09PSAzID8gJywgZmluaXNoX3RpbWUgPSA/JyA6ICcnOwogIGNvbnN0IHBhcmFtcyA9IFtOdW1iZXIoc3RhdHVzKV07CiAgaWYgKE51bWJlcihzdGF0dXMpID09PSAzKSBwYXJhbXMucHVzaChub3coKSk7CiAgcGFyYW1zLnB1c2gob3JkZXIuaWQpOwogIGRiLnByZXBhcmUoYFVQREFURSBvcmRlcnMgU0VUIHN0YXR1cyA9ID8ke2V4dHJhfSBXSEVSRSBpZCA9ID9gKS5ydW4oLi4ucGFyYW1zKTsKICByZXMuanNvbih7IGNvZGU6IDAsIG1zZzogJ+eKtuaAgeW3suabtOaWsCcgfSk7Cn0pOwoKLy8gPT09PT09PT09PT09PT09PT09PT09IOivhOS7t+euoeeQhiA9PT09PT09PT09PT09PT09PT09PT0Kcm91dGVyLmdldCgnL3Jldmlld3MnLCAocmVxLCByZXMpID0+IHsKICBjb25zdCBsaXN0ID0gZGIucHJlcGFyZShgU0VMRUNUIHIuKiwgdS5uaWNrbmFtZSwgcy5uYW1lIEFTIHNlcnZpY2VfbmFtZSwgby5vcmRlcl9ubwogICAgRlJPTSByZXZpZXdzIHIKICAgIExFRlQgSk9JTiB1c2VycyB1IE9OIHIudXNlcl9pZCA9IHUuaWQKICAgIExFRlQgSk9JTiBzZXJ2aWNlcyBzIE9OIHIuc2VydmljZV9pZCA9IHMuaWQKICAgIExFRlQgSk9JTiBvcmRlcnMgbyBPTiByLm9yZGVyX2lkID0gby5pZAogICAgT1JERVIgQlkgci5pZCBERVNDYCkuYWxsKCk7CiAgcmVzLmpzb24oeyBjb2RlOiAwLCBkYXRhOiBsaXN0IH0pOwp9KTsKCnJvdXRlci5kZWxldGUoJy9yZXZpZXdzLzppZCcsIChyZXEsIHJlcykgPT4gewogIGRiLnByZXBhcmUoJ0RFTEVURSBGUk9NIHJldmlld3MgV0hFUkUgaWQgPSA/JykucnVuKHJlcS5wYXJhbXMuaWQpOwogIHJlcy5qc29uKHsgY29kZTogMCwgbXNnOiAn6K+E5Lu35bey5Yig6ZmkJyB9KTsKfSk7CgovLyA9PT09PT09PT09PT09PT09PT09PT0g55WZ6KiA5ZKo6K+i566h55CGID09PT09PT09PT09PT09PT09PT09PQpyb3V0ZXIuZ2V0KCcvbWVzc2FnZXMnLCAocmVxLCByZXMpID0+IHsKICAvLyDmjInnlKjmiLfogZrlkIjvvIzov5Tlm57mr4/kuKrnlKjmiLfnmoTkvJror50KICBjb25zdCB1c2VycyA9IGRiLnByZXBhcmUoYFNFTEVDVCBESVNUSU5DVCBtLnVzZXJfaWQsIHUubmlja25hbWUsIHUudXNlcm5hbWUsCiAgICAoU0VMRUNUIGNvbnRlbnQgRlJPTSBtZXNzYWdlcyBXSEVSRSB1c2VyX2lkID0gbS51c2VyX2lkIE9SREVSIEJZIGlkIERFU0MgTElNSVQgMSkgQVMgbGFzdF9jb250ZW50LAogICAgKFNFTEVDVCBjcmVhdGVkX2F0IEZST00gbWVzc2FnZXMgV0hFUkUgdXNlcl9pZCA9IG0udXNlcl9pZCBPUkRFUiBCWSBpZCBERVNDIExJTUlUIDEpIEFTIGxhc3RfdGltZSwKICAgIChTRUxFQ1QgQ09VTlQoKikgRlJPTSBtZXNzYWdlcyBXSEVSRSB1c2VyX2lkID0gbS51c2VyX2lkIEFORCByb2xlID0gJ3VzZXInKSBBUyBtc2dfY291bnQKICAgIEZST00gbWVzc2FnZXMgbSBMRUZUIEpPSU4gdXNlcnMgdSBPTiBtLnVzZXJfaWQgPSB1LmlkCiAgICBPUkRFUiBCWSBtLnVzZXJfaWQgREVTQ2ApLmFsbCgpOwogIHJlcy5qc29uKHsgY29kZTogMCwgZGF0YTogdXNlcnMgfSk7Cn0pOwoKLy8g5p+l55yL5p+Q5Liq55So5oi355qE5a6M5pW06IGK5aSp6K6w5b2VCnJvdXRlci5nZXQoJy9tZXNzYWdlcy86dXNlcklkJywgKHJlcSwgcmVzKSA9PiB7CiAgY29uc3QgbGlzdCA9IGRiLnByZXBhcmUoJ1NFTEVDVCAqIEZST00gbWVzc2FnZXMgV0hFUkUgdXNlcl9pZCA9ID8gT1JERVIgQlkgaWQgQVNDJykuYWxsKHJlcS5wYXJhbXMudXNlcklkKTsKICByZXMuanNvbih7IGNvZGU6IDAsIGRhdGE6IGxpc3QgfSk7Cn0pOwoKLy8g5a6i5pyN5Zue5aSNCnJvdXRlci5wb3N0KCcvbWVzc2FnZXMvOnVzZXJJZC9yZXBseScsIChyZXEsIHJlcykgPT4gewogIGNvbnN0IHsgY29udGVudCB9ID0gcmVxLmJvZHkgfHwge307CiAgaWYgKCFjb250ZW50IHx8ICFjb250ZW50LnRyaW0oKSkgcmV0dXJuIHJlcy5qc29uKHsgY29kZTogMSwgbXNnOiAn5Zue5aSN5YaF5a655LiN6IO95Li656m6JyB9KTsKICBkYi5wcmVwYXJlKCdJTlNFUlQgSU5UTyBtZXNzYWdlcyAodXNlcl9pZCwgcm9sZSwgY29udGVudCwgY3JlYXRlZF9hdCkgVkFMVUVTICg/LD8sPyw/KScpCiAgICAucnVuKHJlcS5wYXJhbXMudXNlcklkLCAnYWRtaW4nLCBjb250ZW50LnRyaW0oKSwgbm93KCkpOwogIHJlcy5qc29uKHsgY29kZTogMCwgbXNnOiAn5Zue5aSN5oiQ5YqfJyB9KTsKfSk7Cgptb2R1bGUuZXhwb3J0cyA9IHJvdXRlcjsK
+/**
+ * 管理员后台接口
+ * 数据概览 / 用户管理 / 师傅管理 / 订单管理 / 评价管理 / 留言咨询管理
+ */
+const express = require('express');
+const { db, hashPassword, now } = require('../db/database');
+const { requireAdmin } = require('../middleware/auth');
+
+const router = express.Router();
+router.use(requireAdmin); // 所有管理接口均需管理员登录
+
+// ===================== 数据概览 =====================
+router.get('/stats', (req, res) => {
+  const count = (sql, ...p) => db.prepare(sql).get(...p).c;
+  res.json({
+    code: 0,
+    data: {
+      user_count: count('SELECT COUNT(*) c FROM users'),
+      worker_count: count('SELECT COUNT(*) c FROM workers WHERE status = 1'),
+      order_count: count('SELECT COUNT(*) c FROM orders'),
+      paid_count: count('SELECT COUNT(*) c FROM orders WHERE pay_status = 1'),
+      done_count: count('SELECT COUNT(*) c FROM orders WHERE status = 3'),
+      pending_count: count('SELECT COUNT(*) c FROM orders WHERE status = 0'),
+      review_count: count('SELECT COUNT(*) c FROM reviews'),
+      revenue: db.prepare('SELECT IFNULL(SUM(price),0) s FROM orders WHERE pay_status = 1').get().s
+    }
+  });
+});
+
+// ===================== 用户管理 =====================
+router.get('/users', (req, res) => {
+  const { keyword } = req.query;
+  let sql = `SELECT u.*, (SELECT COUNT(*) FROM orders o WHERE o.user_id = u.id) AS order_count
+             FROM users u WHERE 1=1`;
+  const params = [];
+  if (keyword) { sql += ' AND (u.username LIKE ? OR u.nickname LIKE ? OR u.phone LIKE ?)'; params.push('%' + keyword + '%', '%' + keyword + '%', '%' + keyword + '%'); }
+  sql += ' ORDER BY u.id DESC';
+  res.json({ code: 0, data: db.prepare(sql).all(...params) });
+});
+
+// 新增用户
+router.post('/users', (req, res) => {
+  const { username, password, nickname, phone } = req.body || {};
+  if (!username || !password) return res.json({ code: 1, msg: '账号密码不能为空' });
+  if (db.prepare('SELECT id FROM users WHERE username = ?').get(username)) return res.json({ code: 1, msg: '账号已存在' });
+  db.prepare('INSERT INTO users (username,password,nickname,phone,created_at) VALUES (?,?,?,?,?)')
+    .run(username, hashPassword(password), nickname || username, phone || '', now());
+  res.json({ code: 0, msg: '添加成功' });
+});
+
+// 编辑用户（昵称/手机号/状态/重置密码）
+router.put('/users/:id', (req, res) => {
+  const { nickname, phone, status, password } = req.body || {};
+  const user = db.prepare('SELECT * FROM users WHERE id = ?').get(req.params.id);
+  if (!user) return res.json({ code: 1, msg: '用户不存在' });
+  db.prepare('UPDATE users SET nickname=?, phone=?, status=? WHERE id=?')
+    .run(nickname ?? user.nickname, phone ?? user.phone, status ?? user.status, user.id);
+  if (password) db.prepare('UPDATE users SET password=? WHERE id=?').run(hashPassword(password), user.id);
+  res.json({ code: 0, msg: '保存成功' });
+});
+
+// 删除用户
+router.delete('/users/:id', (req, res) => {
+  db.prepare('DELETE FROM users WHERE id = ?').run(req.params.id);
+  res.json({ code: 0, msg: '已删除' });
+});
+
+// ===================== 维修师傅管理 =====================
+router.get('/workers', (req, res) => {
+  const { keyword } = req.query;
+  let sql = 'SELECT * FROM workers WHERE 1=1';
+  const params = [];
+  if (keyword) { sql += ' AND (name LIKE ? OR skill LIKE ? OR phone LIKE ?)'; params.push('%' + keyword + '%', '%' + keyword + '%', '%' + keyword + '%'); }
+  sql += ' ORDER BY id DESC';
+  res.json({ code: 0, data: db.prepare(sql).all(...params) });
+});
+
+router.post('/workers', (req, res) => {
+  const { name, phone, avatar, skill, years, rating } = req.body || {};
+  if (!name) return res.json({ code: 1, msg: '师傅姓名不能为空' });
+  db.prepare(`INSERT INTO workers (name, phone, avatar, skill, years, rating, status, created_at)
+    VALUES (?,?,?,?,?,1,?,?)`)
+    .run(name, phone || '', avatar || '👨‍🔧', skill || '', Number(years) || 5, Number(rating) || 5.0, now());
+  res.json({ code: 0, msg: '添加成功' });
+});
+
+router.put('/workers/:id', (req, res) => {
+  const { name, phone, avatar, skill, years, rating, status } = req.body || {};
+  const w = db.prepare('SELECT * FROM workers WHERE id = ?').get(req.params.id);
+  if (!w) return res.json({ code: 1, msg: '师傅不存在' });
+  db.prepare(`UPDATE workers SET name=?, phone=?, avatar=?, skill=?, years=?, rating=?, status=? WHERE id=?`)
+    .run(name ?? w.name, phone ?? w.phone, avatar ?? w.avatar, skill ?? w.skill,
+      years ?? w.years, rating ?? w.rating, status ?? w.status, w.id);
+  res.json({ code: 0, msg: '保存成功' });
+});
+
+router.delete('/workers/:id', (req, res) => {
+  db.prepare('DELETE FROM workers WHERE id = ?').run(req.params.id);
+  res.json({ code: 0, msg: '已删除' });
+});
+
+// ===================== 订单管理 =====================
+router.get('/orders', (req, res) => {
+  const { status, keyword } = req.query;
+  let sql = `SELECT o.*, u.nickname, u.phone AS user_phone,
+             w.name AS worker_name
+             FROM orders o
+             LEFT JOIN users u ON o.user_id = u.id
+             LEFT JOIN workers w ON o.worker_id = w.id WHERE 1=1`;
+  const params = [];
+  if (status !== undefined && status !== '') { sql += ' AND o.status = ?'; params.push(Number(status)); }
+  if (keyword) {
+    sql += ' AND (o.order_no LIKE ? OR u.nickname LIKE ? OR o.service_name LIKE ? OR o.device_name LIKE ?)';
+    params.push('%' + keyword + '%', '%' + keyword + '%', '%' + keyword + '%', '%' + keyword + '%');
+  }
+  sql += ' ORDER BY o.id DESC';
+  res.json({ code: 0, data: db.prepare(sql).all(...params) });
+});
+
+// 修改订单检修状态（如标记已完成）
+router.put('/orders/:id/status', (req, res) => {
+  const { status } = req.body || {};
+  const order = db.prepare('SELECT * FROM orders WHERE id = ?').get(req.params.id);
+  if (!order) return res.json({ code: 1, msg: '订单不存在' });
+  if (![0, 1, 2, 3, 4].includes(Number(status))) return res.json({ code: 1, msg: '状态不合法' });
+  const extra = Number(status) === 3 ? ', finish_time = ?' : '';
+  const params = [Number(status)];
+  if (Number(status) === 3) params.push(now());
+  params.push(order.id);
+  db.prepare(`UPDATE orders SET status = ?${extra} WHERE id = ?`).run(...params);
+  res.json({ code: 0, msg: '状态已更新' });
+});
+
+// ===================== 评价管理 =====================
+router.get('/reviews', (req, res) => {
+  const list = db.prepare(`SELECT r.*, u.nickname, s.name AS service_name, o.order_no
+    FROM reviews r
+    LEFT JOIN users u ON r.user_id = u.id
+    LEFT JOIN services s ON r.service_id = s.id
+    LEFT JOIN orders o ON r.order_id = o.id
+    ORDER BY r.id DESC`).all();
+  res.json({ code: 0, data: list });
+});
+
+router.delete('/reviews/:id', (req, res) => {
+  db.prepare('DELETE FROM reviews WHERE id = ?').run(req.params.id);
+  res.json({ code: 0, msg: '评价已删除' });
+});
+
+// ===================== 留言咨询管理 =====================
+router.get('/messages', (req, res) => {
+  // 按用户聚合，返回每个用户的会话
+  const users = db.prepare(`SELECT DISTINCT m.user_id, u.nickname, u.username,
+    (SELECT content FROM messages WHERE user_id = m.user_id ORDER BY id DESC LIMIT 1) AS last_content,
+    (SELECT created_at FROM messages WHERE user_id = m.user_id ORDER BY id DESC LIMIT 1) AS last_time,
+    (SELECT COUNT(*) FROM messages WHERE user_id = m.user_id AND role = 'user') AS msg_count
+    FROM messages m LEFT JOIN users u ON m.user_id = u.id
+    ORDER BY m.user_id DESC`).all();
+  res.json({ code: 0, data: users });
+});
+
+// 查看某个用户的完整聊天记录
+router.get('/messages/:userId', (req, res) => {
+  const list = db.prepare('SELECT * FROM messages WHERE user_id = ? ORDER BY id ASC').all(req.params.userId);
+  res.json({ code: 0, data: list });
+});
+
+// 客服回复
+router.post('/messages/:userId/reply', (req, res) => {
+  const { content } = req.body || {};
+  if (!content || !content.trim()) return res.json({ code: 1, msg: '回复内容不能为空' });
+  db.prepare('INSERT INTO messages (user_id, role, content, created_at) VALUES (?,?,?,?)')
+    .run(req.params.userId, 'admin', content.trim(), now());
+  res.json({ code: 0, msg: '回复成功' });
+});
+
+module.exports = router;

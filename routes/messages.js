@@ -1,1 +1,332 @@
-LyoqCiAqIOWcqOe6v+WSqOivou+8iOiBiuWkqe+8ieaOpeWPowogKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogKiDmmbrog73lrqLmnI3vvJoKICogMS4g5qC55o2u55So5oi35o+Q6Zeu5YWz6ZSu6K+N6Ieq5Yqo5Yy56YWN5Zue562U77yI5q+P5qyh5Zue5aSNIDF+MiDmnaHvvIkKICogMi4g5oyH5ZCN5biI5YKF77ya55So5oi36KaB54K55p+Q5L2N5biI5YKF5pe277yM5a6J5o6S5biI5YKF6IGU57O755So5oi344CB5Y+v5LiK6Zeo5pyN5YqhCiAqICAgIC0g6K+05YWo5ZCN77yI546L5bu65Zu95biI5YKF77yJ4oaSIOebtOaOpeehruiupOWuieaOkgogKiAgICAtIOivtOWnk+awj++8iOW8oOW4iOWChSAvIOWnk+adjueahO+8ieKGkiDmioror6Xlp5PluIjlgoXlhajlkI3lj5Hnu5nnlKjmiLfnoa7orqQKICogICAgLSDlkIzlp5PlpJrkvY0g4oaSIOWIl+WHuuWAmemAieiuqeeUqOaIt+mAie+8m+eUqOaIt+S4jea4healmiDihpIg5o6o6I2Q6K+E5YiG5pyA6auY55qE5biI5YKFCiAqIDMuIOW4puWvueivneS4iuS4i+aWh++8mumXrui/hyLmmK/ov5nkvY3lkJci5ZCO77yM5LiL5LiA6L2u5qC55o2u55So5oi3IuaYry/kuI3mmK8v56ys5LiA5LiqIue7p+e7reWkhOeQhgogKi8KY29uc3QgZXhwcmVzcyA9IHJlcXVpcmUoJ2V4cHJlc3MnKTsKY29uc3QgeyBkYiwgbm93IH0gPSByZXF1aXJlKCcuLi9kYi9kYXRhYmFzZScpOwpjb25zdCB7IHJlcXVpcmVVc2VyIH0gPSByZXF1aXJlKCcuLi9taWRkbGV3YXJlL2F1dGgnKTsKCmNvbnN0IHJvdXRlciA9IGV4cHJlc3MuUm91dGVyKCk7CnJvdXRlci51c2UocmVxdWlyZVVzZXIpOwoKLyoqIOWcqOWyl+W4iOWChe+8iOWujOWFqOS7peWQjuWPsOW4iOWCheeuoeeQhueahCLlnKjlspfnirbmgIEi5Li65YeG77yM5ZCO5Y+w5YGc55SoL+WQr+eUqOWunuaXtueUn+aViO+8iSAqLwpmdW5jdGlvbiBnZXRXb3JrZXJzKCkgewogIHJldHVybiBkYi5wcmVwYXJlKCdTRUxFQ1QgKiBGUk9NIHdvcmtlcnMgV0hFUkUgc3RhdHVzID0gMSBPUkRFUiBCWSByYXRpbmcgREVTQycpLmFsbCgpOwp9CgovKiog5biI5YKF566A5LuL5paH5qGIICovCmZ1bmN0aW9uIHdvcmtlckRlc2ModykgewogIHJldHVybiBg44CQJHt3Lm5hbWV944CR5biI5YKF77yI5pOF6ZW/JHt3LnNraWxsfe+8jOS7juS4miR7dy55ZWFyc33lubTvvIzor4TliIYke3cucmF0aW5nfeWIhu+8iWA7Cn0KCi8qKiDnoa7orqTlronmjpLluIjlgoXnmoTlm57lpI0gKi8KZnVuY3Rpb24gY29uZmlybUFzc2lnbih3KSB7CiAgcmV0dXJuIGDmlLbliLDvvIHpqazkuIrkuLrmgqjlronmjpIke3dvcmtlckRlc2Modyl95LiO5oKo55S16K+d6IGU57O777yM5biI5YKF5Y+v5Lul5LiK6Zeo5pyN5Yqh77yM6K+35L+d5oyB5omL5py655WF6YCa772eYDsKfQoKLy8gPT09PT09PT09PT09PT09PT09PT09IOeUqOaIt+WvueivneS4iuS4i+aWh++8iOWGheWtmOaAge+8iSA9PT09PT09PT09PT09PT09PT09PT0KLy8gdWlkIC0+IHsgdHlwZTogJ2NvbmZpcm1fd29ya2VyJyDlj6rnrYnnoa7orqTkuIDkvY0gLyAncGlja193b3JrZXInIOWkmuWAmemAieW+hemAieaLqSwgd29ya2VyLCBjYW5kaWRhdGVzIH0KY29uc3QgdXNlckN0eCA9IG5ldyBNYXAoKTsKCmNvbnN0IEFGRklSTSA9IFsn5pivJywgJ+WvuScsICflpb0nLCAn5ZevJywgJ+imgScsICflj6/ku6UnLCAn6KGMJywgJ29rJywgJ3llcycsICfmsqHplJknLCAn5bCx5pivJywgJ+ehruWumicsICflronmjpInXTsKY29uc3QgREVOWSA9IFsn5LiNJywgJ+aNoicsICfliKsnLCAn5YW25LuWJywgJ+eul+S6hicsICflkKYnLCAn5Y+m5LiA5LiqJ107CmNvbnN0IFVOQ0xFQVIgPSBbJ+S4jeefpemBkycsICfkuI3muIXmpZonLCAn6ZqP5L6/JywgJ+mDveihjCcsICfpg73lpb0nLCAn5peg5omA6LCTJywgJ+S4jeaHgicsICflv5jkuoYnLCAn6K6w5LiN5b6XJywgJ+WTquS4qumDvSddOwoKLyoqIOaYry/lkKYv6ZqP5L6/IOWIpOaWrSAqLwpmdW5jdGlvbiByZWFkSW50ZW50KHRleHQpIHsKICBjb25zdCB0ID0gdGV4dC50b0xvd2VyQ2FzZSgpOwogIGNvbnN0IGFmZmlybSA9IEFGRklSTS5zb21lKGsgPT4gdC5pbmNsdWRlcyhrKSk7CiAgY29uc3QgZGVueSA9IERFTlkuc29tZShrID0+IHQuaW5jbHVkZXMoaykpOwogIGNvbnN0IHVuY2xlYXIgPSBVTkNMRUFSLnNvbWUoayA9PiB0LmluY2x1ZGVzKGspKTsKICByZXR1cm4geyBhZmZpcm0sIGRlbnksIHVuY2xlYXIgfTsKfQoKLyoqIOS7juWAmemAiemHjOaMieWQjeWtly/luo/lj7fvvIjnrKzkuIDkuKrjgIEx44CB4pGh562J77yJ5oyR5Lq6ICovCmZ1bmN0aW9uIHBpY2tGcm9tQ2FuZGlkYXRlcyh0ZXh0LCBjYW5kaWRhdGVzKSB7CiAgY29uc3QgdCA9IHRleHQudHJpbSgpOwogIC8vIOebtOaOpeivtOWQjeWtl++8iOaIluWQjeWtl+eahOS4gOmDqOWIhu+8iQogIGNvbnN0IGJ5TmFtZSA9IGNhbmRpZGF0ZXMuZmluZCh3ID0+IHQuaW5jbHVkZXMody5uYW1lKSB8fCAodC5yZXBsYWNlKC/luIjlgoV85belL2csICcnKS5sZW5ndGggPj0gMiAmJiB3Lm5hbWUuaW5jbHVkZXModC5yZXBsYWNlKC/luIjlgoV85belL2csICcnKSkpKTsKICBpZiAoYnlOYW1lKSByZXR1cm4gYnlOYW1lOwogIC8vIOW6j+WPt++8muesrDEv56ys5LiA5LiqLzEv5LiAL+KRoQogIGNvbnN0IG0gPSB0Lm1hdGNoKC/nrKw/XHMqKFsxLTnkuIDkuozkuInlm5vkupTlha3kuIPlhavkuZ3ljYFdKXwoW+KRoOKRoeKRouKRo+KRpF0pLyk7CiAgaWYgKG0pIHsKICAgIGNvbnN0IGNuID0geyAn5LiAJzogMSwgJ+S6jCc6IDIsICfkuIknOiAzLCAn5ZubJzogNCwgJ+S6lCc6IDUsICflha0nOiA2LCAn5LiDJzogNywgJ+WFqyc6IDgsICfkuZ0nOiA5LCAn5Y2BJzogMTAsICfikaAnOiAxLCAn4pGhJzogMiwgJ+KRoic6IDMsICfikaMnOiA0LCAn4pGkJzogNSB9OwogICAgY29uc3QgaWR4ID0gKGNuW21bMV0gfHwgbVsyXV0gfHwgTnVtYmVyKG1bMV0pKSAtIDE7CiAgICBpZiAoY2FuZGlkYXRlc1tpZHhdKSByZXR1cm4gY2FuZGlkYXRlc1tpZHhdOwogIH0KICByZXR1cm4gbnVsbDsKfQoKLyoqCiAqIOS4iuS4i+aWh+e7reiBiu+8muS4iuS4gOi9ruWcqOetieeUqOaIt+ehruiupOW4iOWCheaXtu+8jOino+aekOacrOi9ruWbnuWkjQogKiDov5Tlm57lm57lpI3mlbDnu4TvvJvov5Tlm54gbnVsbCDooajnpLrmnKzmnaHmtojmga/kuI3lsZ7kuo7kuIrkuIvmlofvvIznu6fnu63otbDluLjop4TljLnphY0KICovCmZ1bmN0aW9uIGhhbmRsZUNvbnRleHQodGV4dCwgdWlkKSB7CiAgY29uc3QgY3R4ID0gdXNlckN0eC5nZXQodWlkKTsKICBpZiAoIWN0eCkgcmV0dXJuIG51bGw7CiAgY29uc3QgeyBhZmZpcm0sIGRlbnksIHVuY2xlYXIgfSA9IHJlYWRJbnRlbnQodGV4dCk7CgogIGlmIChjdHgudHlwZSA9PT0gJ2NvbmZpcm1fd29ya2VyJykgewogICAgaWYgKGFmZmlybSAmJiAhZGVueSkgeyB1c2VyQ3R4LmRlbGV0ZSh1aWQpOyByZXR1cm4gW2NvbmZpcm1Bc3NpZ24oY3R4LndvcmtlcildOyB9CiAgICBpZiAodW5jbGVhcikgewogICAgICAvLyDlrp7lnKjkuI3muIXmpZog4oaSIOWwseWumuW9k+WJjeaOqOiNkOeahO+8iOivhOWIhuacgOmrmOeahO+8iQogICAgICB1c2VyQ3R4LmRlbGV0ZSh1aWQpOwogICAgICByZXR1cm4gW2DmsqHlhbPns7vvvZ7pgqPlsLHkuLrmgqjlronmjpLor4TliIbmnIDpq5jnmoQke3dvcmtlckRlc2MoY3R4Lndvcmtlcil95LiK6Zeo5ZWm77yB5biI5YKF6ams5LiK5LiO5oKo55S16K+d6IGU57O777yM6K+35L+d5oyB5omL5py655WF6YCa772eYF07CiAgICB9CiAgICBpZiAoZGVueSkgewogICAgICAvLyDnlKjmiLfkuI3opoEg4oaSIOaNouS4i+S4gOS9jeaOqOiNkAogICAgICBjb25zdCB3b3JrZXJzID0gZ2V0V29ya2VycygpOwogICAgICBjb25zdCBuZXh0ID0gd29ya2Vycy5maW5kKHcgPT4gdy5pZCAhPT0gY3R4Lndvcmtlci5pZCk7CiAgICAgIGlmIChuZXh0KSB7CiAgICAgICAgdXNlckN0eC5zZXQodWlkLCB7IHR5cGU6ICdjb25maXJtX3dvcmtlcicsIHdvcmtlcjogbmV4dCB9KTsKICAgICAgICByZXR1cm4gW2Dlpb3nmoTvvZ7pgqPkuLrmgqjmjqjojZAke3dvcmtlckRlc2MobmV4dCl977yM6L+Z5L2N5Y+v5Lul5ZCX77yf5Zue5aSNIuaYryLpqazkuIrlronmjpLjgIJgXTsKICAgICAgfQogICAgICB1c2VyQ3R4LmRlbGV0ZSh1aWQpOwogICAgICByZXR1cm4gWyfnm67liY3luIjlgoXmoaPmnJ/pg73mr5TovoPmu6HvvIzmgqjlhYjnlZnkuKrnlLXor53lkozlnLDlnYDvvIznqI3lkI7lrqLmnI3kuJPlkZjkuLrmgqjljY/osIPlronmjpLlk6bvvZ4nXTsKICAgIH0KICAgIC8vIOeUqOaIt+ayoeaOpeivneiMrO+8iOmXruS6huWIq+eahOS6i++8ieKGkiDmuIXpmaTnirbmgIHotbDluLjop4TmtYHnqIsKICAgIHVzZXJDdHguZGVsZXRlKHVpZCk7CiAgICByZXR1cm4gbnVsbDsKICB9CgogIGlmIChjdHgudHlwZSA9PT0gJ3BpY2tfd29ya2VyJykgewogICAgaWYgKHVuY2xlYXIpIHsKICAgICAgLy8g5a6e5Zyo5LiN5riF5qWaIOKGkiDmjqjojZDlgJnpgInkuK3or4TliIbmnIDpq5jnmoQKICAgICAgdXNlckN0eC5kZWxldGUodWlkKTsKICAgICAgY29uc3QgdG9wID0gY3R4LmNhbmRpZGF0ZXMuc2xpY2UoKS5zb3J0KChhLCBiKSA9PiBiLnJhdGluZyAtIGEucmF0aW5nKVswXTsKICAgICAgdXNlckN0eC5zZXQodWlkLCB7IHR5cGU6ICdjb25maXJtX3dvcmtlcicsIHdvcmtlcjogdG9wIH0pOwogICAgICByZXR1cm4gW2DmsqHlhbPns7vvvZ7pgqPlsLHkuLrmgqjlronmjpLor4TliIbmnIDpq5jnmoQke3dvcmtlckRlc2ModG9wKX3kuIrpl6jvvIzlj6/ku6XlkJfvvJ/lm57lpI0i5pivIueri+WNs+WuieaOkuOAgmBdOwogICAgfQogICAgY29uc3QgcGljayA9IHBpY2tGcm9tQ2FuZGlkYXRlcyh0ZXh0LCBjdHguY2FuZGlkYXRlcyk7CiAgICBpZiAocGljaykgeyB1c2VyQ3R4LmRlbGV0ZSh1aWQpOyByZXR1cm4gW2NvbmZpcm1Bc3NpZ24ocGljayldOyB9CiAgICBpZiAoZGVueSkgewogICAgICB1c2VyQ3R4LmRlbGV0ZSh1aWQpOwogICAgICByZXR1cm4gWyflpb3nmoTvvIzpgqPmgqjlho3mg7Pmg7PvvZ7kuZ/lj6/ku6Xnm7TmjqXlkYror4nmiJHorr7lpIfmlYXpmpzlkozlnLDlnYDvvIzmiJHluK7mgqjljLnphY3mnIDmk4Xplb/nmoTluIjlgoXjgIInXTsKICAgIH0KICAgIHJldHVybiBudWxsOwogIH0KICByZXR1cm4gbnVsbDsKfQoKLyoqCiAqIOaMh+WQjeW4iOWCheaEj+WbvuWkhOeQhgogKiDmlK/mjIHvvJrnjovlu7rlm73luIjlgoUgLyDlvKDluIjlgoUgLyDlp5PmnY7nmoTluIjlgoUgLyDluK7miJHlj6vkuKrluIjlgoXkuIrpl6gKICovCmZ1bmN0aW9uIGhhbmRsZVdvcmtlckludGVudCh0ZXh0LCB1aWQpIHsKICBjb25zdCB3b3JrZXJzID0gZ2V0V29ya2VycygpOwogIGlmICghd29ya2Vycy5sZW5ndGgpIHJldHVybiBbJ+W9k+WJjeW4iOWChemDveWcqOW/mee6v+S4iuWNle+8jOeojeWQjuS4uuaCqOWuieaOkuWTpu+9niddOwoKICAvLyDms5vmjIflrZfvvJrlh7rnjrDov5nkupvlrZfor7TmmI7nlKjmiLfmsqHlhbfkvZPmjIflkI3vvIjlpoIi5Y+r5Liq5biI5YKFIiLmtL7kvY3luIjlgoXmnaUi77yJCiAgY29uc3QgR0VORVJJQyA9ICfkuKrkvY3lkI3mib7opoHlj6vor7fov5npgqPlk6rnmoTmnaXmtL7luK7ngrnpmo/kvr8nOwogIC8vIOaPkOWPluaMh+WQjeS/oeaBrwogIGxldCBzdXJuYW1lID0gbnVsbDsKICBjb25zdCBmdWxsTmFtZU1hdGNoID0gdGV4dC5tYXRjaCgvKFtcdTRlMDAtXHU5ZmE1XXsyLDN9KeW4iOWChS8pOyAgIC8vICLnjovlu7rlm73luIjlgoUiCiAgY29uc3Qgc3VybmFtZU1hdGNoID0gdGV4dC5tYXRjaCgv5aeTKFtcdTRlMDAtXHU5ZmE1XSkvKTsgICAgICAgICAgICAvLyAi5aeT5p2O55qE5biI5YKFIgogIGNvbnN0IHhNYXRjaCA9IHRleHQubWF0Y2goLyhbXHU0ZTAwLVx1OWZhNV0p5biI5YKFLyk7ICAgICAgICAgICAgICAgIC8vICLlvKDluIjlgoUiCgogIC8vIDEpIOivtOeahOaYr+ecn+WunuWFqOWQje+8iOS4jeWQq+azm+aMh+Wtl++8ieKGkiDnm7TmjqXnoa7orqTlronmjpIKICBpZiAoZnVsbE5hbWVNYXRjaCAmJiAhZnVsbE5hbWVNYXRjaFsxXS5zcGxpdCgnJykuc29tZShjID0+IEdFTkVSSUMuaW5jbHVkZXMoYykpKSB7CiAgICBjb25zdCBoaXQgPSB3b3JrZXJzLmZpbmQodyA9PiB3Lm5hbWUgPT09IGZ1bGxOYW1lTWF0Y2hbMV0pOwogICAgaWYgKGhpdCkgeyB1c2VyQ3R4LmRlbGV0ZSh1aWQpOyByZXR1cm4gW2NvbmZpcm1Bc3NpZ24oaGl0KV07IH0KICAgIHN1cm5hbWUgPSBmdWxsTmFtZU1hdGNoWzFdWzBdOyAvLyDlhajlkI3msqHmib7liLDvvIzmjInnrKzkuIDkuKrlrZflvZPlp5PmsI/nu6fnu63mib4KICB9IGVsc2UgaWYgKHN1cm5hbWVNYXRjaCkgewogICAgc3VybmFtZSA9IHN1cm5hbWVNYXRjaFsxXTsKICB9IGVsc2UgaWYgKHhNYXRjaCAmJiAhR0VORVJJQy5pbmNsdWRlcyh4TWF0Y2hbMV0pKSB7CiAgICBzdXJuYW1lID0geE1hdGNoWzFdOwogIH0KCiAgLy8gMikg6K+05LqG5aeT5rCPIOKGkiDmn6Xor6Xlp5PluIjlgoUKICBpZiAoc3VybmFtZSkgewogICAgY29uc3QgY2FuZHMgPSB3b3JrZXJzLmZpbHRlcih3ID0+IHcubmFtZS5zdGFydHNXaXRoKHN1cm5hbWUpKTsKICAgIGlmIChjYW5kcy5sZW5ndGggPT09IDEpIHsKICAgICAgLy8g5Y2V5Liq77ya5oqK5YWo5ZCN5Y+R57uZ55So5oi356Gu6K6kCiAgICAgIHVzZXJDdHguc2V0KHVpZCwgeyB0eXBlOiAnY29uZmlybV93b3JrZXInLCB3b3JrZXI6IGNhbmRzWzBdIH0pOwogICAgICByZXR1cm4gW2DmiJHku6wke3N1cm5hbWV95aeT55qE5biI5YKF5pivJHt3b3JrZXJEZXNjKGNhbmRzWzBdKX3vvIzmmK/mgqjopoHmib7nmoTlkJfvvJ/lm57lpI0i5pivIuWwseS4uuaCqOWuieaOkuS4iumXqOWVpu+9nmBdOwogICAgfQogICAgaWYgKGNhbmRzLmxlbmd0aCA+IDEpIHsKICAgICAgLy8g5aSa5Liq77ya5YiX5Ye65p2l5LuU57uG6K+i6ZeuCiAgICAgIHVzZXJDdHguc2V0KHVpZCwgeyB0eXBlOiAncGlja193b3JrZXInLCBjYW5kaWRhdGVzOiBjYW5kcyB9KTsKICAgICAgY29uc3QgbGlzdCA9IGNhbmRzLm1hcCgodywgaSkgPT4gYCR7J+KRoOKRoeKRouKRo+KRpCdbaV19JHt3Lm5hbWV977yIJHt3LnNraWxsfe+8jCR7dy5yYXRpbmd95YiG77yJYCkuam9pbignICAnKTsKICAgICAgcmV0dXJuIFtg5oiR5Lus5aeTJHtzdXJuYW1lfeeahOW4iOWCheaciSR7Y2FuZHMubGVuZ3RofeS9je+8miR7bGlzdH3jgILor7fpl67mgqjmg7PpooTnuqblk6rkuIDkvY3lkYDvvJ/lm57lpI3nvJblj7fmiJblkI3lrZfljbPlj6/vvZ5gXTsKICAgIH0KICAgIC8vIOayoeacieivpeWnkyDihpIg5o6o6I2Q6K+E5YiG5pyA6auY55qECiAgICBjb25zdCB0b3AgPSB3b3JrZXJzWzBdOwogICAgdXNlckN0eC5zZXQodWlkLCB7IHR5cGU6ICdjb25maXJtX3dvcmtlcicsIHdvcmtlcjogdG9wIH0pOwogICAgcmV0dXJuIFtg5oqx5q2J5ZGA77yM5pqC5pe25rKh5pyJ5aeTJHtzdXJuYW1lfeeahOW4iOWCheWcqOe6v+OAguS4uuaCqOaOqOiNkOW5s+WPsOivhOWIhuacgOmrmOeahCR7d29ya2VyRGVzYyh0b3Apfe+8jOWPr+S7peWQl++8n2BdOwogIH0KCiAgLy8gMykg5rOb5oyHIuWPq+S4quW4iOWChSLihpIg55u05o6l5o6o6I2Q6K+E5YiG5pyA6auY55qECiAgY29uc3QgdG9wID0gd29ya2Vyc1swXTsKICB1c2VyQ3R4LnNldCh1aWQsIHsgdHlwZTogJ2NvbmZpcm1fd29ya2VyJywgd29ya2VyOiB0b3AgfSk7CiAgcmV0dXJuIFsn5aW95Zie77yB6ams5LiK5Li65oKo5a6J5o6S5biI5YKF5LiK6Zeo772eJywgYOS4uuaCqOaOqOiNkOivhOWIhuacgOmrmOeahCR7d29ya2VyRGVzYyh0b3Apfe+8jOW4iOWCheWPr+S7peebtOaOpeS4juaCqOeUteivneiBlOezu+OAgeS4iumXqOacjeWKoeOAguWbnuWkjSLmmK8i56uL5Y2z5a6J5o6S77yBYF07Cn0KCi8qID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICDlhbPplK7or43op4TliJnlupPvvIjmjInpobrluo/ljLnphY3vvIzlkb3kuK3ljbPlgZzmraLvvJvmr4/mnaHop4TliJnov5Tlm57mtojmga/mlbDnu4TvvIkKICAgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09ICovCmNvbnN0IFJVTEVTID0gWwogIC8vIC0tLS0g6Zeu5YCZIC0tLS0KICB7IGt3OiBbJ+S9oOWlvScsICfmgqjlpb0nLCAnaGknLCAnaGVsbG8nLCAn5Zyo5ZCXJywgJ+WcqOS5iCddLAogICAgcmVwbGllczogWyfmgqjlpb3lkYDvvZ7miJHmmK/pmL/mnY7lt6XlnYrnmoTlnKjnur/lrqLmnI3lsI/mnY4g8J+QtCcsICfor7fpl67mgqjlrrbku4DkuYjorr7lpIfpnIDopoHnu7Tkv67miJbmuIXmtJflkaLvvJ/lkYror4nmiJHlk4HniYwr5pWF6Zqc546w6LGh77yM5oiR6ams5LiK5Li65oKo5a6J5o6S5biI5YKF5LiK6Zeo44CCJ10gfSwKCiAgLy8gLS0tLSDku7fmoLwgLyDmlLbotLkgLS0tLQogIHsga3c6IFsn5aSa5bCR6ZKxJywgJ+S7t+agvCcsICfmlLbotLknLCAn6LS555SoJywgJ+i0teS4jScsICfmgI7kuYjnrpfpkrEnLCAn5oCO5LmI5pS26LS5JywgJ+S7t+ebriddLAogICAgcmVwbGllczogWyflkrHku6zlubPlj7DmmI7noIHmoIfku7fjgIHlhYjmiqXku7flkI7nu7Tkv67vvIzluIjlgoXkuIrpl6jmo4DmtYvlkI7lh7rmlrnmoYjvvIzmgqjnoa7orqTku7fmoLzkuobmiY3lvIDlt6XvvIznu53kuI3kubHmlLbotLnvvZ4nLAogICAgICAgICAgICAgICflkIzkuIDmlYXpmpzvvJrluIjlgoXkuIrpl6jmo4Dmn6UgMzAg5YWD6LW377yM566A5Y2V57u05L+u77yI57q/6LevL+eoi+W6jy/kv6Hlj7fnsbvvvIkxMDYg5YWDL+WPsOi1t++8jOWkp+S/riAyOTgg5YWD6LW377yM5YW35L2T5Lul546w5Zy65oql5Lu35Li65YeG5ZOm44CCJ10gfSwKCiAgLy8gLS0tLSDnqbrosIMgLS0tLQogIHsga3c6IFsn56m66LCDJ10sCiAgICByZXBsaWVzOiBbJ+epuuiwg+mXrumimOS6pOe7meaIkeS7rOWwseWlveWVpu+8geaMguacui/mn5zmnLov5Lit5aSu56m66LCD6YO96IO95L+u77ya5LiN5Yi25Ya344CB5ryP5rC044CB5Zmq6Z+z5aSn44CB5Yqg5rCf44CB56e75py65Z2H5Y+v5LiK6Zeo44CCJywKICAgICAgICAgICAgICAn5Y+C6ICD5Lu377ya5oyC5py656m66LCD57u05L+uIDk4IOWFg+i1t+OAgeepuuiwg+a3seW6pua4hea0lyAxNDkg5YWD6LW344CB5Lit5aSu56m66LCD5riF5rSXIDI4OSDlhYPotbfvvIzngrnlh7vpppbpobXjgIznqbrosIPmuIXmtJfjgI3lj6/nm7TmjqXkuIvljZXpooTnuqbvvZ4nXSB9LAoKICAvLyAtLS0tIOa0l+iho+acuiAtLS0tCiAgeyBrdzogWyfmtJfooaPmnLonXSwKICAgIHJlcGxpZXM6IFsn5rSX6KGj5py65LiN6ISx5rC044CB5ryP5rC044CB5byC5ZON44CB5omT5LiN5byA6Zeo6YO95Y+v5Lul5L+u77yM5rOi6L2uL+a7muetki/mtJfng5jkuIDkvZPmnLrpg73mlK/mjIHkuIrpl6jmo4DmtYvjgIInLAogICAgICAgICAgICAgICfmtJfooaPmnLrnu7Tkv64gODgg5YWD6LW377yM5rex5bqm5ouG5rSX6Zmk5Z6iIDEyOSDlhYPotbfvvIzpooTnuqblkI7luIjlgoXkvJrmj5DliY3nlLXor53ogZTns7vmgqjvvZ4nXSB9LAoKICAvLyAtLS0tIOWGsOeusSAvIOWGsOafnCAtLS0tCiAgeyBrdzogWyflhrDnrrEnLCAn5Yaw5p+cJywgJ+WGt+afnCddLAogICAgcmVwbGllczogWyflhrDnrrHkuI3liLblhrfjgIHlhrfol4/lrqTnu5PlhrDjgIHlmarpn7PlpKfjgIHpl6jlsIHmnaHogIHljJbpg73mmK/luLjop4Hpl67popjvvIzluIjlgoXluKbphY3ku7bkuIrpl6jkuIDmrKHkv67lpb3jgIInLAogICAgICAgICAgICAgICflhrDnrrHnu7Tkv64gOTgg5YWD6LW377yM5a6255SoL+WVhueUqOWGsOafnOajgOS/riAxNTgg5YWD6LW377yM5Yaw566x5rex5bqm5riF5rSXIDI5OSDlhYPotbfvvIjpq5jmuKnmnYDoj4zpmaTlkbPvvInjgIInXSB9LAoKICAvLyAtLS0tIOeDreawtOWZqCAvIOWOqOeUtSAtLS0tCiAgeyBrdzogWyfng63msLTlmagnLCAn54eD5rCU54G2JywgJ+ayueeDn+acuicsICfngbYnXSwKICAgIHJlcGxpZXM6IFsn5Y6o55S15oiR5Lus6YO95b6I5Zyo6KGM77ya54Ot5rC05Zmo5LiN5omT54Gr44CB5rC05LiN54Ot77yM54eD5rCU54G25omT5LiN552A54Gr44CB5p2+5omL54aE54Gr77yM5rK554Of5py65ZC45Yqb5bCP44CB5byC5ZON77yM6YO96IO95LiK6Zeo5aSE55CG44CCJywKICAgICAgICAgICAgICAn54eD5rCU54Ot5rC05Zmo5a6J6KOFIDE1OCDlhYPotbfvvIzmsrnng5/mnLrmi4bmtJcgMTE5IOWFg+i1t++8jOeHg+awlOeBtue7tOS/riA4OCDlhYPotbfvvIzlronlhajnrKzkuIDvvIznh4PmsJTnsbvpl67popjlu7rorq7lsL3lv6vmiqXkv67lk6bjgIInXSB9LAoKICAvLyAtLS0tIOeUteinhiAtLS0tCiAgeyBrdzogWyfnlLXop4YnLCAn5pi+56S65ZmoJ10sCiAgICByZXBsaWVzOiBbJ+eUteinhum7keWxj+OAgeiKseWxj+OAgeayoeWjsOmfs+OAgeaXoOazleW8gOacuumDveWPr+S7peajgOa1i+e7tOS/ru+8jOWQhOWTgeeJjOa2suaZtueUteinhuWdh+aUr+aMgeS4iumXqOOAgicsCiAgICAgICAgICAgICAgJ+eUteinhueugOWNlee7tOS/riAxMDYg5YWDL+WPsOi1t++8jOWkp+S/riAyOTgg5YWD6LW377yM5biI5YKF5LiK6Zeo5ZCO5YWI5qOA5rWL5oql5Lu35YaN57u05L+u44CCJ10gfSwKCiAgLy8gLS0tLSDmvI/msLQgLyDmsLTnrqEgLS0tLQogIHsga3c6IFsn5ryP5rC0JywgJ+a4l+awtCcsICfmsLTnrqEnLCAn5rC06b6Z5aS0JywgJ+mYgOmXqCcsICfop5LpmIAnLCAn54iG566hJ10sCiAgICByZXBsaWVzOiBbJ+a8j+awtOmXrumimOimgeaKk+e0p+WkhOeQhu+8jOmBv+WFjeazoeWdj+WutuWFt+WcsOadv++9nuawtOeuoeeIhuijguOAgem+meWktOa7tOawtOOAgeaOpeWktOa4l+awtOOAgeaal+euoea8j+awtOmDveiDveS/ruOAgicsCiAgICAgICAgICAgICAgJ+awtOeuoee7tOS/riA2OCDlhYPotbfvvIzkuIrpl6jlkI7kvJrlhYjlhbPpmIDmraLmsLTlho3mo4Dkv67vvIzntKfmgKXmg4XlhrXlu7rorq7lhYjlhbPmgLvpmIDvvIznhLblkI7pqazkuIrpooTnuqbluIjlgoXjgIInXSB9LAoKICAvLyAtLS0tIOeWj+mAmiAtLS0tCiAgeyBrdzogWyfloLUnLCAn55aP6YCaJywgJ+mprOahticsICflnLDmvI8nLCAn5LiL5rC06YGTJywgJ+a0l+aJi+ebhicsICfmtJfoj5znm4YnXSwKICAgIHJlcGxpZXM6IFsn6ams5qG25aC15aGe44CB5Zyw5ryP6L+U5ZGz44CB5LiL5rC06YGT5oWi5o6S6YO95Y+v5Lul55aP6YCa77yM5biI5YKF5bim5LiT5Lia55aP6YCa5py65ZKM566h6YGT56ql6ZWc5LiK6Zeo44CCJywKICAgICAgICAgICAgICAn6ams5qG255aP6YCaIDY4IOWFg+i1t++8iOWQq+eWj+mAmuS4gOasoe+8ie+8jOWcsOa8jy/mtJfmiYvnm4bnlo/pgJogNTgg5YWD6LW377yM55aP6YCa5peg5pWI5LiN5pS26LS5772eJ10gfSwKCiAgLy8gLS0tLSDnlLXot68gLS0tLQogIHsga3c6IFsn6Lez6Ze4JywgJ+eUtei3rycsICfmlq3nlLUnLCAn54Gv5YW3JywgJ+eBrycsICfmj5LluqcnLCAn5byA5YWzJywgJ+efrei3ryddLAogICAgcmVwbGllczogWyflrrbph4zot7Ppl7jjgIHmj5LluqfmsqHnlLXjgIHnga/lhbfkuI3kuq7jgIHlvIDlhbPlpLHngbXpg73lj6/ku6XlpITnkIbvvIzluIjlgoXmjIHor4HkuIrlspfvvIznlKjnlLXlronlhajmlL7lv4PkuqTnu5nmiJHku6zjgIInLAogICAgICAgICAgICAgICfnlLXot6/mo4Dkv64gNzgg5YWD6LW377yM54Gv5YW3L+W8gOWFs+abtOaNoiA1OCDlhYPotbfvvIjkuI3lkKvnga/lhbfmnZDmlpnvvInvvIzlhYjmo4DmtYvlkI7miqXku7fjgIInXSB9LAoKICAvLyAtLS0tIOWuieijhSAtLS0tCiAgeyBrdzogWyflronoo4UnLCAn6KOF5LiA5LiqJywgJ+aMguaeticsICfmlrDkubDnmoQnXSwKICAgIHJlcGxpZXM6IFsn5a6J6KOF5pyN5Yqh5YWo6IO95a6J5o6S77ya56m66LCD44CB54Ot5rC05Zmo44CB5rK554Of5py644CB54Gv5YW344CB56qX5biY44CB5pm+6KGj5p6244CB572u54mp5p6244CB5pm66IO96ZSB562J6YO95Y+v5Lul5LiK6Zeo5a6J6KOF44CCJywKICAgICAgICAgICAgICAn5oyC5py656m66LCD5a6J6KOFIDE5OCDlhYPotbfvvIznh4PmsJTng63msLTlmajlronoo4UgMTU4IOWFg+i1t++8jOWFtuS7luWwj+S7tuWuieijhSA0OSDlhYPotbfvvIzotK3kubDmuKDpgZPkuI3pmZDpg73lj6/lronoo4XjgIInXSB9LAoKICAvLyAtLS0tIOa4hea0lyAtLS0tCiAgeyBrdzogWyfmuIXmtJcnLCAn5L+d5rSBJywgJ+mZpOieqCcsICfmtojmr5InLCAn6Zmk5Z6iJ10sCiAgICByZXBsaWVzOiBbJ+WutueUtea3seW6pua4hea0l+WPr+S7pemihOe6pu+8muayueeDn+acuuOAgea0l+iho+acuuOAgeepuuiwg+OAgeWGsOeusemDveiDveaLhua0l+mZpOWeouadgOiPjO+8jOW6iuWeq+mZpOieqOS5n+aUr+aMgeS4iumXqOOAgicsCiAgICAgICAgICAgICAgJ+a0l+iho+acuuaLhua0lyAxMjkg5YWD6LW377yM56m66LCD5riF5rSXIDE0OSDlhYPotbfvvIzluorlnqvpmaTonqggMTQ5IOWFg+i1t++8jOa4hea0l+WQjueOsOWcuumqjOaUtuWGjeehruiupOOAgiddIH0sCgogIC8vIC0tLS0g6Ziy5rC0IC0tLS0KICB7IGt3OiBbJ+mYsuawtCcsICfooaXmvI8nLCAn5aSW5aKZJywgJ+Wxi+mhticsICfljavnlJ/pl7TmuJcnXSwKICAgIHJlcGxpZXM6IFsn5aSW5aKZ44CB5bGL6aG244CB5Y2r55Sf6Ze044CB56qX5Y+w5riX5rC05ryP5rC06YO95Y+v5Lul5YGa6Ziy5rC06KGl5ryP77yM6auY5Y6L5rOo5rWGK+a2guiGnOWPjOmHjeW3peiJuu+8jOi0qOS/neWuieW/g+OAgicsCiAgICAgICAgICAgICAgJ+mYsuawtOihpea8jyAzMCDlhYPotbfvvIjmjInpnaLnp6/miqXku7fvvInvvIzmu6EgMTUwMCDlhYPlh48gMTUw77yM5pa95bel5YmN5Lya5Ye65pa55qGI5ZKM5piO57uG5oql5Lu35Y2V44CCJ10gfSwKCiAgLy8gLS0tLSDpooTnuqbmtYHnqIsgLS0tLQogIHsga3c6IFsn5oCO5LmI6aKE57qmJywgJ+WmguS9lemihOe6picsICfmgI7kuYjkuIvljZUnLCAn6aKE57qm5rWB56iLJywgJ+aAjuS5iOaKpeS/ricsICflpoLkvZXmiqXkv64nLCAn5LiL5Y2V5rWB56iLJywgJ+aAjuS5iOW8hCddLAogICAgcmVwbGllczogWyfpooTnuqbotoXnroDljZXvvIzkuInmraXmkJ7lrprvvJrikaAg6aaW6aG16YCJ5pyN5Yqh5oiW55u05o6l44CM5b+r6YCf5oql5L+u44CN5aGr5YaZ6K6+5aSH5pWF6Zqc5ZKM5Zyw5Z2A77yb4pGhIOmAieWlveW4iOWCheaPkOS6pOiuouWNle+8m+KRoiDlnKjnur/mlK/ku5jlkI7luIjlgoXmjInml7bkuIrpl6jjgIInLAogICAgICAgICAgICAgICfkuZ/lj6/ku6Xnm7TmjqXlkYror4nmiJHjgJDorr7lpIcr5pWF6ZqcK+WcsOWdgCvnlLXor53jgJHvvIzmiJHluK7mgqjkurrlt6XnmbvorrDpooTnuqbvvZ4nXSB9LAoKICAvLyAtLS0tIOS4iumXqOaXtumXtCAtLS0tCiAgeyBrdzogWyflpJrkuYUnLCAn5aSa6ZW/5pe26Ze0JywgJ+S7gOS5iOaXtuWAmScsICflh6DngrknLCAn5pe26Ze0JywgJ+WkmuW/qycsICfntKfmgKUnLCAn5Yqg5oClJ10sCiAgICByZXBsaWVzOiBbJ+acjeWKoeaXtumXtOavj+WkqSA5OjAwLTIwOjAw77yM5Z+O5Yy65YaF5LiL5Y2V5ZCO5pyA5b+rIDIg5bCP5pe25LiK6Zeo77yM6aKE57qm5pe25q615Y+v6Ieq6YCJ77yM5biI5YKF5LiK6Zeo5YmNIDMwIOWIhumSn+S8mueUteivneiBlOezu+aCqOOAgicsCiAgICAgICAgICAgICAgJ+e0p+aApeaVhemanO+8iOa8j+awtC/ot7Ppl7gv54eD5rCU77yJ5Y+v5Lul5aSH5rOo44CM5Yqg5oCl44CN77yM5LyY5YWI5a6J5o6S5bCx6L+R5biI5YKF44CCJ10gfSwKCiAgLy8gLS0tLSDopobnm5bln47luIIgLS0tLQogIHsga3c6IFsn5Z+O5biCJywgJ+WcsOWMuicsICfog73liLAnLCAn6KaG55uWJywgJ+aIkeS9j+WcqCcsICflk6rkuKrljLonLCAn5pSv5oyB5ZOq5LqbJ10sCiAgICByZXBsaWVzOiBbJ+mYv+adjuW3peWdiuW3suimhuebluWFqOWbvSAzMDArIOWfjuW4gu+8jOaCqOWcqOmmlumhteW3puS4iuinkuWIh+aNouWIsOaJgOWcqOWfjuW4gu+8jOWwseiDveafpeeci+acrOWcsOWPr+mihOe6pueahOW4iOWCheWVpuOAgicsCiAgICAgICAgICAgICAgJ+WmguaenOaQnOe0ouS4jeWIsOaCqOeahOWfjuW4gu+8jOS5n+WPr+S7peeVmeiogOWRiuivieaIke+8jOaIkeS7rOS8muWwveW/q+W8gOmAmuacjeWKoee9keeCue+9niddIH0sCgogIC8vIC0tLS0g5biI5YKF6LWE6LSoIC0tLS0KICB7IGt3OiBbJ+S4k+S4muWQlycsICfpnaDosLEnLCAn5rC05bmzJywgJ+aKgOacrycsICfor4TliIYnLCAn6K+E5Lu3J10sCiAgICByZXBsaWVzOiBbJ+WSseS7rOW4iOWCheWFqOmDqOWunuWQjeiupOivgeaMgeivgeS4iuWyl++8jOW5s+Wdh+S7juS4miA4IOW5tCvvvIzlubPlj7Dlj6/mn6Xor4TliIblkoznlKjmiLfor4Tku7fvvIzmnI3liqHkuI3mu6HmhI/mlK/mjIHph43mlrDlronmjpLjgIInLAogICAgICAgICAgICAgICfmgqjkuZ/lj6/ku6XlnKjjgIzpooTnuqbluIjlgoXjgI3pobXpnaLmn6XnnIvmr4/kvY3luIjlgoXnmoTmk4Xplb/poobln5/jgIHku47kuJrlubTpmZDlkozor4TliIbvvIzmjJHpgInlv4Pku6rnmoTlt6XnqIvluIjlk6bvvZ4nXSB9LAoKICAvLyAtLS0tIOS/neS/riAvIOWUruWQjiAtLS0tCiAgeyBrdzogWyfkv53kv64nLCAn6LSo5L+dJywgJ+S/nemanCcsICfllK7lkI4nLCAn5Y+I5Z2PJywgJ+WGjeWdjycsICflpI3lj5EnXSwKICAgIHJlcGxpZXM6IFsn5ZCM5oCn6LSo5ZCM6YOo5L2N5pWF6Zqc5L+d5L+uIDkwIOWkqe+8geS/neS/ruacn+WGheWGjeasoeWHuueOsOmXrumimO+8jOebtOaOpeaJvuaIkeS7rOWFjei0uei/lOS/ru+8jOS4jeeUqOmHjeWkjeS7mOi0ueOAgicsCiAgICAgICAgICAgICAgJ+e7tOS/ruWQjiA3IOWkqeWGheWmguWvueaViOaenOS4jea7oeaEj++8jOS5n+WPr+S7peeUs+ivt+WFjei0ueWkjeajgO+8jOWUruWQjuacieS/nemanO+9niddIH0sCgogIC8vIC0tLS0g5pSv5LuYIC0tLS0KICB7IGt3OiBbJ+aUr+S7mCcsICfku5jmrL4nLCAn5oCO5LmI57uZ6ZKxJywgJ+WFiOS7mCcsICfotKfliLAnXSwKICAgIHJlcGxpZXM6IFsn5pSv5oyB5Zyo57q/5pSv5LuY77yI5b6u5L+hL+aUr+S7mOWune+8ie+8jOS5n+WPr+S7peW4iOWCheS4iumXqOe7tOS/ruWujOaIkOmqjOaUtuWQjuWGjeS7mOasvu+8jOWFqOeoi+W5s+WPsOaLheS/neabtOWuieWFqOOAgicsCiAgICAgICAgICAgICAgJ+a4qemmqOaPkOekuu+8muS7mOasvuWJjeW4iOWCheS8muWFiOWHuuaKpeS7t+WNle+8jOaCqOehruiupOS7t+agvOWQjuWGjeaUr+S7mO+8jOe7neS4jemihOaUtuS4jeaYjui0ueeUqO+9niddIH0sCgogIC8vIC0tLS0g6YCA5qy+IC8g5Y+W5raIIC0tLS0KICB7IGt3OiBbJ+mAgOasvicsICfpgIDpkrEnLCAn5Y+W5raIJywgJ+mAgOWNlScsICfmlLnml7bpl7QnXSwKICAgIHJlcGxpZXM6IFsn5biI5YKF5LiK6Zeo5YmN6YO95Y+v5Lul5YWN6LS55Y+W5raI5oiW5pS55pyf77yM5Zyo44CM5oiR55qE6K6i5Y2V44CN6YeM5pON5L2c5Y2z5Y+v77yb5bey5pSv5LuY5pyq5pyN5Yqh55qE6K6i5Y2V5Y+W5raI5ZCO5Y6f6Lev6YCA5Zue44CCJywKICAgICAgICAgICAgICAn6ZyA6KaB5oiR5biu5oKo5pS557qm5pe26Ze055qE6K+d77yM5oqK6K6i5Y2V5Y+35ZKM5paw55qE5pe26Ze05Y+R5oiR5bCx6KGM772eJ10gfSwKCiAgLy8gLS0tLSDogZTns7vmlrnlvI8gLS0tLQogIHsga3c6IFsn55S16K+dJywgJ+WuouacjeeDree6vycsICfmiZPnu5knXSwKICAgIHJlcGxpZXM6IFsn5a6i5pyN54Ot57q/77yaMDIzLTYzMTUzNDY077yIOTowMC0yMDowMO+8ie+8jOS5n+WPr+S7peebtOaOpeWcqOi/memHjOeVmeiogO+8jOaIkeeci+WIsOWQjumprOS4iuWbnuWkjeaCqOOAgicsCiAgICAgICAgICAgICAgJ+e0p+aApeaKpeS/ruW7uuiuruebtOaOpeaJk+eUteivne+8jOWTjeW6lOabtOW/q+WTpu+9niddIH0sCgogIC8vIC0tLS0g5oSf6LCiIC0tLS0KICB7IGt3OiBbJ+iwouiwoicsICfmhJ/osKInLCAn6L6b6IumJywgJ3RoYW5rcycsICflpb3nmoQnLCAn5Zev5ZevJywgJ29rJ10sCiAgICByZXBsaWVzOiBbJ+S4jeWuouawlOWTku+9nuiDveW4ruWIsOaCqOWwseWlvSDwn5iKJywgJ+WQjue7reacieS7u+S9lee7tOS/ruS/neWFu+mXrumimOmaj+aXtuadpeaJvuaIke+8jOelneeUn+a0u+aEieW/q++8gSddIH0KXTsKCi8vIOacquWRveS4reS7u+S9leWFs+mUruivjeaXtueahOWFnOW6leWbnuWkje+8iOi9ruaNouS9v+eUqO+8jOmBv+WFjeWNg+evh+S4gOW+i++8iQpjb25zdCBGQUxMQkFDSyA9IFsKICBbJ+aUtuWIsO+9nuS4uuS6huabtOW/q+W4ruaCqOino+WGs+mXrumimO+8jOm6u+eDpuWRiuivieaIke+8muKRoCDku4DkuYjorr7lpIcv6YOo5L2N5Ye66Zeu6aKYIOKRoSDlhbfkvZPmlYXpmpznjrDosaEg4pGiIOaCqOeahOWcsOWdgOWSjOiBlOezu+eUteivne+8jOaIkemprOS4iuS4uuaCqOWuieaOkuW4iOWCheS4iumXqOOAgicsCiAgICfkuZ/lj6/ku6Xnm7TmjqXlnKjpppbpobXmjJHpgInlr7nlupTmnI3liqHpobnnm67kuIvljZXvvIzmmI7noIHmoIfku7fmm7TmlL7lv4PvvZ4nXSwKICBbJ+WlveeahO+8jOW3suS4uuaCqOiusOW9le+8geivt+ihpeWFheS4gOS4i+OAkOiuvuWkhyvmlYXpmpzmg4XlhrUr5Zyw5Z2AK+iBlOezu+eUteivneOAke+8jOWuouacjemprOS4iuS4uuaCqOWuieaOkuW3peeoi+W4iOS4iumXqOajgOa1i+OAgicsCiAgICflkrHku6zluIjlgoXkuIrpl6jlkI7lhYjmo4DmtYvmiqXku7fvvIzmgqjnoa7orqTku7fmoLzlkI7lho3nu7Tkv67vvIzlkIzpg6jkvY3mlYXpmpzkv53kv64gOTAg5aSp5ZOm772eJ10sCiAgWyfmmI7nmb3llabvvZ7nqI3nrYnvvIzmiJHluK7mgqjnnIvkuIvlr7nlupTnmoTmnI3liqHpobnnm67jgILmgqjkuZ/lj6/ku6XlhYjlnKjpppbpobXjgIzlhajpg6jmnI3liqHjgI3ph4zmib7mib7vvIzmiJbmi6jmiZPlrqLmnI3ng63nur8gMDIzLTYzMTUzNDY0IOWSqOivouOAgiddCl07CgovKiog5qC55o2u55So5oi35o+Q6Zeu5YaF5a655Yy56YWN5Zue5aSNICovCmZ1bmN0aW9uIGF1dG9SZXBseShjb250ZW50KSB7CiAgY29uc3QgdGV4dCA9IGNvbnRlbnQudG9Mb3dlckNhc2UoKTsKICBmb3IgKGNvbnN0IHJ1bGUgb2YgUlVMRVMpIHsKICAgIGlmIChydWxlLmt3LnNvbWUoayA9PiB0ZXh0LmluY2x1ZGVzKGspKSkgcmV0dXJuIHJ1bGUucmVwbGllczsKICB9CiAgcmV0dXJuIEZBTExCQUNLW2ZhbGxiYWNrSWR4KysgJSBGQUxMQkFDSy5sZW5ndGhdOwp9CmxldCBmYWxsYmFja0lkeCA9IDA7CgovLyA9PT09PT09PT09PT0g5oiR55qE6IGK5aSp6K6w5b2VID09PT09PT09PT09PQpyb3V0ZXIuZ2V0KCcvJywgKHJlcSwgcmVzKSA9PiB7CiAgY29uc3QgbGlzdCA9IGRiLnByZXBhcmUoJ1NFTEVDVCAqIEZST00gbWVzc2FnZXMgV0hFUkUgdXNlcl9pZCA9ID8gT1JERVIgQlkgaWQgQVNDJykuYWxsKHJlcS51c2VyLmlkKTsKICByZXMuanNvbih7IGNvZGU6IDAsIGRhdGE6IGxpc3QgfSk7Cn0pOwoKLy8gPT09PT09PT09PT09IOWPkemAgeS4gOadoea2iOaBr++8iOaZuuiDveWuouacjeWbnuWkjSAxfjIg5p2h77yJID09PT09PT09PT09PQpyb3V0ZXIucG9zdCgnLycsIChyZXEsIHJlcykgPT4gewogIGNvbnN0IHsgY29udGVudCB9ID0gcmVxLmJvZHkgfHwge307CiAgaWYgKCFjb250ZW50IHx8ICFjb250ZW50LnRyaW0oKSkgcmV0dXJuIHJlcy5qc29uKHsgY29kZTogMSwgbXNnOiAn5raI5oGv5YaF5a655LiN6IO95Li656m6JyB9KTsKCiAgY29uc3QgdGV4dCA9IGNvbnRlbnQudHJpbSgpOwogIGNvbnN0IHVpZCA9IHJlcS51c2VyLmlkOwogIGRiLnByZXBhcmUoJ0lOU0VSVCBJTlRPIG1lc3NhZ2VzICh1c2VyX2lkLCByb2xlLCBjb250ZW50LCBjcmVhdGVkX2F0KSBWQUxVRVMgKD8sPyw/LD8pJykKICAgIC5ydW4odWlkLCAndXNlcicsIHRleHQsIG5vdygpKTsKCiAgLy8gMSkg5LiK5LiL5paH57ut6IGK77yI562J5b6F55So5oi356Gu6K6kL+mAieaLqeW4iOWCheS4re+8ieS8mOWFiAogIGxldCByZXBsaWVzID0gaGFuZGxlQ29udGV4dCh0ZXh0LCB1aWQpOwogIC8vIDIpIOaMh+WQjeW4iOWCheaEj+Wbvu+8iOimgeeCueafkOS9jeW4iOWChSAvIOWPq+W4iOWCheS4iumXqO+8iQogIGlmICghcmVwbGllcyAmJiAv5biI5YKFfOS4iumXqOacjeWKoXzlj6suKuadpXzmtL4uKuadpS8udGVzdCh0ZXh0KSkgcmVwbGllcyA9IGhhbmRsZVdvcmtlckludGVudCh0ZXh0LCB1aWQpOwogIC8vIDMpIOW4uOinhOWFs+mUruivjeWMuemFjQogIGlmICghcmVwbGllcykgcmVwbGllcyA9IGF1dG9SZXBseSh0ZXh0KTsKCiAgY29uc3QgaW5zID0gZGIucHJlcGFyZSgnSU5TRVJUIElOVE8gbWVzc2FnZXMgKHVzZXJfaWQsIHJvbGUsIGNvbnRlbnQsIGNyZWF0ZWRfYXQpIFZBTFVFUyAoPyw/LD8sPyknKTsKICByZXBsaWVzLmZvckVhY2gociA9PiBpbnMucnVuKHVpZCwgJ2FkbWluJywgciwgbm93KCkpKTsKCiAgcmVzLmpzb24oeyBjb2RlOiAwLCBtc2c6ICflj5HpgIHmiJDlip8nLCBkYXRhOiB7IHJlcGx5OiByZXBsaWVzWzBdLCByZXBsaWVzIH0gfSk7Cn0pOwoKbW9kdWxlLmV4cG9ydHMgPSByb3V0ZXI7Cg==
+/**
+ * 在线咨询（聊天）接口
+ * --------------------------------------------------
+ * 智能客服：
+ * 1. 根据用户提问关键词自动匹配回答（每次回复 1~2 条）
+ * 2. 指名师傅：用户要点某位师傅时，安排师傅联系用户、可上门服务
+ *    - 说全名（王建国师傅）→ 直接确认安排
+ *    - 说姓氏（张师傅 / 姓李的）→ 把该姓师傅全名发给用户确认
+ *    - 同姓多位 → 列出候选让用户选；用户不清楚 → 推荐评分最高的师傅
+ * 3. 带对话上下文：问过"是这位吗"后，下一轮根据用户"是/不是/第一个"继续处理
+ */
+const express = require('express');
+const { db, now } = require('../db/database');
+const { requireUser } = require('../middleware/auth');
+
+const router = express.Router();
+router.use(requireUser);
+
+/** 在岗师傅（完全以后台师傅管理的"在岗状态"为准，后台停用/启用实时生效） */
+function getWorkers() {
+  return db.prepare('SELECT * FROM workers WHERE status = 1 ORDER BY rating DESC').all();
+}
+
+/** 师傅简介文案 */
+function workerDesc(w) {
+  return `【${w.name}】师傅（擅长${w.skill}，从业${w.years}年，评分${w.rating}分）`;
+}
+
+/** 确认安排师傅的回复 */
+function confirmAssign(w) {
+  return `收到！马上为您安排${workerDesc(w)}与您电话联系，师傅可以上门服务，请保持手机畅通～`;
+}
+
+// ===================== 用户对话上下文（内存态） =====================
+// uid -> { type: 'confirm_worker' 只等确认一位 / 'pick_worker' 多候选待选择, worker, candidates }
+const userCtx = new Map();
+
+const AFFIRM = ['是', '对', '好', '嗯', '要', '可以', '行', 'ok', 'yes', '没错', '就是', '确定', '安排'];
+const DENY = ['不', '换', '别', '其他', '算了', '否', '另一个'];
+const UNCLEAR = ['不知道', '不清楚', '随便', '都行', '都好', '无所谓', '不懂', '忘了', '记不得', '哪个都'];
+
+/** 是/否/随便 判断 */
+function readIntent(text) {
+  const t = text.toLowerCase();
+  const affirm = AFFIRM.some(k => t.includes(k));
+  const deny = DENY.some(k => t.includes(k));
+  const unclear = UNCLEAR.some(k => t.includes(k));
+  return { affirm, deny, unclear };
+}
+
+/** 从候选里按名字/序号（第一个、1、②等）挑人 */
+function pickFromCandidates(text, candidates) {
+  const t = text.trim();
+  // 直接说名字（或名字的一部分）
+  const byName = candidates.find(w => t.includes(w.name) || (t.replace(/师傅|工/g, '').length >= 2 && w.name.includes(t.replace(/师傅|工/g, ''))));
+  if (byName) return byName;
+  // 序号：第1/第一个/1/一/②
+  const m = t.match(/第?\s*([1-9一二三四五六七八九十])|([①②③④⑤])/);
+  if (m) {
+    const cn = { '一': 1, '二': 2, '三': 3, '四': 4, '五': 5, '六': 6, '七': 7, '八': 8, '九': 9, '十': 10, '①': 1, '②': 2, '③': 3, '④': 4, '⑤': 5 };
+    const idx = (cn[m[1] || m[2]] || Number(m[1])) - 1;
+    if (candidates[idx]) return candidates[idx];
+  }
+  return null;
+}
+
+/**
+ * 上下文续聊：上一轮在等用户确认师傅时，解析本轮回复
+ * 返回回复数组；返回 null 表示本条消息不属于上下文，继续走常规匹配
+ */
+function handleContext(text, uid) {
+  const ctx = userCtx.get(uid);
+  if (!ctx) return null;
+  const { affirm, deny, unclear } = readIntent(text);
+
+  if (ctx.type === 'confirm_worker') {
+    if (affirm && !deny) { userCtx.delete(uid); return [confirmAssign(ctx.worker)]; }
+    if (unclear) {
+      // 实在不清楚 → 就定当前推荐的（评分最高的）
+      userCtx.delete(uid);
+      return [`没关系～那就为您安排评分最高的${workerDesc(ctx.worker)}上门啦！师傅马上与您电话联系，请保持手机畅通～`];
+    }
+    if (deny) {
+      // 用户不要 → 换下一位推荐
+      const workers = getWorkers();
+      const next = workers.find(w => w.id !== ctx.worker.id);
+      if (next) {
+        userCtx.set(uid, { type: 'confirm_worker', worker: next });
+        return [`好的～那为您推荐${workerDesc(next)}，这位可以吗？回复"是"马上安排。`];
+      }
+      userCtx.delete(uid);
+      return ['目前师傅档期都比较满，您先留个电话和地址，稍后客服专员为您协调安排哦～'];
+    }
+    // 用户没接话茬（问了别的事）→ 清除状态走常规流程
+    userCtx.delete(uid);
+    return null;
+  }
+
+  if (ctx.type === 'pick_worker') {
+    if (unclear) {
+      // 实在不清楚 → 推荐候选中评分最高的
+      userCtx.delete(uid);
+      const top = ctx.candidates.slice().sort((a, b) => b.rating - a.rating)[0];
+      userCtx.set(uid, { type: 'confirm_worker', worker: top });
+      return [`没关系～那就为您安排评分最高的${workerDesc(top)}上门，可以吗？回复"是"立即安排。`];
+    }
+    const pick = pickFromCandidates(text, ctx.candidates);
+    if (pick) { userCtx.delete(uid); return [confirmAssign(pick)]; }
+    if (deny) {
+      userCtx.delete(uid);
+      return ['好的，那您再想想～也可以直接告诉我设备故障和地址，我帮您匹配最擅长的师傅。'];
+    }
+    return null;
+  }
+  return null;
+}
+
+/**
+ * 指名师傅意图处理
+ * 支持：王建国师傅 / 张师傅 / 姓李的师傅 / 帮我叫个师傅上门
+ */
+function handleWorkerIntent(text, uid) {
+  const workers = getWorkers();
+  if (!workers.length) return ['当前师傅都在忙线上单，稍后为您安排哦～'];
+
+  // 泛指字：出现这些字说明用户没具体指名（如"叫个师傅""派位师傅来"）
+  const GENERIC = '个位名找要叫请这那哪的来派帮点随便';
+  // 提取指名信息
+  let surname = null;
+  const fullNameMatch = text.match(/([\u4e00-\u9fa5]{2,3})师傅/);   // "王建国师傅"
+  const surnameMatch = text.match(/姓([\u4e00-\u9fa5])/);            // "姓李的师傅"
+  const xMatch = text.match(/([\u4e00-\u9fa5])师傅/);                // "张师傅"
+
+  // 1) 说的是真实全名（不含泛指字）→ 直接确认安排
+  if (fullNameMatch && !fullNameMatch[1].split('').some(c => GENERIC.includes(c))) {
+    const hit = workers.find(w => w.name === fullNameMatch[1]);
+    if (hit) { userCtx.delete(uid); return [confirmAssign(hit)]; }
+    surname = fullNameMatch[1][0]; // 全名没找到，按第一个字当姓氏继续找
+  } else if (surnameMatch) {
+    surname = surnameMatch[1];
+  } else if (xMatch && !GENERIC.includes(xMatch[1])) {
+    surname = xMatch[1];
+  }
+
+  // 2) 说了姓氏 → 查该姓师傅
+  if (surname) {
+    const cands = workers.filter(w => w.name.startsWith(surname));
+    if (cands.length === 1) {
+      // 单个：把全名发给用户确认
+      userCtx.set(uid, { type: 'confirm_worker', worker: cands[0] });
+      return [`我们${surname}姓的师傅是${workerDesc(cands[0])}，是您要找的吗？回复"是"就为您安排上门啦～`];
+    }
+    if (cands.length > 1) {
+      // 多个：列出来仔细询问
+      userCtx.set(uid, { type: 'pick_worker', candidates: cands });
+      const list = cands.map((w, i) => `${'①②③④⑤'[i]}${w.name}（${w.skill}，${w.rating}分）`).join('  ');
+      return [`我们姓${surname}的师傅有${cands.length}位：${list}。请问您想预约哪一位呀？回复编号或名字即可～`];
+    }
+    // 没有该姓 → 推荐评分最高的
+    const top = workers[0];
+    userCtx.set(uid, { type: 'confirm_worker', worker: top });
+    return [`抱歉呀，暂时没有姓${surname}的师傅在线。为您推荐平台评分最高的${workerDesc(top)}，可以吗？`];
+  }
+
+  // 3) 泛指"叫个师傅"→ 直接推荐评分最高的
+  const top = workers[0];
+  userCtx.set(uid, { type: 'confirm_worker', worker: top });
+  return ['好嘞！马上为您安排师傅上门～', `为您推荐评分最高的${workerDesc(top)}，师傅可以直接与您电话联系、上门服务。回复"是"立即安排！`];
+}
+
+/* =========================================================
+   关键词规则库（按顺序匹配，命中即停止；每条规则返回消息数组）
+   ========================================================= */
+const RULES = [
+  // ---- 问候 ----
+  { kw: ['你好', '您好', 'hi', 'hello', '在吗', '在么'],
+    replies: ['您好呀～我是阿李工坊的在线客服小李 🐴', '请问您家什么设备需要维修或清洗呢？告诉我品牌+故障现象，我马上为您安排师傅上门。'] },
+
+  // ---- 价格 / 收费 ----
+  { kw: ['多少钱', '价格', '收费', '费用', '贵不', '怎么算钱', '怎么收费', '价目'],
+    replies: ['咱们平台明码标价、先报价后维修，师傅上门检测后出方案，您确认价格了才开工，绝不乱收费～',
+              '同一故障：师傅上门检查 30 元起，简单维修（线路/程序/信号类）106 元/台起，大修 298 元起，具体以现场报价为准哦。'] },
+
+  // ---- 空调 ----
+  { kw: ['空调'],
+    replies: ['空调问题交给我们就好啦！挂机/柜机/中央空调都能修：不制冷、漏水、噪音大、加氟、移机均可上门。',
+              '参考价：挂机空调维修 98 元起、空调深度清洗 149 元起、中央空调清洗 289 元起，点击首页「空调清洗」可直接下单预约～'] },
+
+  // ---- 洗衣机 ----
+  { kw: ['洗衣机'],
+    replies: ['洗衣机不脱水、漏水、异响、打不开门都可以修，波轮/滚筒/洗烘一体机都支持上门检测。',
+              '洗衣机维修 88 元起，深度拆洗除垢 129 元起，预约后师傅会提前电话联系您～'] },
+
+  // ---- 冰箱 / 冰柜 ----
+  { kw: ['冰箱', '冰柜', '冷柜'],
+    replies: ['冰箱不制冷、冷藏室结冰、噪音大、门封条老化都是常见问题，师傅带配件上门一次修好。',
+              '冰箱维修 98 元起，家用/商用冰柜检修 158 元起，冰箱深度清洗 299 元起（高温杀菌除味）。'] },
+
+  // ---- 热水器 / 厨电 ----
+  { kw: ['热水器', '燃气灶', '油烟机', '灶'],
+    replies: ['厨电我们都很在行：热水器不打火、水不热，燃气灶打不着火、松手熄火，油烟机吸力小、异响，都能上门处理。',
+              '燃气热水器安装 158 元起，油烟机拆洗 119 元起，燃气灶维修 88 元起，安全第一，燃气类问题建议尽快报修哦。'] },
+
+  // ---- 电视 ----
+  { kw: ['电视', '显示器'],
+    replies: ['电视黑屏、花屏、没声音、无法开机都可以检测维修，各品牌液晶电视均支持上门。',
+              '电视简单维修 106 元/台起，大修 298 元起，师傅上门后先检测报价再维修。'] },
+
+  // ---- 漏水 / 水管 ----
+  { kw: ['漏水', '渗水', '水管', '水龙头', '阀门', '角阀', '爆管'],
+    replies: ['漏水问题要抓紧处理，避免泡坏家具地板～水管爆裂、龙头滴水、接头渗水、暗管漏水都能修。',
+              '水管维修 68 元起，上门后会先关阀止水再检修，紧急情况建议先关总阀，然后马上预约师傅。'] },
+
+  // ---- 疏通 ----
+  { kw: ['堵', '疏通', '马桶', '地漏', '下水道', '洗手盆', '洗菜盆'],
+    replies: ['马桶堵塞、地漏返味、下水道慢排都可以疏通，师傅带专业疏通机和管道窥镜上门。',
+              '马桶疏通 68 元起（含疏通一次），地漏/洗手盆疏通 58 元起，疏通无效不收费～'] },
+
+  // ---- 电路 ----
+  { kw: ['跳闸', '电路', '断电', '灯具', '灯', '插座', '开关', '短路'],
+    replies: ['家里跳闸、插座没电、灯具不亮、开关失灵都可以处理，师傅持证上岗，用电安全放心交给我们。',
+              '电路检修 78 元起，灯具/开关更换 58 元起（不含灯具材料），先检测后报价。'] },
+
+  // ---- 安装 ----
+  { kw: ['安装', '装一个', '挂架', '新买的'],
+    replies: ['安装服务全能安排：空调、热水器、油烟机、灯具、窗帘、晾衣架、置物架、智能锁等都可以上门安装。',
+              '挂机空调安装 198 元起，燃气热水器安装 158 元起，其他小件安装 49 元起，购买渠道不限都可安装。'] },
+
+  // ---- 清洗 ----
+  { kw: ['清洗', '保洁', '除螨', '消毒', '除垢'],
+    replies: ['家电深度清洗可以预约：油烟机、洗衣机、空调、冰箱都能拆洗除垢杀菌，床垫除螨也支持上门。',
+              '洗衣机拆洗 129 元起，空调清洗 149 元起，床垫除螨 149 元起，清洗后现场验收再确认。'] },
+
+  // ---- 防水 ----
+  { kw: ['防水', '补漏', '外墙', '屋顶', '卫生间渗'],
+    replies: ['外墙、屋顶、卫生间、窗台渗水漏水都可以做防水补漏，高压注浆+涂膜双重工艺，质保安心。',
+              '防水补漏 30 元起（按面积报价），满 1500 元减 150，施工前会出方案和明细报价单。'] },
+
+  // ---- 预约流程 ----
+  { kw: ['怎么预约', '如何预约', '怎么下单', '预约流程', '怎么报修', '如何报修', '下单流程', '怎么弄'],
+    replies: ['预约超简单，三步搞定：① 首页选服务或直接「快速报修」填写设备故障和地址；② 选好师傅提交订单；③ 在线支付后师傅按时上门。',
+              '也可以直接告诉我【设备+故障+地址+电话】，我帮您人工登记预约～'] },
+
+  // ---- 上门时间 ----
+  { kw: ['多久', '多长时间', '什么时候', '几点', '时间', '多快', '紧急', '加急'],
+    replies: ['服务时间每天 9:00-20:00，城区内下单后最快 2 小时上门，预约时段可自选，师傅上门前 30 分钟会电话联系您。',
+              '紧急故障（漏水/跳闸/燃气）可以备注「加急」，优先安排就近师傅。'] },
+
+  // ---- 覆盖城市 ----
+  { kw: ['城市', '地区', '能到', '覆盖', '我住在', '哪个区', '支持哪些'],
+    replies: ['阿李工坊已覆盖全国 300+ 城市，您在首页左上角切换到所在城市，就能查看本地可预约的师傅啦。',
+              '如果搜索不到您的城市，也可以留言告诉我，我们会尽快开通服务网点～'] },
+
+  // ---- 师傅资质 ----
+  { kw: ['专业吗', '靠谱', '水平', '技术', '评分', '评价'],
+    replies: ['咱们师傅全部实名认证持证上岗，平均从业 8 年+，平台可查评分和用户评价，服务不满意支持重新安排。',
+              '您也可以在「预约师傅」页面查看每位师傅的擅长领域、从业年限和评分，挑选心仪的工程师哦～'] },
+
+  // ---- 保修 / 售后 ----
+  { kw: ['保修', '质保', '保障', '售后', '又坏', '再坏', '复发'],
+    replies: ['同性质同部位故障保修 90 天！保修期内再次出现问题，直接找我们免费返修，不用重复付费。',
+              '维修后 7 天内如对效果不满意，也可以申请免费复检，售后有保障～'] },
+
+  // ---- 支付 ----
+  { kw: ['支付', '付款', '怎么给钱', '先付', '货到'],
+    replies: ['支持在线支付（微信/支付宝），也可以师傅上门维修完成验收后再付款，全程平台担保更安全。',
+              '温馨提示：付款前师傅会先出报价单，您确认价格后再支付，绝不预收不明费用～'] },
+
+  // ---- 退款 / 取消 ----
+  { kw: ['退款', '退钱', '取消', '退单', '改时间'],
+    replies: ['师傅上门前都可以免费取消或改期，在「我的订单」里操作即可；已支付未服务的订单取消后原路退回。',
+              '需要我帮您改约时间的话，把订单号和新的时间发我就行～'] },
+
+  // ---- 联系方式 ----
+  { kw: ['电话', '客服热线', '打给'],
+    replies: ['客服热线：023-63153464（9:00-20:00），也可以直接在这里留言，我看到后马上回复您。',
+              '紧急报修建议直接打电话，响应更快哦～'] },
+
+  // ---- 感谢 ----
+  { kw: ['谢谢', '感谢', '辛苦', 'thanks', '好的', '嗯嗯', 'ok'],
+    replies: ['不客气哒～能帮到您就好 😊', '后续有任何维修保养问题随时来找我，祝生活愉快！'] }
+];
+
+// 未命中任何关键词时的兜底回复（轮换使用，避免千篇一律）
+const FALLBACK = [
+  ['收到～为了更快帮您解决问题，麻烦告诉我：① 什么设备/部位出问题 ② 具体故障现象 ③ 您的地址和联系电话，我马上为您安排师傅上门。',
+   '也可以直接在首页挑选对应服务项目下单，明码标价更放心～'],
+  ['好的，已为您记录！请补充一下【设备+故障情况+地址+联系电话】，客服马上为您安排工程师上门检测。',
+   '咱们师傅上门后先检测报价，您确认价格后再维修，同部位故障保修 90 天哦～'],
+  ['明白啦～稍等，我帮您看下对应的服务项目。您也可以先在首页「全部服务」里找找，或拨打客服热线 023-63153464 咨询。']
+];
+
+/** 根据用户提问内容匹配回复 */
+function autoReply(content) {
+  const text = content.toLowerCase();
+  for (const rule of RULES) {
+    if (rule.kw.some(k => text.includes(k))) return rule.replies;
+  }
+  return FALLBACK[fallbackIdx++ % FALLBACK.length];
+}
+let fallbackIdx = 0;
+
+// ============ 我的聊天记录 ============
+router.get('/', (req, res) => {
+  const list = db.prepare('SELECT * FROM messages WHERE user_id = ? ORDER BY id ASC').all(req.user.id);
+  res.json({ code: 0, data: list });
+});
+
+// ============ 发送一条消息（智能客服回复 1~2 条） ============
+router.post('/', (req, res) => {
+  const { content } = req.body || {};
+  if (!content || !content.trim()) return res.json({ code: 1, msg: '消息内容不能为空' });
+
+  const text = content.trim();
+  const uid = req.user.id;
+  db.prepare('INSERT INTO messages (user_id, role, content, created_at) VALUES (?,?,?,?)')
+    .run(uid, 'user', text, now());
+
+  // 1) 上下文续聊（等待用户确认/选择师傅中）优先
+  let replies = handleContext(text, uid);
+  // 2) 指名师傅意图（要点某位师傅 / 叫师傅上门）
+  if (!replies && /师傅|上门服务|叫.*来|派.*来/.test(text)) replies = handleWorkerIntent(text, uid);
+  // 3) 常规关键词匹配
+  if (!replies) replies = autoReply(text);
+
+  const ins = db.prepare('INSERT INTO messages (user_id, role, content, created_at) VALUES (?,?,?,?)');
+  replies.forEach(r => ins.run(uid, 'admin', r, now()));
+
+  res.json({ code: 0, msg: '发送成功', data: { reply: replies[0], replies } });
+});
+
+module.exports = router;

@@ -1,1 +1,241 @@
-LyogPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgIOWcqOe6v+WSqOivou+8muWunuaXtuWvueivneaooeW8j++8iOeUqOaIt+WPkemAgea2iOaBr+WQjuWuouacjeWGjeWbnuWkje+8jOS4jemihOWKoOi9veWOhuWPsuiBiuWkqe+8iQogICDliqDlj7fmjInpkq7mmbrog73liIfmjaLvvJrovpPlhaXmoYbnqbog4oaSIOW8ueW/q+aNt+mdouadv++8m+acieWGheWuuSDihpIg5Y+Y5Y+R6YCBCiAgIOW/q+aNt+mdouadv++8muWbvueJhyAvIOi9rOS6uuW3pSAvIOivhOS7twogICA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gKi8KY29uc3QgYm9keSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdjaGF0Qm9keScpOwpjb25zdCBpbnB1dCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdjaGF0SW5wdXQnKTsKY29uc3QgcGx1c0J0biA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdwbHVzQnRuJyk7CmNvbnN0IGNoYXRBY3Rpb25zID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2NoYXRBY3Rpb25zJyk7CgovLyDlrqLmnI3lpLTlg4/vvJrlj6/niLHnmoTljaHpgJrljIXlt6XlpLTvvIjmlofnlJ/lm77vvIkKY29uc3QgQ1JFV19BVkFUQVIgPSAnaHR0cHM6Ly90cmFlLWFwaS1jbi5tY2hvc3QuZ3VydS9hcGkvaWRlL3YxL3RleHRfdG9faW1hZ2U/cHJvbXB0PScgKwogIGVuY29kZVVSSUNvbXBvbmVudCgn5Y+v54ix5Y2h6YCa5YyF5bel5aS05aS05YOP77yMUeeJiOWchua2pumjjuagvO+8jOaItOm7hOiJsuWuieWFqOW4ve+8jOepv+iTneiJsuW3peijheiDjOW/g++8jOWkp+ecvOedm+W8gOW/g+W+rueske+8jOaJgeW5s+aPkueUu++8jOa3oee0q+iJsuWchuW9ouiDjOaZr++8jOWktOWDj+aehOWbvicpICsKICAnJmltYWdlX3NpemU9c3F1YXJlJzsKCi8qKiDlvZPliY3ml7bpl7QgSEg6TU0gKi8KZnVuY3Rpb24gdGltZVN0cigpIHsKICBjb25zdCBkID0gbmV3IERhdGUoKTsKICBjb25zdCBwID0gbiA9PiBTdHJpbmcobikucGFkU3RhcnQoMiwgJzAnKTsKICByZXR1cm4gYOS7iuWkqSAke3AoZC5nZXRIb3VycygpKX06JHtwKGQuZ2V0TWludXRlcygpKX1gOwp9CgovKiog6L+95Yqg5LiA5p2h5raI5oGv5rCU5rOhICovCmZ1bmN0aW9uIGFwcGVuZE1zZyhyb2xlLCBjb250ZW50LCBpc0ltYWdlID0gZmFsc2UpIHsKICBjb25zdCByb3cgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTsKICByb3cuY2xhc3NOYW1lID0gJ21zZy1yb3cnICsgKHJvbGUgPT09ICd1c2VyJyA/ICcgbWUnIDogJycpOwogIGNvbnN0IGF2YXRhciA9IHJvbGUgPT09ICd1c2VyJyA/ICfwn5mCJyA6IGA8aW1nIHNyYz0iJHtDUkVXX0FWQVRBUn0iIGFsdD0i5YyF5bel5aS05a6i5pyNIj5gOwogIGlmIChpc0ltYWdlKSB7CiAgICByb3cuaW5uZXJIVE1MID0gYAogICAgICA8ZGl2IGNsYXNzPSJtc2ctYXZhdGFyIj4ke2F2YXRhcn08L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0iYnViYmxlIiBzdHlsZT0icGFkZGluZzo0cHg7b3ZlcmZsb3c6aGlkZGVuIj48aW1nIHNyYz0iJHtjb250ZW50fSIgc3R5bGU9Im1heC13aWR0aDoyMDBweDtib3JkZXItcmFkaXVzOjhweDtkaXNwbGF5OmJsb2NrIj48L2Rpdj5gOwogIH0gZWxzZSB7CiAgICByb3cuaW5uZXJIVE1MID0gYAogICAgICA8ZGl2IGNsYXNzPSJtc2ctYXZhdGFyIj4ke2F2YXRhcn08L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0iYnViYmxlIj48L2Rpdj5gOwogICAgcm93LnF1ZXJ5U2VsZWN0b3IoJy5idWJibGUnKS50ZXh0Q29udGVudCA9IGNvbnRlbnQ7CiAgfQogIGJvZHkuYXBwZW5kQ2hpbGQocm93KTsKICBib2R5LnNjcm9sbFRvcCA9IGJvZHkuc2Nyb2xsSGVpZ2h0Owp9CgovKiog5pi+56S6IuWvueaWueato+WcqOi+k+WFpSLmj5DnpLogKi8KZnVuY3Rpb24gc2hvd1R5cGluZygpIHsKICBjb25zdCByb3cgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTsKICByb3cuY2xhc3NOYW1lID0gJ21zZy1yb3cgdHlwaW5nLXJvdyc7CiAgcm93LmlubmVySFRNTCA9IGAKICAgIDxkaXYgY2xhc3M9Im1zZy1hdmF0YXIiPjxpbWcgc3JjPSIke0NSRVdfQVZBVEFSfSIgYWx0PSLljIXlt6XlpLTlrqLmnI0iPjwvZGl2PgogICAgPGRpdiBjbGFzcz0iYnViYmxlIHR5cGluZyI+5a+55pa55q2j5Zyo6L6T5YWlPHNwYW4gY2xhc3M9ImRvdCI+Ljwvc3Bhbj48c3BhbiBjbGFzcz0iZG90Ij4uPC9zcGFuPjxzcGFuIGNsYXNzPSJkb3QiPi48L3NwYW4+PC9kaXY+YDsKICBib2R5LmFwcGVuZENoaWxkKHJvdyk7CiAgYm9keS5zY3JvbGxUb3AgPSBib2R5LnNjcm9sbEhlaWdodDsKICByZXR1cm4gcm93Owp9CgovKiog6aG16Z2i5Yid5aeL5YyW77ya5LuF5qOA5p+l55m75b2V5oCB77yM5LiN6aKE5Yqg6L295Lu75L2V6IGK5aSp6K6w5b2VICovCmFzeW5jIGZ1bmN0aW9uIGluaXQoKSB7CiAgY29uc3QgdXNlciA9IGF3YWl0IGN1cnJlbnRVc2VyKCk7CiAgaWYgKCF1c2VyKSB7CiAgICBzZXRUaW1lb3V0KCgpID0+IHsKICAgICAgbW9kYWwoeyBpY29uOiAn8J+UkScsIHRpdGxlOiAn6K+35YWI55m75b2VJywgdGV4dDogJ+eZu+W9leWQjuWNs+WPr+WcqOe6v+WSqOivou+8jOWuouacjeWunuaXtuS4uuaCqOino+etlCcsIGJ0bjogJ+WOu+eZu+W9lScsIG9uT2s6ICgpID0+IGdvKCdsb2dpbi5odG1sP3JlZGlyZWN0PWNvbnN1bHQuaHRtbCcpIH0pOwogICAgfSwgMzAwKTsKICAgIHJldHVybjsKICB9CiAgLy8g5bey55m75b2V77ya5LiN6aKE5Yqg6L295Y6G5Y+y5a+56K+d77yM562J5b6F55So5oi35Li75Yqo5Y+R6YCBCn0KCmxldCBzZW5kaW5nID0gZmFsc2U7IC8vIOmYsuatoui/nuWPkQoKLyoqIOWPkemAgea2iOaBr++8iOWunuaXtuWvueivne+8mueUqOaIt+WPkemAgeWQjuaZuuiDveWuouacjeaMieWFs+mUruivjeWbnuWkjSAxfjIg5p2h77yJICovCmFzeW5jIGZ1bmN0aW9uIHNlbmQoKSB7CiAgaWYgKHNlbmRpbmcpIHJldHVybjsKICBjb25zdCBjb250ZW50ID0gaW5wdXQudmFsdWUudHJpbSgpOwogIGlmICghY29udGVudCkgcmV0dXJuOwogIHNlbmRpbmcgPSB0cnVlOwogIGlucHV0LnZhbHVlID0gJyc7CiAgdXBkYXRlUGx1c0J0bigpOwogIGFwcGVuZE1zZygndXNlcicsIGNvbnRlbnQpOwoKICBjb25zdCB0eXBpbmdFbCA9IHNob3dUeXBpbmcoKTsKCiAgY29uc3QgciA9IGF3YWl0IGFwaSgnL2FwaS9tZXNzYWdlcycsIHsgbWV0aG9kOiAnUE9TVCcsIGJvZHk6IHsgY29udGVudCB9IH0pOwogIHR5cGluZ0VsLnJlbW92ZSgpOwoKICBpZiAoci5jb2RlID09PSAwKSB7CiAgICBjb25zdCByZXBsaWVzID0gKHIuZGF0YS5yZXBsaWVzICYmIHIuZGF0YS5yZXBsaWVzLmxlbmd0aCA/IHIuZGF0YS5yZXBsaWVzIDogW3IuZGF0YS5yZXBseV0pOwogICAgZm9yIChsZXQgaSA9IDA7IGkgPCByZXBsaWVzLmxlbmd0aDsgaSsrKSB7CiAgICAgIGF3YWl0IHNsZWVwKDYwMCk7CiAgICAgIGFwcGVuZE1zZygnYWRtaW4nLCByZXBsaWVzW2ldKTsKICAgICAgaWYgKGkgPCByZXBsaWVzLmxlbmd0aCAtIDEpIGF3YWl0IHNsZWVwKDMwMCk7CiAgICB9CiAgICBzZW5kaW5nID0gZmFsc2U7CiAgfSBlbHNlIGlmIChyLmNvZGUgPT09IDQwMSkgewogICAgc2VuZGluZyA9IGZhbHNlOwogICAgdG9hc3QoJ+ivt+WFiOeZu+W9lScpOwogICAgc2V0VGltZW91dCgoKSA9PiBnbygnbG9naW4uaHRtbD9yZWRpcmVjdD1jb25zdWx0Lmh0bWwnKSwgODAwKTsKICB9IGVsc2UgewogICAgc2VuZGluZyA9IGZhbHNlOwogICAgdG9hc3Qoci5tc2cpOwogIH0KfQoKLyoqIOW7tuaXtuW3peWFtyAqLwpmdW5jdGlvbiBzbGVlcChtcykgeyByZXR1cm4gbmV3IFByb21pc2UocmVzb2x2ZSA9PiBzZXRUaW1lb3V0KHJlc29sdmUsIG1zKSk7IH0KCi8qID09PT09PT09PT09PT09IOWKoOWPt+aMiemSruaZuuiDveWIh+aNou+8muepuuKGku+8i++8iOW8ueWHuumdouadv++8ie+8jOacieWGheWuueKGkuWPkemAgSA9PT09PT09PT09PT09PSAqLwpmdW5jdGlvbiB1cGRhdGVQbHVzQnRuKCkgewogIGNvbnN0IGhhc0NvbnRlbnQgPSBpbnB1dC52YWx1ZS50cmltKCkubGVuZ3RoID4gMDsKICBpZiAoaGFzQ29udGVudCkgewogICAgcGx1c0J0bi5jbGFzc0xpc3QuYWRkKCdpcy1zZW5kJyk7CiAgICBwbHVzQnRuLnRleHRDb250ZW50ID0gJ+WPkemAgSc7CiAgfSBlbHNlIHsKICAgIHBsdXNCdG4uY2xhc3NMaXN0LnJlbW92ZSgnaXMtc2VuZCcpOwogICAgcGx1c0J0bi50ZXh0Q29udGVudCA9ICfvvIsnOwogIH0KfQoKcGx1c0J0bi5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsICgpID0+IHsKICBjb25zdCBoYXNDb250ZW50ID0gaW5wdXQudmFsdWUudHJpbSgpLmxlbmd0aCA+IDA7CiAgaWYgKGhhc0NvbnRlbnQpIHsKICAgIHNlbmQoKTsKICB9IGVsc2UgewogICAgLy8g5YiH5o2i5b+r5o236Z2i5p2/CiAgICBjb25zdCBpc1Nob3duID0gY2hhdEFjdGlvbnMuc3R5bGUuZGlzcGxheSAhPT0gJ25vbmUnOwogICAgY2hhdEFjdGlvbnMuc3R5bGUuZGlzcGxheSA9IGlzU2hvd24gPyAnbm9uZScgOiAnZmxleCc7CiAgfQp9KTsKCmlucHV0LmFkZEV2ZW50TGlzdGVuZXIoJ2lucHV0JywgKCkgPT4gewogIHVwZGF0ZVBsdXNCdG4oKTsKICAvLyDovpPlhaXlhoXlrrnml7boh6rliqjmlLbotbflv6vmjbfpnaLmnb8KICBpZiAoaW5wdXQudmFsdWUudHJpbSgpLmxlbmd0aCA+IDApIHsKICAgIGNoYXRBY3Rpb25zLnN0eWxlLmRpc3BsYXkgPSAnbm9uZSc7CiAgfQp9KTsKCi8vIOWbnui9puWPkemAgQppbnB1dC5hZGRFdmVudExpc3RlbmVyKCdrZXlkb3duJywgZSA9PiB7CiAgaWYgKGUuaXNDb21wb3NpbmcgfHwgZS5rZXlDb2RlID09PSAyMjkpIHJldHVybjsKICBpZiAoZS5rZXkgPT09ICdFbnRlcicgfHwgZS5rZXlDb2RlID09PSAxMykgewogICAgZS5wcmV2ZW50RGVmYXVsdCgpOwogICAgc2VuZCgpOwogIH0KfSk7CgovKiA9PT09PT09PT09PT09PSDlv6vmjbflip/og73vvJrlm77niYcgLyDovazkurrlt6UgLyDor4Tku7cgPT09PT09PT09PT09PT0gKi8KCi8qKiDlm77niYfvvJrosIPnlKjmlofku7bpgInmi6nlmaggKi8KZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2FjdEltZycpLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgKCkgPT4gewogIGNoYXRBY3Rpb25zLnN0eWxlLmRpc3BsYXkgPSAnbm9uZSc7CiAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2ltZ1BpY2tlcicpLmNsaWNrKCk7Cn0pOwoKZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2ltZ1BpY2tlcicpLmFkZEV2ZW50TGlzdGVuZXIoJ2NoYW5nZScsIChlKSA9PiB7CiAgY29uc3QgZmlsZSA9IGUudGFyZ2V0LmZpbGVzWzBdOwogIGlmICghZmlsZSkgcmV0dXJuOwogIC8vIOacrOWcsOmihOiniO+8iOS4jeWunumZheS4iuS8oO+8jOebtOaOpeeUqCBVUkwuY3JlYXRlT2JqZWN0VVJMIOaYvuekuu+8iQogIGNvbnN0IHVybCA9IFVSTC5jcmVhdGVPYmplY3RVUkwoZmlsZSk7CiAgYXBwZW5kTXNnKCd1c2VyJywgdXJsLCB0cnVlKTsKICAvLyDlrqLmnI3lm57lpI3vvIjmj5DnpLrnlKjmiLflm77niYflt7LmlLbliLDvvIkKICBzZXRUaW1lb3V0KCgpID0+IHsKICAgIGNvbnN0IHR5cGluZ0VsID0gc2hvd1R5cGluZygpOwogICAgc2V0VGltZW91dChhc3luYyAoKSA9PiB7CiAgICAgIHR5cGluZ0VsLnJlbW92ZSgpOwogICAgICBhcHBlbmRNc2coJ2FkbWluJywgJ/Cfk7cg5bey5pS25Yiw5oKo55qE5Zu+54mH77yM6K+36Zeu6ZyA6KaB5oiR5Lus57u05L+u5oiW5riF5rSX55qE5a6255S15piv5LuA5LmI77yf6K+35Y+R6YCB44CQ5Zyw5Z2AK+iBlOezu+aWueW8jyvnu7Tkv67kuqflk4HjgJHnu5nmgqjpooTnuqblt6XnqIvluIjkuIrpl6jmnI3liqHjgIInKTsKICAgIH0sIDgwMCk7CiAgfSwgNTAwKTsKICAvLyDmuIXnqbogZmlsZSBpbnB1dCDorqnnlKjmiLflj6/ku6Xlho3mrKHpgInmi6nlkIzkuIDmlofku7YKICBlLnRhcmdldC52YWx1ZSA9ICcnOwp9KTsKCi8qKiDovazkurrlt6XvvJrlj5HpgIHkuIDmnaEi6L2s5Lq65bel5a6i5pyNIua2iOaBr++8jOWuouacjeWbnuWkjSLlt7LkuLrmgqjovazmjqUiICovCmRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdhY3RIdW1hbicpLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgYXN5bmMgKCkgPT4gewogIGNoYXRBY3Rpb25zLnN0eWxlLmRpc3BsYXkgPSAnbm9uZSc7CiAgaWYgKHNlbmRpbmcpIHJldHVybjsKICBzZW5kaW5nID0gdHJ1ZTsKICBhcHBlbmRNc2coJ3VzZXInLCAn8J+OpyDovazkurrlt6XlrqLmnI0nKTsKICBjb25zdCB0eXBpbmdFbCA9IHNob3dUeXBpbmcoKTsKICBhd2FpdCBzbGVlcCg4MDApOwogIHR5cGluZ0VsLnJlbW92ZSgpOwogIGFwcGVuZE1zZygnYWRtaW4nLCAn5oKo5aW977yM5bey5Li65oKo6L2s5o6l5Lq65bel5a6i5pyN44CC5b2T5YmN5o6S6Zif5Lq65pWw6L6D5bCR77yM5bel56iL5biI5bCG5ZyoIDEg5YiG6ZKf5YaF5LiO5oKo5a+55o6l77yM6K+356iN5YCZIOKPsycpOwogIHNlbmRpbmcgPSBmYWxzZTsKfSk7CgovKiog6K+E5Lu377ya5by556qXIDUg5pif6K+E5Lu3ICovCmRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdhY3RSYXRlJykuYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCAoKSA9PiB7CiAgY2hhdEFjdGlvbnMuc3R5bGUuZGlzcGxheSA9ICdub25lJzsKICBzaG93UmF0ZU1vZGFsKCk7Cn0pOwoKZnVuY3Rpb24gc2hvd1JhdGVNb2RhbCgpIHsKICBjb25zdCBtYXNrID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZGl2Jyk7CiAgbWFzay5jbGFzc05hbWUgPSAncmF0ZS1tYXNrJzsKICBtYXNrLmlubmVySFRNTCA9IGAKICAgIDxkaXYgY2xhc3M9InJhdGUtYm94Ij4KICAgICAgPGRpdiBjbGFzcz0icmF0ZS10aXRsZSI+4q2QIOacjeWKoeivhOS7tzwvZGl2PgogICAgICA8ZGl2IGNsYXNzPSJyYXRlLXN1YiI+5oKo5a+55pys5qyh5ZKo6K+i5pyN5Yqh5ruh5oSP5ZCX77yfPC9kaXY+CiAgICAgIDxkaXYgY2xhc3M9InJhdGUtc3RhcnMiIGlkPSJyYXRlU3RhcnMiPgogICAgICAgIDxzcGFuIGRhdGEtdj0iMSI+4q2QPC9zcGFuPgogICAgICAgIDxzcGFuIGRhdGEtdj0iMiI+4q2QPC9zcGFuPgogICAgICAgIDxzcGFuIGRhdGEtdj0iMyI+4q2QPC9zcGFuPgogICAgICAgIDxzcGFuIGRhdGEtdj0iNCI+4q2QPC9zcGFuPgogICAgICAgIDxzcGFuIGRhdGEtdj0iNSI+4q2QPC9zcGFuPgogICAgICA8L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0icmF0ZS1hY3Rpb25zIj4KICAgICAgICA8YnV0dG9uIGNsYXNzPSJjYW5jZWwiIGlkPSJyYXRlQ2FuY2VsIj7lj5bmtog8L2J1dHRvbj4KICAgICAgICA8YnV0dG9uIGNsYXNzPSJzdWJtaXQiIGlkPSJyYXRlU3VibWl0Ij7mj5DkuqTor4Tku7c8L2J1dHRvbj4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj5gOwogIGRvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQobWFzayk7CgogIGNvbnN0IHN0YXJzID0gbWFzay5xdWVyeVNlbGVjdG9yQWxsKCcjcmF0ZVN0YXJzIHNwYW4nKTsKICBsZXQgc2VsZWN0ZWQgPSAwOwogIHN0YXJzLmZvckVhY2goc3RhciA9PiB7CiAgICBzdGFyLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgKCkgPT4gewogICAgICBjb25zdCB2ID0gcGFyc2VJbnQoc3Rhci5kYXRhc2V0LnYpOwogICAgICBzZWxlY3RlZCA9IHY7CiAgICAgIHN0YXJzLmZvckVhY2goKHMsIGkpID0+IHMuY2xhc3NMaXN0LnRvZ2dsZSgnYWN0aXZlJywgaSA8IHYpKTsKICAgIH0pOwogIH0pOwoKICBtYXNrLnF1ZXJ5U2VsZWN0b3IoJyNyYXRlQ2FuY2VsJykuYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCAoKSA9PiBtYXNrLnJlbW92ZSgpKTsKICBtYXNrLnF1ZXJ5U2VsZWN0b3IoJyNyYXRlU3VibWl0JykuYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCAoKSA9PiB7CiAgICBpZiAoc2VsZWN0ZWQgPT09IDApIHsKICAgICAgdG9hc3QoJ+ivt+WFiOmAieaLqeivhOWIhicpOwogICAgICByZXR1cm47CiAgICB9CiAgICBtYXNrLnJlbW92ZSgpOwogICAgLy8g5Zyo6IGK5aSp5Yy65pi+56S66K+E5Lu35raI5oGvCiAgICBhcHBlbmRNc2coJ3VzZXInLCBg8J+SrCDmiJHlr7nmnKzmrKHmnI3liqHnu5nkuoYgJHtzZWxlY3RlZH0g6aKX5pifICR7J+KtkCcucmVwZWF0KHNlbGVjdGVkKX1gKTsKICAgIHNldFRpbWVvdXQoYXN5bmMgKCkgPT4gewogICAgICBjb25zdCB0eXBpbmdFbCA9IHNob3dUeXBpbmcoKTsKICAgICAgYXdhaXQgc2xlZXAoNzAwKTsKICAgICAgdHlwaW5nRWwucmVtb3ZlKCk7CiAgICAgIGNvbnN0IHJlcGx5ID0gc2VsZWN0ZWQgPj0gNAogICAgICAgID8gYOaEn+iwouaCqOeahCAke3NlbGVjdGVkfSDmmJ/lpb3or4TvvIHmgqjnmoTmu6HmhI/mmK/miJHku6zmnIDlpKfnmoTliqjlipsg8J+Mn1xu5aaC5pyJ6ZyA6KaB6ZqP5pe26IGU57O75oiR5Lus77yM56Wd5oKo55Sf5rS75oSJ5b+r77yBYAogICAgICAgIDogYOaEn+iwouaCqOeahOWPjemmiO+8jOaIkeS7rOS8muaMgee7reaUuei/m+acjeWKoei0qOmHj+OAguWuouacjeS4u+euoeWwhumHjeeCueWFs+azqOaCqOeahOacrOasoeWSqOivou+8jOe7meaCqOW4puadpeS4jeWlveeahOS9k+mqjOaIkeS7rOa3seaEn+atieaEjyDwn5mPYDsKICAgICAgYXBwZW5kTXNnKCdhZG1pbicsIHJlcGx5KTsKICAgIH0sIDMwMCk7CiAgfSk7Cn0KCmluaXQoKTsK
+/* =========================================================
+   在线咨询：实时对话模式（用户发送消息后客服再回复，不预加载历史聊天）
+   加号按钮智能切换：输入框空 → 弹快捷面板；有内容 → 变发送
+   快捷面板：图片 / 转人工 / 评价
+   ========================================================= */
+const body = document.getElementById('chatBody');
+const input = document.getElementById('chatInput');
+const plusBtn = document.getElementById('plusBtn');
+const chatActions = document.getElementById('chatActions');
+
+// 客服头像：可爱的卡通包工头（文生图）
+const CREW_AVATAR = 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=' +
+  encodeURIComponent('可爱卡通包工头头像，Q版圆润风格，戴黄色安全帽，穿蓝色工装背心，大眼睛开心微笑，扁平插画，淡紫色圆形背景，头像构图') +
+  '&image_size=square';
+
+/** 当前时间 HH:MM */
+function timeStr() {
+  const d = new Date();
+  const p = n => String(n).padStart(2, '0');
+  return `今天 ${p(d.getHours())}:${p(d.getMinutes())}`;
+}
+
+/** 追加一条消息气泡 */
+function appendMsg(role, content, isImage = false) {
+  const row = document.createElement('div');
+  row.className = 'msg-row' + (role === 'user' ? ' me' : '');
+  const avatar = role === 'user' ? '🙂' : `<img src="${CREW_AVATAR}" alt="包工头客服">`;
+  if (isImage) {
+    row.innerHTML = `
+      <div class="msg-avatar">${avatar}</div>
+      <div class="bubble" style="padding:4px;overflow:hidden"><img src="${content}" style="max-width:200px;border-radius:8px;display:block"></div>`;
+  } else {
+    row.innerHTML = `
+      <div class="msg-avatar">${avatar}</div>
+      <div class="bubble"></div>`;
+    row.querySelector('.bubble').textContent = content;
+  }
+  body.appendChild(row);
+  body.scrollTop = body.scrollHeight;
+}
+
+/** 显示"对方正在输入"提示 */
+function showTyping() {
+  const row = document.createElement('div');
+  row.className = 'msg-row typing-row';
+  row.innerHTML = `
+    <div class="msg-avatar"><img src="${CREW_AVATAR}" alt="包工头客服"></div>
+    <div class="bubble typing">对方正在输入<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></div>`;
+  body.appendChild(row);
+  body.scrollTop = body.scrollHeight;
+  return row;
+}
+
+/** 页面初始化：仅检查登录态，不预加载任何聊天记录 */
+async function init() {
+  const user = await currentUser();
+  if (!user) {
+    setTimeout(() => {
+      modal({ icon: '🔑', title: '请先登录', text: '登录后即可在线咨询，客服实时为您解答', btn: '去登录', onOk: () => go('login.html?redirect=consult.html') });
+    }, 300);
+    return;
+  }
+  // 已登录：不预加载历史对话，等待用户主动发送
+}
+
+let sending = false; // 防止连发
+
+/** 发送消息（实时对话：用户发送后智能客服按关键词回复 1~2 条） */
+async function send() {
+  if (sending) return;
+  const content = input.value.trim();
+  if (!content) return;
+  sending = true;
+  input.value = '';
+  updatePlusBtn();
+  appendMsg('user', content);
+
+  const typingEl = showTyping();
+
+  const r = await api('/api/messages', { method: 'POST', body: { content } });
+  typingEl.remove();
+
+  if (r.code === 0) {
+    const replies = (r.data.replies && r.data.replies.length ? r.data.replies : [r.data.reply]);
+    for (let i = 0; i < replies.length; i++) {
+      await sleep(600);
+      appendMsg('admin', replies[i]);
+      if (i < replies.length - 1) await sleep(300);
+    }
+    sending = false;
+  } else if (r.code === 401) {
+    sending = false;
+    toast('请先登录');
+    setTimeout(() => go('login.html?redirect=consult.html'), 800);
+  } else {
+    sending = false;
+    toast(r.msg);
+  }
+}
+
+/** 延时工具 */
+function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
+
+/* ============== 加号按钮智能切换：空→＋（弹出面板），有内容→发送 ============== */
+function updatePlusBtn() {
+  const hasContent = input.value.trim().length > 0;
+  if (hasContent) {
+    plusBtn.classList.add('is-send');
+    plusBtn.textContent = '发送';
+  } else {
+    plusBtn.classList.remove('is-send');
+    plusBtn.textContent = '＋';
+  }
+}
+
+plusBtn.addEventListener('click', () => {
+  const hasContent = input.value.trim().length > 0;
+  if (hasContent) {
+    send();
+  } else {
+    // 切换快捷面板
+    const isShown = chatActions.style.display !== 'none';
+    chatActions.style.display = isShown ? 'none' : 'flex';
+  }
+});
+
+input.addEventListener('input', () => {
+  updatePlusBtn();
+  // 输入内容时自动收起快捷面板
+  if (input.value.trim().length > 0) {
+    chatActions.style.display = 'none';
+  }
+});
+
+// 回车发送
+input.addEventListener('keydown', e => {
+  if (e.isComposing || e.keyCode === 229) return;
+  if (e.key === 'Enter' || e.keyCode === 13) {
+    e.preventDefault();
+    send();
+  }
+});
+
+/* ============== 快捷功能：图片 / 转人工 / 评价 ============== */
+
+/** 图片：调用文件选择器 */
+document.getElementById('actImg').addEventListener('click', () => {
+  chatActions.style.display = 'none';
+  document.getElementById('imgPicker').click();
+});
+
+document.getElementById('imgPicker').addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  // 本地预览（不实际上传，直接用 URL.createObjectURL 显示）
+  const url = URL.createObjectURL(file);
+  appendMsg('user', url, true);
+  // 客服回复（提示用户图片已收到）
+  setTimeout(() => {
+    const typingEl = showTyping();
+    setTimeout(async () => {
+      typingEl.remove();
+      appendMsg('admin', '📷 已收到您的图片，请问需要我们维修或清洗的家电是什么？请发送【地址+联系方式+维修产品】给您预约工程师上门服务。');
+    }, 800);
+  }, 500);
+  // 清空 file input 让用户可以再次选择同一文件
+  e.target.value = '';
+});
+
+/** 转人工：发送一条"转人工客服"消息，客服回复"已为您转接" */
+document.getElementById('actHuman').addEventListener('click', async () => {
+  chatActions.style.display = 'none';
+  if (sending) return;
+  sending = true;
+  appendMsg('user', '🎧 转人工客服');
+  const typingEl = showTyping();
+  await sleep(800);
+  typingEl.remove();
+  appendMsg('admin', '您好，已为您转接人工客服。当前排队人数较少，工程师将在 1 分钟内与您对接，请稍候 ⏳');
+  sending = false;
+});
+
+/** 评价：弹窗 5 星评价 */
+document.getElementById('actRate').addEventListener('click', () => {
+  chatActions.style.display = 'none';
+  showRateModal();
+});
+
+function showRateModal() {
+  const mask = document.createElement('div');
+  mask.className = 'rate-mask';
+  mask.innerHTML = `
+    <div class="rate-box">
+      <div class="rate-title">⭐ 服务评价</div>
+      <div class="rate-sub">您对本次咨询服务满意吗？</div>
+      <div class="rate-stars" id="rateStars">
+        <span data-v="1">⭐</span>
+        <span data-v="2">⭐</span>
+        <span data-v="3">⭐</span>
+        <span data-v="4">⭐</span>
+        <span data-v="5">⭐</span>
+      </div>
+      <div class="rate-actions">
+        <button class="cancel" id="rateCancel">取消</button>
+        <button class="submit" id="rateSubmit">提交评价</button>
+      </div>
+    </div>`;
+  document.body.appendChild(mask);
+
+  const stars = mask.querySelectorAll('#rateStars span');
+  let selected = 0;
+  stars.forEach(star => {
+    star.addEventListener('click', () => {
+      const v = parseInt(star.dataset.v);
+      selected = v;
+      stars.forEach((s, i) => s.classList.toggle('active', i < v));
+    });
+  });
+
+  mask.querySelector('#rateCancel').addEventListener('click', () => mask.remove());
+  mask.querySelector('#rateSubmit').addEventListener('click', () => {
+    if (selected === 0) {
+      toast('请先选择评分');
+      return;
+    }
+    mask.remove();
+    // 在聊天区显示评价消息
+    appendMsg('user', `💬 我对本次服务给了 ${selected} 颗星 ${'⭐'.repeat(selected)}`);
+    setTimeout(async () => {
+      const typingEl = showTyping();
+      await sleep(700);
+      typingEl.remove();
+      const reply = selected >= 4
+        ? `感谢您的 ${selected} 星好评！您的满意是我们最大的动力 🌟\n如有需要随时联系我们，祝您生活愉快！`
+        : `感谢您的反馈，我们会持续改进服务质量。客服主管将重点关注您的本次咨询，给您带来不好的体验我们深感歉意 🙏`;
+      appendMsg('admin', reply);
+    }, 300);
+  });
+}
+
+init();

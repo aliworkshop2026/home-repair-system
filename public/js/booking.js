@@ -1,1 +1,102 @@
-LyogPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgIOmihOe6pumhtemdou+8mumAieaLqee7tOS/ruW4iOWChSArIOehruiupOS4iumXqOaXtumXtCAtPiDmj5DkuqTpooTnuqYKICAgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09ICovCmNvbnN0IG9yZGVySWQgPSBxcygnaWQnKTsKbGV0IHNlbGVjdGVkV29ya2VyID0gbnVsbDsKbGV0IG9yZGVyID0gbnVsbDsKCi8qKiDml7bpl7TmoLzlvI/ljJbkuLogaW5wdXQg5Y+v55So5YC8ICovCmZ1bmN0aW9uIHRvSW5wdXRWYWx1ZSh0KSB7CiAgaWYgKCF0KSByZXR1cm4gJyc7CiAgcmV0dXJuIHQucmVwbGFjZSgnICcsICdUJykuc2xpY2UoMCwgMTYpOwp9CgovKiog55Sf5oiQ5pyq5p2lIDMg5aSp55qE5b+r5o235pe25q61ICovCmZ1bmN0aW9uIHF1aWNrVGltZXMoKSB7CiAgY29uc3Qgc2xvdHMgPSBbJzA5OjAwJywgJzExOjAwJywgJzE0OjAwJywgJzE2OjAwJywgJzE4OjMwJ107CiAgY29uc3QgYXJyID0gW107CiAgY29uc3QgcCA9IG4gPT4gU3RyaW5nKG4pLnBhZFN0YXJ0KDIsICcwJyk7CiAgZm9yIChsZXQgZGF5ID0gMDsgZGF5IDwgMzsgZGF5KyspIHsKICAgIGNvbnN0IGQgPSBuZXcgRGF0ZShEYXRlLm5vdygpICsgZGF5ICogODY0MDAwMDApOwogICAgY29uc3QgZGF0ZSA9IGAke2QuZ2V0RnVsbFllYXIoKX0tJHtwKGQuZ2V0TW9udGgoKSArIDEpfS0ke3AoZC5nZXREYXRlKCkpfWA7CiAgICBzbG90cy5mb3JFYWNoKHQgPT4gYXJyLnB1c2goeyBkYXRlLCB0aW1lOiB0LCBsYWJlbDogZGF5ID09PSAwID8gJ+S7iuWkqSAnICsgdCA6IGRheSA9PT0gMSA/ICfmmI7lpKkgJyArIHQgOiBg5ZCO5aSpICR7dH1gIH0pKTsKICB9CiAgcmV0dXJuIGFycjsKfQoKLyoqIOWKoOi9veiuouWNleivpuaDhSAqLwphc3luYyBmdW5jdGlvbiBsb2FkT3JkZXIoKSB7CiAgY29uc3QgdXNlciA9IGF3YWl0IHJlcXVpcmVMb2dpbigpOwogIGlmICghdXNlcikgcmV0dXJuOwogIGNvbnN0IHIgPSBhd2FpdCBhcGkoJy9hcGkvb3JkZXJzLycgKyBvcmRlcklkKTsKICBpZiAoci5jb2RlICE9PSAwKSB7IHRvYXN0KHIubXNnKTsgcmV0dXJuOyB9CiAgb3JkZXIgPSByLmRhdGE7CiAgaWYgKG9yZGVyLnN0YXR1cyAhPT0gMCkgewogICAgdG9hc3QoJ+ivpeiuouWNleW3sumihOe6picpOwogICAgc2V0VGltZW91dCgoKSA9PiBnbygnb3JkZXJzLmh0bWw/dGFiPXJlcGFpcicpLCA4MDApOwogICAgcmV0dXJuOwogIH0KICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnb0ltZycpLnNyYyA9IG9yZGVyLnNlcnZpY2VfaW1hZ2UgfHwgJyc7CiAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ29JbWcnKS5vbmVycm9yID0gZnVuY3Rpb24gKCkgeyB0aGlzLnN0eWxlLnZpc2liaWxpdHkgPSAnaGlkZGVuJzsgfTsKICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnb05hbWUnKS50ZXh0Q29udGVudCA9IG9yZGVyLnNlcnZpY2VfbmFtZSB8fCAn6Ieq5Yqp5oql5L+uJzsKICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnb0ZhdWx0JykudGV4dENvbnRlbnQgPSAn5pWF6Zqc77yaJyArIChvcmRlci5mYXVsdF9kZXNjIHx8ICcnKTsKICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnb0FkZHInKS50ZXh0Q29udGVudCA9ICflnLDlnYDvvJonICsgKG9yZGVyLmFkZHJlc3MgfHwgJycpOwogIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdhcHBvaW50VGltZScpLnZhbHVlID0gdG9JbnB1dFZhbHVlKG9yZGVyLmV4cGVjdF90aW1lKSB8fCAnJzsKCiAgLy8g5b+r5o235pe25q61CiAgY29uc3QgcWIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncXVpY2tUaW1lcycpOwogIHFiLmlubmVySFRNTCA9IHF1aWNrVGltZXMoKS5tYXAoKHEsIGkpID0+CiAgICBgPGJ1dHRvbiB0eXBlPSJidXR0b24iIGNsYXNzPSJidG4tZ3JheSIgZGF0YS1pPSIke2l9IiBzdHlsZT0ibWFyZ2luOjJweCAwIj4ke3EubGFiZWx9PC9idXR0b24+YCkuam9pbignJyk7CiAgcWIucXVlcnlTZWxlY3RvckFsbCgnYnV0dG9uJykuZm9yRWFjaCgoYiwgaSkgPT4gewogICAgYi5vbmNsaWNrID0gKCkgPT4gewogICAgICBjb25zdCBxID0gcXVpY2tUaW1lcygpW051bWJlcihiLmRhdGFzZXQuaSldOwogICAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYXBwb2ludFRpbWUnKS52YWx1ZSA9IGAke3EuZGF0ZX1UJHtxLnRpbWV9YDsKICAgICAgcWIucXVlcnlTZWxlY3RvckFsbCgnYnV0dG9uJykuZm9yRWFjaCh4ID0+IHguY2xhc3NMaXN0LnJlbW92ZSgnYnRuLXBsYWluJykpOwogICAgICBiLmNsYXNzTGlzdC5yZW1vdmUoJ2J0bi1ncmF5Jyk7CiAgICAgIGIuY2xhc3NMaXN0LmFkZCgnYnRuLXBsYWluJyk7CiAgICB9OwogIH0pOwp9CgovKiog5Yqg6L295Zyo5bKX5biI5YKFICovCmFzeW5jIGZ1bmN0aW9uIGxvYWRXb3JrZXJzKCkgewogIGNvbnN0IHIgPSBhd2FpdCBhcGkoJy9hcGkvd29ya2VycycpOwogIGNvbnN0IGxpc3QgPSByLmRhdGEgfHwgW107CiAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3dvcmtlckxpc3QnKS5pbm5lckhUTUwgPSBsaXN0Lm1hcCh3ID0+IGAKICAgIDxkaXYgY2xhc3M9Indvcmtlci1pdGVtIiBkYXRhLWlkPSIke3cuaWR9Ij4KICAgICAgPGRpdiBjbGFzcz0idy1hdmF0YXIiPiR7dy5hdmF0YXJ9PC9kaXY+CiAgICAgIDxkaXYgY2xhc3M9InctaW5mbyI+CiAgICAgICAgPGI+JHt3Lm5hbWV9PC9iPgogICAgICAgIDxwPuKtkCAke3cucmF0aW5nfSDliIYgwrcg5LuO5LiaICR7dy55ZWFyc30g5bm0IMK3IOe0r+iuoeaOpeWNlSAke3cub3JkZXJfY291bnR9PC9wPgogICAgICAgIDxwPuaThemVv++8miR7dy5za2lsbH08L3A+CiAgICAgIDwvZGl2PgogICAgICA8ZGl2IGNsYXNzPSJyYWRpbyI+PC9kaXY+CiAgICA8L2Rpdj5gKS5qb2luKCcnKTsKICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCcud29ya2VyLWl0ZW0nKS5mb3JFYWNoKGVsID0+IHsKICAgIGVsLm9uY2xpY2sgPSAoKSA9PiB7CiAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJy53b3JrZXItaXRlbScpLmZvckVhY2goeCA9PiB4LmNsYXNzTGlzdC5yZW1vdmUoJ29uJykpOwogICAgICBlbC5jbGFzc0xpc3QuYWRkKCdvbicpOwogICAgICBzZWxlY3RlZFdvcmtlciA9IE51bWJlcihlbC5kYXRhc2V0LmlkKTsKICAgIH07CiAgfSk7Cn0KCi8qKiDnoa7orqTpooTnuqYgKi8KZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2NvbmZpcm1CdG4nKS5vbmNsaWNrID0gYXN5bmMgKCkgPT4gewogIGNvbnN0IGFwcG9pbnRfdGltZSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdhcHBvaW50VGltZScpLnZhbHVlLnJlcGxhY2UoJ1QnLCAnICcpOwogIGlmICghc2VsZWN0ZWRXb3JrZXIpIHJldHVybiB0b2FzdCgn6K+36YCJ5oup5LiA5L2N57u05L+u5biI5YKFJyk7CiAgaWYgKCFhcHBvaW50X3RpbWUpIHJldHVybiB0b2FzdCgn6K+36YCJ5oup6aKE57qm5LiK6Zeo5pe26Ze0Jyk7CgogIGNvbnN0IHIgPSBhd2FpdCBhcGkoYC9hcGkvb3JkZXJzLyR7b3JkZXJJZH0vYm9va2AsIHsKICAgIG1ldGhvZDogJ1BPU1QnLAogICAgYm9keTogeyB3b3JrZXJfaWQ6IHNlbGVjdGVkV29ya2VyLCBhcHBvaW50X3RpbWUgfQogIH0pOwogIGlmIChyLmNvZGUgPT09IDApIHsKICAgIG1vZGFsKHsgaWNvbjogJ+KchScsIHRpdGxlOiAn6aKE57qm5oiQ5YqfJywgdGV4dDogJ+ivt+WujOaIkOaooeaLn+aUr+S7mO+8jOW4iOWCheWwhuaMiemihOe6puaXtumXtOS4iumXqCcsIGJ0bjogJ+eri+WNs+aUr+S7mCcsIG9uT2s6ICgpID0+IGdvKCdwYXkuaHRtbD9pZD0nICsgb3JkZXJJZCkgfSk7CiAgfSBlbHNlIHsKICAgIHRvYXN0KHIubXNnKTsKICB9Cn07Cgpsb2FkT3JkZXIoKTsKbG9hZFdvcmtlcnMoKTsK
+/* =========================================================
+   预约页面：选择维修师傅 + 确认上门时间 -> 提交预约
+   ========================================================= */
+const orderId = qs('id');
+let selectedWorker = null;
+let order = null;
+
+/** 时间格式化为 input 可用值 */
+function toInputValue(t) {
+  if (!t) return '';
+  return t.replace(' ', 'T').slice(0, 16);
+}
+
+/** 生成未来 3 天的快捷时段 */
+function quickTimes() {
+  const slots = ['09:00', '11:00', '14:00', '16:00', '18:30'];
+  const arr = [];
+  const p = n => String(n).padStart(2, '0');
+  for (let day = 0; day < 3; day++) {
+    const d = new Date(Date.now() + day * 86400000);
+    const date = `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+    slots.forEach(t => arr.push({ date, time: t, label: day === 0 ? '今天 ' + t : day === 1 ? '明天 ' + t : `后天 ${t}` }));
+  }
+  return arr;
+}
+
+/** 加载订单详情 */
+async function loadOrder() {
+  const user = await requireLogin();
+  if (!user) return;
+  const r = await api('/api/orders/' + orderId);
+  if (r.code !== 0) { toast(r.msg); return; }
+  order = r.data;
+  if (order.status !== 0) {
+    toast('该订单已预约');
+    setTimeout(() => go('orders.html?tab=repair'), 800);
+    return;
+  }
+  document.getElementById('oImg').src = order.service_image || '';
+  document.getElementById('oImg').onerror = function () { this.style.visibility = 'hidden'; };
+  document.getElementById('oName').textContent = order.service_name || '自助报修';
+  document.getElementById('oFault').textContent = '故障：' + (order.fault_desc || '');
+  document.getElementById('oAddr').textContent = '地址：' + (order.address || '');
+  document.getElementById('appointTime').value = toInputValue(order.expect_time) || '';
+
+  // 快捷时段
+  const qb = document.getElementById('quickTimes');
+  qb.innerHTML = quickTimes().map((q, i) =>
+    `<button type="button" class="btn-gray" data-i="${i}" style="margin:2px 0">${q.label}</button>`).join('');
+  qb.querySelectorAll('button').forEach((b, i) => {
+    b.onclick = () => {
+      const q = quickTimes()[Number(b.dataset.i)];
+      document.getElementById('appointTime').value = `${q.date}T${q.time}`;
+      qb.querySelectorAll('button').forEach(x => x.classList.remove('btn-plain'));
+      b.classList.remove('btn-gray');
+      b.classList.add('btn-plain');
+    };
+  });
+}
+
+/** 加载在岗师傅 */
+async function loadWorkers() {
+  const r = await api('/api/workers');
+  const list = r.data || [];
+  document.getElementById('workerList').innerHTML = list.map(w => `
+    <div class="worker-item" data-id="${w.id}">
+      <div class="w-avatar">${w.avatar}</div>
+      <div class="w-info">
+        <b>${w.name}</b>
+        <p>⭐ ${w.rating} 分 · 从业 ${w.years} 年 · 累计接单 ${w.order_count}</p>
+        <p>擅长：${w.skill}</p>
+      </div>
+      <div class="radio"></div>
+    </div>`).join('');
+  document.querySelectorAll('.worker-item').forEach(el => {
+    el.onclick = () => {
+      document.querySelectorAll('.worker-item').forEach(x => x.classList.remove('on'));
+      el.classList.add('on');
+      selectedWorker = Number(el.dataset.id);
+    };
+  });
+}
+
+/** 确认预约 */
+document.getElementById('confirmBtn').onclick = async () => {
+  const appoint_time = document.getElementById('appointTime').value.replace('T', ' ');
+  if (!selectedWorker) return toast('请选择一位维修师傅');
+  if (!appoint_time) return toast('请选择预约上门时间');
+
+  const r = await api(`/api/orders/${orderId}/book`, {
+    method: 'POST',
+    body: { worker_id: selectedWorker, appoint_time }
+  });
+  if (r.code === 0) {
+    modal({ icon: '✅', title: '预约成功', text: '请完成模拟支付，师傅将按预约时间上门', btn: '立即支付', onOk: () => go('pay.html?id=' + orderId) });
+  } else {
+    toast(r.msg);
+  }
+};
+
+loadOrder();
+loadWorkers();
