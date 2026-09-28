@@ -56,9 +56,19 @@ function initDatabase() {
     nickname TEXT,                           -- 昵称
     phone TEXT,                              -- 手机号
     avatar TEXT DEFAULT '😊',                -- 头像（表情）
+    gender TEXT,                             -- 性别（男/女/保密）
+    birthday TEXT,                           -- 生日 YYYY-MM-DD
     status INTEGER DEFAULT 1,                -- 1正常 0禁用
     created_at TEXT
   );
+  `);
+
+  // 兼容旧数据库：users 表缺 gender/birthday 列时自动补列（否则保存性别/生日会报"响应失败"）
+  const userCols = db.prepare('PRAGMA table_info(users)').all().map(c => c.name);
+  if (!userCols.includes('gender')) db.exec('ALTER TABLE users ADD COLUMN gender TEXT');
+  if (!userCols.includes('birthday')) db.exec('ALTER TABLE users ADD COLUMN birthday TEXT');
+
+  db.exec(`
 
   -- 管理员表
   CREATE TABLE IF NOT EXISTS admins (
