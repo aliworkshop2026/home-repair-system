@@ -1,0 +1,8 @@
+# Replit 自动启动配置
+# Node.js 22+ 通过 --experimental-sqlite 启用 node:sqlite 模块
+run = "node --experimental-sqlite server.js"
+hidden = ["node_modules"]
+entrypoint = "server.js"
+
+[nix]
+channel = "stable-23.05"
