@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>在线报修 - 阿李工坊</title>
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+<div class="phone no-tab">
+  <div class="nav-bar"><a class="back" href="javascript:back()">‹</a><span>在线报修</span></div>
+
+  <!-- 选择的服务 -->
+  <div class="card" id="srvCard" style="display:none">
+    <div style="display:flex;gap:12px;align-items:center">
+      <img id="srvImg" style="width:64px;height:64px;border-radius:10px;object-fit:cover;background:#f4f6f9">
+      <div style="flex:1">
+        <b id="srvName" style="font-size:16px"></b>
+        <div class="price" style="margin-top:6px">
+          <span class="yen">¥</span><span class="num" style="font-size:18px" id="srvPrice"></span>
+          <span style="font-size:12px" id="srvUnit"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 报修表单 -->
+  <div class="form-card">
+    <div class="form-row">
+      <label>设备名称</label>
+      <input type="text" id="deviceName" placeholder="如：海尔壁挂空调 / 创维55寸电视">
+    </div>
+    <div class="form-row">
+      <label>故障描述</label>
+      <textarea id="faultDesc" placeholder="请详细描述故障现象，例如：空调不制冷、开机有异响……"></textarea>
+    </div>
+    <div class="form-row">
+      <label>上门地址</label>
+      <input type="text" id="address" placeholder="请输入详细地址（小区+门牌号）">
+    </div>
+    <div class="form-row">
+      <label>期望时间</label>
+      <input type="datetime-local" id="expectTime">
+    </div>
+    <div class="form-row">
+      <label>联系电话</label>
+      <input type="tel" id="phone" placeholder="方便工程师联系您（选填）">
+    </div>
+  </div>
+
+  <div class="submit-wrap">
+    <button class="btn-red" style="height:48px;font-size:17px;width:100%" id="submitBtn">提交报修 · 下一步预约师傅</button>
+    <div class="pay-tip">提交后可在“我的订单”中随时查看进度</div>
+  </div>
+</div>
+<script src="js/common.js"></script>
+<script src="js/repair.js"></script>
+</body>
+</html>

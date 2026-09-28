@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>设置 - 阿李工坊</title>
+  <link rel="stylesheet" href="css/mobile.css">
+  <style>
+    /* 设置页专用样式：让菜单项占满整行 */
+    .settings-card { background: #fff; border-radius: 12px; margin: 10px 12px; overflow: hidden; }
+    .settings-card .s-item {
+      display: flex; align-items: center; padding: 15px 16px;
+      border-bottom: 1px solid #f3f4f6; font-size: 15px; cursor: pointer;
+      transition: background .2s;
+    }
+    .settings-card .s-item:active { background: #f8f9fa; }
+    .settings-card .s-item:last-child { border-bottom: none; }
+    .settings-card .s-item .s-ico { font-size: 19px; margin-right: 12px; width: 24px; text-align: center; }
+    .settings-card .s-item .s-text { flex: 1; }
+    .settings-card .s-item .s-arrow { color: #c4c9d2; font-size: 14px; }
+    .settings-card .s-item .s-hint { color: var(--text-3); font-size: 12px; margin-left: auto; margin-right: 8px; }
+    /* 用户信息头部 */
+    .user-header { background: #fff; padding: 20px 16px; display: flex; align-items: center; margin: 10px 12px; border-radius: 12px; }
+    .user-header .u-avatar { width: 56px; height: 56px; font-size: 28px; margin-right: 14px; background: var(--blue-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .user-header .u-info b { font-size: 17px; font-weight: 600; }
+    .user-header .u-info p { font-size: 13px; color: var(--text-3); margin-top: 3px; }
+    /* 退出按钮 */
+    .logout-btn { margin: 24px 16px; width: calc(100% - 32px); height: 44px; border-radius: 22px; background: #f5f6f8; color: var(--text); font-size: 15px; border: none; }
+  </style>
+</head>
+<body>
+<div class="phone">
+
+  <div class="nav-bar">
+    <a class="back" href="profile.html">‹</a>
+    设置
+  </div>
+
+  <!-- 用户信息卡片 -->
+  <div class="user-header">
+    <div class="u-avatar">👤</div>
+    <div class="u-info">
+      <b id="stName">用户</b>
+      <p id="stId">用户名：--</p>
+    </div>
+  </div>
+
+  <!-- 第一组菜单 -->
+  <div class="settings-card">
+    <div class="s-item" onclick="go('profile-edit.html')">
+      <span class="s-ico">👤</span>
+      <span class="s-text">个人资料</span>
+      <span class="s-arrow">›</span>
+    </div>
+    <div class="s-item" onclick="go('address.html')">
+      <span class="s-ico">📍</span>
+      <span class="s-text">地址管理</span>
+      <span class="s-hint">新增/修改服务地址</span>
+      <span class="s-arrow">›</span>
+    </div>
+  </div>
+
+  <!-- 第二组菜单 -->
+  <div class="settings-card">
+    <div class="s-item" onclick="showModal('用户协议')">
+      <span class="s-ico">📄</span>
+      <span class="s-text">用户协议</span>
+      <span class="s-arrow">›</span>
+    </div>
+    <div class="s-item" onclick="showModal('隐私协议')">
+      <span class="s-ico">🔒</span>
+      <span class="s-text">隐私协议</span>
+      <span class="s-arrow">›</span>
+    </div>
+    <div class="s-item" onclick="showModal('隐私政策摘要')">
+      <span class="s-ico">📋</span>
+      <span class="s-text">隐私政策摘要</span>
+      <span class="s-arrow">›</span>
+    </div>
+    <div class="s-item" onclick="showModal('服务监督协议')">
+      <span class="s-ico">✅</span>
+      <span class="s-text">服务监督协议</span>
+      <span class="s-arrow">›</span>
+    </div>
+    <div class="s-item" onclick="showModal('经营资质')">
+      <span class="s-ico">🏢</span>
+      <span class="s-text">经营资质</span>
+      <span class="s-arrow">›</span>
+    </div>
+  </div>
+
+  <!-- 第三组菜单 -->
+  <div class="settings-card">
+    <div class="s-item" onclick="showModal('功能建议')">
+      <span class="s-ico">💡</span>
+      <span class="s-text">功能建议</span>
+      <span class="s-arrow">›</span>
+    </div>
+    <div class="s-item" onclick="showModal('投诉电话')">
+      <span class="s-ico">📞</span>
+      <span class="s-text">投诉电话</span>
+      <span class="s-arrow">›</span>
+    </div>
+    <div class="s-item" onclick="confirmLogout()">
+      <span class="s-ico">🚪</span>
+      <span class="s-text">账号注销</span>
+      <span class="s-arrow">›</span>
+    </div>
+  </div>
+
+  <!-- 退出登录 -->
+  <button class="logout-btn" onclick="logout()">退出登录</button>
+
+</div>
+
+<!-- 通用弹窗 -->
+<div class="modal-mask" id="infoModal" style="display:none" onclick="if(event.target===this)hideModal()">
+  <div class="modal-box" style="max-height:70vh;overflow-y:auto;text-align:left;max-width:320px">
+    <h3 id="modalTitle" style="text-align:center;margin-bottom:12px;font-size:17px">标题</h3>
+    <div id="modalContent" style="font-size:13.5px;color:var(--text-2);line-height:1.8;padding:0 4px;white-space:pre-line"></div>
+    <button style="margin-top:16px;width:100%;height:42px;border-radius:21px;background:var(--blue);color:#fff;font-size:15px;border:none" onclick="hideModal()">我知道了</button>
+  </div>
+</div>
+
+<script src="js/common.js"></script>
+<script>
+  renderTabbar('me');
+
+  /** 加载用户信息 */
+  (async function () {
+    const user = await currentUser();
+    if (!user) { go('login.html?redirect=settings.html'); return; }
+    document.getElementById('stName').textContent = user.nickname || user.username;
+    document.getElementById('stId').textContent = '用户名：' + user.username;
+  })();
+
+  /** 显示协议弹窗 */
+  const MODAL_CONTENT = {
+    '用户协议': '阿李工坊用户服务协议\n\n1. 用户需年满18周岁或获得监护人同意\n2. 预约服务需提前2小时\n3. 维修完成后请当面验收\n4. 服务完成后90天内同部位免费保修\n5. 请保持通讯畅通以便师傅联系',
+    '隐私协议': '隐私保护协议\n\n1. 我们收集的信息仅用于提供服务\n2. 不会向第三方泄露您的个人信息\n3. 位置信息仅用于派单给附近师傅\n4. 您可以随时注销账号删除数据',
+    '隐私政策摘要': '隐私政策摘要\n\n• 收集信息：姓名、电话、地址\n• 使用目的：预约维修服务\n• 信息共享：仅与接单师傅共享\n• 数据安全：加密存储，定期备份',
+    '服务监督协议': '服务监督协议\n\n1. 师傅上门需佩戴工牌\n2. 维修前需出示收费标准\n3. 禁止私下收费，一经发现封号\n4. 服务完成后请给予评价',
+    '经营资质': '经营资质\n\n营业执照：XX市市场监督管理局\n许可证编号：XXXXXXXXXXXX\n经营范围：家用电器维修、水电安装\n成立日期：2020年1月1日',
+    '功能建议': '功能建议\n\n如果您有任何功能建议，请联系在线客服或发送邮件至：\nsuggest@aligongfang.com',
+    '投诉电话': '投诉电话\n\n服务监督热线：023-63153464\n工作时间：周一至周日 8:00-22:00\n\n如遇师傅违规收费、服务态度恶劣等问题，请立即拨打投诉电话，我们将严肃处理。'
+  };
+
+  function showModal(title) {
+    document.getElementById('modalTitle').textContent = title;
+    document.getElementById('modalContent').innerText = MODAL_CONTENT[title] || '内容加载中...';
+    document.getElementById('infoModal').style.display = 'flex';
+  }
+  function hideModal() {
+    document.getElementById('infoModal').style.display = 'none';
+  }
+
+  /** 退出登录 */
+  async function logout() {
+    if (!confirm('确定退出登录吗？')) return;
+    await api('/api/auth/logout', { method: 'POST' });
+    toast('已退出');
+    setTimeout(() => go('index.html'), 500);
+  }
+
+  /** 账号注销 */
+  async function confirmLogout() {
+    if (!confirm('确定注销账号吗？注销后数据将无法恢复！')) return;
+    if (!confirm('再次确认：注销账号将删除所有订单和地址数据，是否继续？')) return;
+    toast('账号注销功能开发中，请联系客服处理');
+  }
+</script>
+</body>
+</html>

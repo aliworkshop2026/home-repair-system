@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>地址管理 - 阿李工坊</title>
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+<div class="phone">
+
+  <div class="nav-bar">
+    <a class="back" href="profile.html">‹</a>
+    地址管理
+  </div>
+
+  <!-- 地址列表 -->
+  <div id="addrList">
+    <div class="loading">加载中...</div>
+  </div>
+
+  <!-- 新增地址按钮 -->
+  <div style="padding:20px 16px;position:fixed;bottom:calc(var(--tab-h) + 10px);left:0;right:0;max-width:480px;margin:0 auto">
+    <button class="btn-primary" onclick="go('address-add.html')">+ 新增地址</button>
+  </div>
+
+</div>
+
+<script src="js/common.js"></script>
+<script>
+  renderTabbar('me');
+
+  /** 加载地址列表 */
+  (async function () {
+    const user = await currentUser();
+    if (!user) { go('login.html?redirect=address.html'); return; }
+
+    const listEl = document.getElementById('addrList');
+    const r = await api('/api/addresses');
+    const list = r.data || [];
+
+    if (!list.length) {
+      // 空状态：显示提示+logo
+      listEl.innerHTML = `
+        <div style="text-align:center;padding:60px 20px">
+          <div style="font-size:80px;margin-bottom:20px">🐴</div>
+          <div style="font-size:16px;color:var(--text);margin-bottom:8px">哎呀~服务地址为空</div>
+          <div style="font-size:14px;color:var(--text-3)">主人快去添加吧</div>
+        </div>`;
+      return;
+    }
+
+    // 有地址：显示列表
+    listEl.innerHTML = list.map(a => `
+      <div class="card" style="margin:12px;padding:16px">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <div style="flex:1">
+            <div style="font-size:16px;font-weight:600;margin-bottom:6px">${a.contact} ${a.phone}</div>
+            <div style="font-size:14px;color:var(--text-2)">${a.city} ${a.address} ${a.detail || ''}</div>
+          </div>
+          <span style="color:var(--text-3);font-size:13px;cursor:pointer;margin-left:12px" onclick="editAddr(${a.id})">编辑</span>
+        </div>
+      </div>
+    `).join('');
+  })();
+
+  function editAddr(id) {
+    go('address-add.html?id=' + id);
+  }
+</script>
+</body>
+</html>

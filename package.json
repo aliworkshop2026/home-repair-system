@@ -1,0 +1,15 @@
+{
+  "name": "home-repair-system",
+  "version": "1.0.0",
+  "description": "基于Node.js的家用设备上门检修预约系统（Express + 原生HTML/CSS/JS + 内置SQLite）",
+  "main": "server.js",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.22.3"
+  }
+}

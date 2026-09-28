@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>模拟支付 - 阿李工坊</title>
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+<div class="phone no-tab">
+  <div class="nav-bar"><a class="back" href="javascript:back()">‹</a><span>订单支付</span></div>
+
+  <!-- 支付金额 -->
+  <div class="pay-amount">
+    <div><span class="yen">¥</span><span class="big" id="payAmount">0.00</span></div>
+    <div style="color:var(--text-3);font-size:13px;margin-top:4px" id="payTitle">检修服务费</div>
+  </div>
+
+  <!-- 订单摘要 -->
+  <div class="card" style="margin-top:0">
+    <div style="display:flex;justify-content:space-between;margin-bottom:10px">
+      <span style="color:var(--text-2)">订单编号</span><span id="payNo"></span>
+    </div>
+    <div style="display:flex;justify-content:space-between;margin-bottom:10px">
+      <span style="color:var(--text-2)">服务项目</span><span id="paySrv"></span>
+    </div>
+    <div style="display:flex;justify-content:space-between;margin-bottom:10px">
+      <span style="color:var(--text-2)">维修师傅</span><span id="payWorker"></span>
+    </div>
+    <div style="display:flex;justify-content:space-between">
+      <span style="color:var(--text-2)">预约时间</span><span id="payTime"></span>
+    </div>
+  </div>
+
+  <!-- 模拟支付方式（不接入真实支付） -->
+  <div class="card" style="padding:0;overflow:hidden">
+    <div class="pay-method" data-pay="wechat">
+      <span class="m-ico">💚</span>
+      <div>
+        <b>微信支付</b>
+        <div style="color:var(--text-3);font-size:12px">推荐安装微信5.0及以上版本</div>
+      </div>
+      <div class="radio" id="r-wechat"></div>
+    </div>
+    <div class="pay-method" data-pay="alipay">
+      <span class="m-ico" style="color:#1677ff">💙</span>
+      <div>
+        <b>支付宝</b>
+        <div style="color:var(--text-3);font-size:12px">数亿用户都在用，安全可托付</div>
+      </div>
+      <div class="radio" id="r-alipay"></div>
+    </div>
+  </div>
+
+  <div class="pay-tip">* 本系统为毕设演示环境，点击支付不会产生真实扣款</div>
+
+  <div class="submit-wrap" style="padding-top:4px">
+    <button class="btn-red" style="height:50px;font-size:18px;width:100%" id="payBtn">立即支付</button>
+  </div>
+</div>
+<script src="js/common.js"></script>
+<script src="js/pay.js"></script>
+</body>
+</html>

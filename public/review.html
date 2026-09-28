@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>订单评价 - 阿李工坊</title>
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+<div class="phone no-tab">
+  <div class="nav-bar"><a class="back" href="javascript:back()">‹</a><span>订单评价</span></div>
+
+  <div class="card" id="orderBrief" style="line-height:2"></div>
+
+  <div class="card">
+    <div style="text-align:center;font-size:16px;font-weight:700">服务满意度评分</div>
+    <div class="rate-stars" id="rateStars">
+      <span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span>
+      <span data-v="4">★</span><span data-v="5">★</span>
+    </div>
+    <div style="text-align:center;color:var(--text-3);font-size:13px" id="rateText">非常满意</div>
+
+    <textarea id="reviewText" style="width:100%;margin-top:16px;min-height:120px;border:1px solid #eef0f3;border-radius:10px;padding:12px;font-size:14px;resize:none" placeholder="师傅技术怎么样？服务态度如何？欢迎分享您的真实感受，帮助更多人选择~"></textarea>
+  </div>
+
+  <div class="submit-wrap">
+    <button class="btn-red" style="height:48px;font-size:17px;width:100%" id="submitReview">提交评价</button>
+  </div>
+</div>
+<script src="js/common.js"></script>
+<script src="js/review.js"></script>
+</body>
+</html>

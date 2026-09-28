@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>登录 - 阿李工坊</title>
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+<div class="phone no-tab" style="background:transparent;box-shadow:none">
+  <div class="auth-page">
+    <div class="auth-logo">
+      <div class="bird">🐴</div>
+      <h2>阿李工坊</h2>
+      <p>正规家庭维修 · 就找阿李工坊</p>
+    </div>
+
+    <div class="auth-card">
+      <div class="ipt-row"><i>👤</i><input type="text" id="username" placeholder="请输入账号" value=""></div>
+      <div class="ipt-row"><i>🔒</i><input type="password" id="password" placeholder="请输入密码" value=""></div>
+      <button class="btn-primary" id="loginBtn">登 录</button>
+    </div>
+
+    <div class="auth-extra">
+      还没有账号？<a href="register.html">立即注册</a>
+    </div>
+    <div class="auth-admin-link">
+      <a href="admin/login.html">🔑 管理员后台入口</a>
+    </div>
+  </div>
+</div>
+<script src="js/common.js"></script>
+<script>
+  // 登录提交
+  document.getElementById('loginBtn').onclick = async () => {
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+    if (!username || !password) return toast('请输入账号和密码');
+    const r = await api('/api/auth/login', { method: 'POST', body: { username, password } });
+    if (r.code === 0) {
+      toast('登录成功');
+      const redirect = qs('redirect');
+      setTimeout(() => go(redirect ? decodeURIComponent(redirect) : 'index.html'), 600);
+    } else {
+      toast(r.msg);
+    }
+  };
+  document.getElementById('password').onkeydown = e => { if (e.key === 'Enter') document.getElementById('loginBtn').click(); };
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>评价管理 - 阿李工坊后台</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<div id="root">
+  <div class="panel">
+    <div class="panel-hd"><b>评价管理</b></div>
+    <div class="panel-bd" style="padding:0">
+      <table>
+        <thead><tr>
+          <th>ID</th><th>用户</th><th>订单号</th><th>服务项目</th>
+          <th>评分</th><th>评价内容</th><th>评价时间</th><th>操作</th>
+        </tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="js/common.js"></script>
+<script>
+async function load() {
+  const r = await api('/api/admin/reviews');
+  const list = r.data || [];
+  document.getElementById('tbody').innerHTML = list.length ? list.map(v => `
+    <tr>
+      <td>${v.id}</td>
+      <td>${esc(v.nickname || '-')}</td>
+      <td style="white-space:nowrap">${v.order_no || ('#' + v.order_id)}</td>
+      <td>${esc(v.service_name || '-')}</td>
+      <td><span class="stars">${'★'.repeat(v.rating)}${'☆'.repeat(5 - v.rating)}</span></td>
+      <td style="max-width:360px;line-height:1.6">${esc(v.content)}</td>
+      <td style="white-space:nowrap">${v.created_at}</td>
+      <td><button class="btn btn-red btn-sm" onclick='delReview(${v.id})'>删除</button></td>
+    </tr>`).join('') : '<tr><td colspan="8" class="empty-row">暂无评价</td></tr>';
+}
+
+window.delReview = async function (id) {
+  if (!confirm('确定删除该条评价吗？')) return;
+  const r = await api('/api/admin/reviews/' + id, { method: 'DELETE' });
+  toast(r.msg);
+  if (r.code === 0) load();
+};
+
+(async function init() { await renderLayout('评价管理', 'reviews.html'); load(); })();
+</script>
+</body>
+</html>

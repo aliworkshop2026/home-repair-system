@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>我的 - 阿李工坊</title>
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+<div class="phone">
+
+  <!-- 用户信息头 -->
+  <div class="me-header" id="meHeader">
+    <div class="m-avatar" id="meAvatar">👤</div>
+    <div>
+      <b id="meName">点击登录</b>
+      <p id="mePhone">登录后享受上门检修预约服务</p>
+      <p class="me-addr" id="meAddr" style="display:none;margin-top:6px;font-size:13px;opacity:.9;cursor:pointer" onclick="event.stopPropagation();go('address.html')">
+        📍 服务地址 <span style="opacity:.7">›</span>
+      </p>
+    </div>
+    <div class="me-actions" style="margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;gap:8px">
+      <span class="me-action" onclick="event.stopPropagation();showServiceModal()" style="font-size:13px;opacity:.9;cursor:pointer">客服</span>
+      <span class="me-action" onclick="event.stopPropagation();go('settings.html')" style="font-size:13px;opacity:.9;cursor:pointer">设置</span>
+    </div>
+  </div>
+
+  <!-- 我的订单 -->
+  <div class="card me-order-card">
+    <div class="oc-hd">
+      <b>我的订单</b>
+      <a href="orders.html" style="color:var(--text-3)">全部订单 ›</a>
+    </div>
+    <div class="me-status">
+      <a href="orders.html?tab=pending"><i>📅</i>待预约</a>
+      <a href="orders.html?tab=repair"><i>🔧</i>待检修</a>
+      <a href="orders.html?tab=done"><i>✅</i>已完成</a>
+      <a href="consult.html"><i>💬</i>我的咨询</a>
+    </div>
+  </div>
+
+  <!-- 功能菜单 -->
+  <div class="card me-menu" style="padding:0">
+    <a class="m-item" href="repair.html">
+      <span class="mi-ico">🛠️</span>快速报修<span class="arrow">›</span>
+    </a>
+    <a class="m-item" href="services.html">
+      <span class="mi-ico">🧩</span>全部服务<span class="arrow">›</span>
+    </a>
+    <a class="m-item" href="consult.html">
+      <span class="mi-ico">🎧</span>在线咨询<span class="arrow">›</span>
+    </a>
+    <a class="m-item" href="tel:02363153464">
+      <span class="mi-ico">📞</span>客服热线 023-63153464<span class="arrow">›</span>
+    </a>
+  </div>
+
+  <div class="card me-menu" style="padding:0">
+    <a class="m-item" href="admin/login.html">
+      <span class="mi-ico">🔑</span>管理员后台<span class="arrow">›</span>
+    </a>
+    <a class="m-item" href="javascript:logout()" id="logoutItem" style="display:none">
+      <span class="mi-ico">🚪</span>退出登录<span class="arrow">›</span>
+    </a>
+  </div>
+
+  <!-- 更多热销服务推荐 -->
+  <div class="section-title" style="margin-top:22px">更多热销服务推荐</div>
+  <div class="hot-grid" id="hotGrid"></div>
+
+  <!-- 品牌底条 -->
+  <div class="brand-strip">
+    <div class="bs-tit">🐴 阿李工坊家庭维修</div>
+    <div class="marquee-line" style="margin:6px 0 4px"><div class="mq-track" id="profileMq"></div></div>
+    <div class="bs-sub">明码标价 · 先报价后维修 · 同部位保修90天</div>
+  </div>
+
+</div>
+<script src="js/common.js"></script>
+<script>
+  renderTabbar('me');
+
+  /** 底部动态滑动文字（李亚玲 / 亚亚亚亚亚） */
+  (function () {
+    const track = document.getElementById('profileMq');
+    if (!track) return;
+    const seg = '李亚玲<span class="mq-dot">✦</span>亚亚亚亚亚<span class="mq-dot">✦</span>';
+    track.innerHTML = seg.repeat(6);
+  })();
+
+  /** 退出登录 */
+  async function logout() {
+    if (!confirm('确定退出登录吗？')) return;
+    await api('/api/auth/logout', { method: 'POST' });
+    toast('已退出');
+    setTimeout(() => location.reload(), 500);
+  }
+
+  /** 热销服务卡片（参考截图双列大图样式） */
+  function hotCard(s) {
+    return `<div class="hot-card" onclick="go('detail.html?id=${s.id}')">
+      <div class="h-img"><img src="${s.image}" alt="${s.name}" loading="lazy"></div>
+      <div class="h-nm">${s.name}</div>
+      <div class="h-sub">${s.subtitle || '上门快修 · 明码标价'}</div>
+      <div class="h-pr"><span class="yen">¥</span>${s.price}${s.unit || '起'}
+        ${s.original_price > s.price ? `<span class="old">¥${s.original_price}</span>` : ''}
+      </div>
+      <span class="h-btn" onclick="event.stopPropagation();go('repair.html?serviceId=${s.id}')">立即预约</span>
+    </div>`;
+  }
+
+  /** 加载热销服务（取6个补满双列三行，不留空位） */
+  (async function () {
+    const grid = document.getElementById('hotGrid');
+    const r = await api('/api/services');
+    const list = (r.data || []);
+    // 优先取带划线价的团购款，再补热门款，凑满 6 个
+    const group = list.filter(s => s.original_price > s.price);
+    const hot = list.filter(s => s.hot && !(s.original_price > s.price));
+    const picks = [...group.slice(0, 6), ...hot].slice(0, 6);
+    grid.innerHTML = picks.map(hotCard).join('');
+  })();
+
+  /** 加载用户信息 */
+  (async function () {
+    const user = await currentUser();
+    if (!user) {
+      document.getElementById('meHeader').onclick = () => go('login.html?redirect=profile.html');
+      return;
+    }
+    document.getElementById('meAvatar').textContent = user.avatar || '😀';
+    document.getElementById('meName').textContent = user.nickname || user.username;
+    document.getElementById('mePhone').textContent = user.phone ? '📱 ' + user.phone : '账号：' + user.username;
+    document.getElementById('logoutItem').style.display = '';
+    // 显示服务地址入口
+    document.getElementById('meAddr').style.display = '';
+  })();
+
+  /** 客服弹窗 */
+  function showServiceModal() {
+    document.getElementById('serviceModal').style.display = 'flex';
+  }
+  function hideServiceModal() {
+    document.getElementById('serviceModal').style.display = 'none';
+  }
+  // 微信客服：跳转到添加客服页面（模拟）
+  function openWechatService() {
+    toast('微信客服功能开发中，请使用在线客服');
+    hideServiceModal();
+  }
+  // 电话客服：拨打热线
+  function openPhoneService() {
+    location.href = 'tel:02363153464';
+    hideServiceModal();
+  }
+  // 在线客服：跳转咨询页
+  function openOnlineService() {
+    go('consult.html');
+    hideServiceModal();
+  }
+</script>
+
+<!-- ===== 客服咨询方式弹窗（底部弹出，参考截图） ===== -->
+<div class="modal-mask" id="serviceModal" style="display:none" onclick="if(event.target===this)hideServiceModal()">
+  <div class="service-panel" style="background:#fff;border-radius:16px 16px 0 0;padding:20px 16px 30px;position:absolute;bottom:0;left:0;right:0;max-width:480px;margin:0 auto">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+      <b style="font-size:17px">请选择咨询方式</b>
+      <span style="font-size:20px;color:#999;cursor:pointer" onclick="hideServiceModal()">✕</span>
+    </div>
+    <div class="svc-option" onclick="openWechatService()" style="display:flex;align-items:center;padding:14px 0;border-bottom:1px solid #f0f1f3;cursor:pointer">
+      <span style="font-size:20px;margin-right:12px">💬</span>
+      <div style="flex:1">
+        <div style="font-size:15px;font-weight:600">微信客服 <span style="background:#ff9500;color:#fff;font-size:10px;padding:2px 6px;border-radius:4px;margin-left:6px">推荐</span></div>
+        <div style="font-size:12px;color:#999;margin-top:2px">快速响应</div>
+      </div>
+      <span style="color:#c4c9d2">›</span>
+    </div>
+    <div class="svc-option" onclick="openPhoneService()" style="display:flex;align-items:center;padding:14px 0;border-bottom:1px solid #f0f1f3;cursor:pointer">
+      <span style="font-size:20px;margin-right:12px">📞</span>
+      <div style="flex:1">
+        <div style="font-size:15px;font-weight:600">电话客服</div>
+        <div style="font-size:12px;color:#999;margin-top:2px">24小时在线</div>
+      </div>
+      <span style="color:#c4c9d2">›</span>
+    </div>
+    <div class="svc-option" onclick="openOnlineService()" style="display:flex;align-items:center;padding:14px 0;cursor:pointer">
+      <span style="font-size:20px;margin-right:12px">🎧</span>
+      <div style="flex:1">
+        <div style="font-size:15px;font-weight:600">在线客服</div>
+        <div style="font-size:12px;color:#999;margin-top:2px">24小时在线</div>
+      </div>
+      <span style="color:#c4c9d2">›</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

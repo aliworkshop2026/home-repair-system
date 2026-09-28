@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>订单管理 - 阿李工坊后台</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<div id="root">
+  <div class="panel">
+    <div class="panel-hd"><b>订单管理</b></div>
+    <div class="panel-bd">
+      <div class="toolbar">
+        <select id="statusFilter">
+          <option value="">全部状态</option>
+          <option value="0">待预约</option>
+          <option value="1">待支付</option>
+          <option value="2">待检修</option>
+          <option value="3">已完成</option>
+          <option value="4">已取消</option>
+        </select>
+        <input type="text" id="kw" placeholder="订单号 / 用户 / 服务 / 设备" style="width:280px">
+        <button class="btn btn-blue" id="searchBtn">🔍 查询</button>
+      </div>
+      <table>
+        <thead><tr>
+          <th>订单号</th><th>用户/电话</th><th>服务项目</th><th>设备</th>
+          <th>故障描述</th><th>地址</th><th>期望/预约时间</th>
+          <th>师傅</th><th>金额</th><th>支付</th><th>状态</th><th>操作</th>
+        </tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="js/common.js"></script>
+<script>
+const STATUS_TAG = { 0:'tag-orange', 1:'tag-red', 2:'tag-blue', 3:'tag-green', 4:'tag-gray' };
+const STATUS_TXT = { 0:'待预约', 1:'待支付', 2:'待检修', 3:'已完成', 4:'已取消' };
+// 管理员可流转的下一步状态
+const NEXT_STATUS = {
+  0: [{ v: 4, t: '取消订单' }],
+  1: [{ v: 2, t: '确认已支付' }, { v: 4, t: '取消订单' }],
+  2: [{ v: 3, t: '标记已完成' }],
+  3: [],
+  4: []
+};
+
+async function load() {
+  const status = document.getElementById('statusFilter').value;
+  const kw = document.getElementById('kw').value.trim();
+  const q = new URLSearchParams();
+  if (status !== '') q.set('status', status);
+  if (kw) q.set('keyword', kw);
+  const r = await api('/api/admin/orders?' + q.toString());
+  const list = r.data || [];
+  document.getElementById('tbody').innerHTML = list.length ? list.map(o => `
+    <tr>
+      <td style="white-space:nowrap">${o.order_no}<br><span style="color:var(--text-3);font-size:12px">${o.created_at}</span></td>
+      <td>${esc(o.nickname || '-')}<br><span style="color:var(--text-3);font-size:12px">${esc(o.user_phone || '')}</span></td>
+      <td>${esc(o.service_name || '-')}</td>
+      <td>${esc(o.device_name || '-')}</td>
+      <td style="max-width:180px">${esc(o.fault_desc || '-')}</td>
+      <td style="max-width:180px">${esc(o.address || '-')}</td>
+      <td style="font-size:12.5px">期望：${esc(o.expect_time || '-')}<br>预约：${esc(o.appoint_time || '-')}</td>
+      <td>${esc(o.worker_name || '-')}</td>
+      <td style="color:var(--red);font-weight:700;white-space:nowrap">${o.price > 0 ? '¥' + o.price : '待报价'}</td>
+      <td>${o.pay_status === 1 ? '<span class="tag tag-green">已支付</span>' : '<span class="tag tag-gray">未支付</span>'}</td>
+      <td><span class="tag ${STATUS_TAG[o.status]}">${STATUS_TXT[o.status]}</span></td>
+      <td style="white-space:nowrap">
+        <select onchange="changeStatus(${o.id}, this.value)" style="height:30px;border:1px solid var(--border);border-radius:6px;padding:0 4px">
+          <option value="">修改状态</option>
+          <option value="0">待预约</option>
+          <option value="1">待支付</option>
+          <option value="2">待检修</option>
+          <option value="3">已完成</option>
+          <option value="4">已取消</option>
+        </select>
+      </td>
+    </tr>`).join('') : '<tr><td colspan="12" class="empty-row">暂无订单</td></tr>';
+}
+
+window.changeStatus = async function (id, status) {
+  if (status === '') return;
+  const map = { 0:'待预约', 1:'待支付', 2:'待检修', 3:'已完成', 4:'已取消' };
+  if (!confirm(`确定将订单状态修改为「${map[status]}」吗？` + (status === '3' ? '\n标记完成后用户即可提交评价。' : ''))) return;
+  const r = await api('/api/admin/orders/' + id + '/status', { method: 'PUT', body: { status: Number(status) } });
+  toast(r.msg);
+  if (r.code === 0) load();
+};
+
+document.getElementById('searchBtn').onclick = load;
+document.getElementById('statusFilter').onchange = load;
+document.getElementById('kw').onkeydown = e => { if (e.key === 'Enter') load(); };
+
+(async function init() { await renderLayout('订单管理', 'orders.html'); load(); })();
+</script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>个人资料 - 阿李工坊</title>
+  <link rel="stylesheet" href="css/mobile.css">
+  <style>
+    .profile-card { background: #fff; border-radius: 12px; margin: 10px 12px; overflow: hidden; }
+    .profile-item {
+      display: flex; align-items: center; padding: 16px;
+      border-bottom: 1px solid #f3f4f6; font-size: 15px; cursor: pointer;
+    }
+    .profile-item:last-child { border-bottom: none; }
+    .profile-item .p-label { color: var(--text-2); width: 80px; flex-shrink: 0; }
+    .profile-item .p-value { flex: 1; color: var(--text); }
+    .profile-item .p-arrow { color: #c4c9d2; font-size: 14px; margin-left: 8px; }
+    .profile-item .p-hint { color: var(--text-3); font-size: 13px; margin-right: 4px; }
+    /* 头像样式 */
+    .avatar-box { width: 60px; height: 60px; border-radius: 50%; background: var(--blue-light); display: flex; align-items: center; justify-content: center; font-size: 28px; }
+    /* 编辑弹窗 */
+    .edit-mask { position: fixed; inset: 0; background: rgba(0,0,0,.4); z-index: 200; display: flex; align-items: flex-end; justify-content: center; }
+    .edit-panel { background: #fff; width: 100%; max-width: 480px; border-radius: 16px 16px 0 0; padding: 20px 16px 30px; }
+    .edit-panel h3 { text-align: center; font-size: 17px; margin-bottom: 20px; }
+    .edit-input { width: 100%; height: 48px; border: 1px solid #e3e5e8; border-radius: 10px; padding: 0 14px; font-size: 15px; margin-bottom: 16px; }
+    .edit-btns { display: flex; gap: 12px; }
+    .edit-btns button { flex: 1; height: 44px; border-radius: 22px; font-size: 15px; border: none; }
+    .edit-btns .cancel { background: #f5f6f8; color: var(--text); }
+    .edit-btns .confirm { background: var(--blue); color: #fff; }
+    /* 性别选择 */
+    .gender-opt { display: flex; align-items: center; padding: 14px 0; border-bottom: 1px solid #f0f1f3; font-size: 15px; }
+    .gender-opt:last-child { border-bottom: none; }
+    .gender-opt .g-check { width: 20px; height: 20px; border-radius: 50%; border: 2px solid #ddd; margin-right: 12px; display: flex; align-items: center; justify-content: center; }
+    .gender-opt.on .g-check { border-color: var(--blue); background: var(--blue); color: #fff; font-size: 12px; }
+    /* 生日选择 */
+    .birth-input { width: 100%; height: 48px; border: 1px solid #e3e5e8; border-radius: 10px; padding: 0 14px; font-size: 15px; margin-bottom: 16px; }
+  </style>
+</head>
+<body>
+<div class="phone">
+
+  <div class="nav-bar">
+    <a class="back" href="settings.html">‹</a>
+    个人资料
+  </div>
+
+  <!-- 头像 -->
+  <div class="profile-card" onclick="changeAvatar()">
+    <div class="profile-item">
+      <span class="p-label">头像</span>
+      <div class="avatar-box" id="pAvatar">👤</div>
+      <span class="p-arrow">›</span>
+    </div>
+  </div>
+
+  <!-- 昵称 -->
+  <div class="profile-card" onclick="editNickname()">
+    <div class="profile-item">
+      <span class="p-label">昵称</span>
+      <span class="p-value" id="pNickname">--</span>
+      <span class="p-arrow">›</span>
+    </div>
+  </div>
+
+  <!-- 性别 -->
+  <div class="profile-card" onclick="editGender()">
+    <div class="profile-item">
+      <span class="p-label">性别</span>
+      <span class="p-value" id="pGender">--</span>
+      <span class="p-arrow">›</span>
+    </div>
+  </div>
+
+  <!-- 生日 -->
+  <div class="profile-card" onclick="editBirthday()">
+    <div class="profile-item">
+      <span class="p-label">生日</span>
+      <span class="p-value" id="pBirthday">--</span>
+      <span class="p-arrow">›</span>
+    </div>
+  </div>
+
+  <!-- 手机号码 -->
+  <div class="profile-card" onclick="editPhone()">
+    <div class="profile-item">
+      <span class="p-label">手机号码</span>
+      <span class="p-value" id="pPhone">--</span>
+      <span class="p-arrow">›</span>
+    </div>
+  </div>
+
+  <!-- 地址管理 -->
+  <div class="profile-card" onclick="go('address.html')">
+    <div class="profile-item">
+      <span class="p-label">地址管理</span>
+      <span class="p-value" style="color:var(--text-3)">新增/修改服务地址</span>
+      <span class="p-arrow">›</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- 编辑弹窗（通用） -->
+<div class="edit-mask" id="editModal" style="display:none" onclick="if(event.target===this)hideEdit()">
+  <div class="edit-panel">
+    <h3 id="editTitle">编辑</h3>
+    <div id="editBody"></div>
+    <div class="edit-btns">
+      <button class="cancel" onclick="hideEdit()">取消</button>
+      <button class="confirm" onclick="saveEdit()">确定</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/common.js"></script>
+<script>
+  renderTabbar('me');
+
+  let currentEdit = ''; // 当前编辑的字段
+  let userData = {};    // 当前用户数据
+
+  /** 加载用户信息 */
+  (async function () {
+    const user = await currentUser();
+    if (!user) { go('login.html?redirect=profile-edit.html'); return; }
+    userData = user;
+    document.getElementById('pAvatar').textContent = user.avatar || '👤';
+    document.getElementById('pNickname').textContent = user.nickname || '未设置';
+    document.getElementById('pGender').textContent = user.gender || '未设置';
+    document.getElementById('pBirthday').textContent = user.birthday || '未设置';
+    // 手机号脱敏
+    const phone = user.phone || '';
+    document.getElementById('pPhone').textContent = phone ? phone.substring(0,3) + '****' + phone.substring(7) : '未绑定';
+  })();
+
+  /** 打开编辑弹窗 */
+  function showEdit(title, bodyHtml) {
+    document.getElementById('editTitle').textContent = title;
+    document.getElementById('editBody').innerHTML = bodyHtml;
+    document.getElementById('editModal').style.display = 'flex';
+  }
+  function hideEdit() {
+    document.getElementById('editModal').style.display = 'none';
+    currentEdit = '';
+  }
+
+  /** 修改头像 */
+  function changeAvatar() {
+    currentEdit = 'avatar';
+    const avatars = ['😀','😎','🤓','😊','🥰','😇','🤠','👻','🐱','🐶','🦊','🐼'];
+    let html = '<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px">';
+    avatars.forEach(a => {
+      html += `<div style="font-size:36px;text-align:center;cursor:pointer;padding:8px;border-radius:10px;background:#f5f6f8" onclick="selectAvatar('${a}')">${a}</div>`;
+    });
+    html += '</div>';
+    showEdit('选择头像', html);
+  }
+  function selectAvatar(a) {
+    document.getElementById('pAvatar').textContent = a;
+    saveField('avatar', a);
+  }
+
+  /** 修改昵称 */
+  function editNickname() {
+    currentEdit = 'nickname';
+    showEdit('修改昵称', `<input type="text" class="edit-input" id="editInput" value="${userData.nickname || ''}" placeholder="请输入昵称">`);
+    setTimeout(() => document.getElementById('editInput').focus(), 100);
+  }
+
+  /** 修改性别 */
+  function editGender() {
+    currentEdit = 'gender';
+    const g = userData.gender || '';
+    let html = '';
+    ['男', '女', '保密'].forEach(opt => {
+      const on = g === opt ? 'on' : '';
+      html += `<div class="gender-opt ${on}" onclick="selectGender('${opt}')">
+        <span class="g-check">${on ? '✓' : ''}</span>${opt}
+      </div>`;
+    });
+    showEdit('选择性别', html);
+  }
+  function selectGender(g) {
+    document.getElementById('pGender').textContent = g;
+    saveField('gender', g);
+  }
+
+  /** 修改生日 */
+  function editBirthday() {
+    currentEdit = 'birthday';
+    const today = new Date().toISOString().split('T')[0];
+    showEdit('选择生日', `<input type="date" class="birth-input" id="editInput" value="${userData.birthday || ''}" max="${today}">`);
+  }
+
+  /** 修改手机号 */
+  function editPhone() {
+    currentEdit = 'phone';
+    showEdit('修改手机号', `<input type="tel" class="edit-input" id="editInput" value="${userData.phone || ''}" placeholder="请输入11位手机号" maxlength="11">`);
+    setTimeout(() => document.getElementById('editInput').focus(), 100);
+  }
+
+  /** 保存编辑 */
+  async function saveEdit() {
+    if (!currentEdit) { hideEdit(); return; }
+    let value = '';
+    if (currentEdit === 'nickname' || currentEdit === 'phone') {
+      value = document.getElementById('editInput').value.trim();
+      if (!value) { toast('请输入内容'); return; }
+      if (currentEdit === 'phone' && value.length !== 11) { toast('请输入正确的手机号'); return; }
+    } else if (currentEdit === 'birthday') {
+      value = document.getElementById('editInput').value;
+      if (!value) { toast('请选择日期'); return; }
+    }
+    await saveField(currentEdit, value);
+  }
+
+  /** 保存字段到后端 */
+  async function saveField(field, value) {
+    const r = await api('/api/user/update', { method: 'PUT', body: JSON.stringify({ [field]: value }) });
+    if (r.code === 0) {
+      toast('保存成功');
+      userData[field] = value;
+      // 更新页面显示
+      if (field === 'nickname') document.getElementById('pNickname').textContent = value;
+      if (field === 'phone') {
+        const p = value;
+        document.getElementById('pPhone').textContent = p.substring(0,3) + '****' + p.substring(7);
+      }
+      if (field === 'birthday') document.getElementById('pBirthday').textContent = value;
+      hideEdit();
+    } else {
+      toast(r.msg || '保存失败');
+    }
+  }
+</script>
+</body>
+</html>

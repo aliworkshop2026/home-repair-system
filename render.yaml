@@ -1,0 +1,11 @@
+# Render 一键部署蓝图（免费套餐，长期有效，免备案）
+# 文档：https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: home-repair-system
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    autoDeploy: true

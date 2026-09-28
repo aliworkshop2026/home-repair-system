@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>在线咨询 - 阿李工坊</title>
+  <link rel="stylesheet" href="css/mobile.css">
+  <style>
+    .chat-header {
+      height:48px; background:#fff; display:flex; align-items:center; justify-content:center;
+      font-size:17px; font-weight:600; position:sticky; top:0; z-index:50;
+    }
+    .chat-phone { max-width:480px; margin:0 auto; height:100vh; display:flex; flex-direction:column;
+      background:#eef0f3; box-shadow:0 0 24px rgba(0,0,0,.08); }
+    .chat-history-tip { text-align:center; padding:10px; }
+    .chat-history-tip span {
+      background:#fff; color:#8a8f99; font-size:13px; border-radius:16px; padding:6px 16px;
+    }
+  </style>
+</head>
+<body>
+<div class="chat-phone">
+  <div class="chat-header">在线咨询</div>
+
+  <div class="chat-body" id="chatBody">
+    <div class="chat-history-tip"><span>点击查看所有聊天记录 ∨</span></div>
+  </div>
+
+  <div class="chat-foot">
+    <input type="text" id="chatInput" placeholder="请输入您的问题">
+    <button class="plus" id="sendBtn">＋</button>
+  </div>
+
+  <!-- 底部 Tab（咨询高亮） -->
+  <div class="tabbar" style="position:static;transform:none;max-width:none">
+    <a href="index.html"><span class="tab-ico">🏠</span>首页</a>
+    <a href="services.html"><span class="tab-ico">🧩</span>服务</a>
+    <a href="consult.html" class="active"><span class="tab-ico">🎧</span>在线咨询</a>
+    <a href="profile.html"><span class="tab-ico">👤</span>我的</a>
+  </div>
+</div>
+<script src="js/common.js"></script>
+<script src="js/consult.js"></script>
+</body>
+</html>

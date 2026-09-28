@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>搜索 - 阿李工坊</title>
+  <link rel="stylesheet" href="css/mobile.css">
+  <style>
+    /* 搜索页专属样式（对应截图：顶部搜索框 + 历史搜索列表） */
+    .search-page { background: #fff; min-height: 100vh; }
+    .search-row { display: flex; align-items: center; gap: 10px; padding: 10px 12px; }
+    .search-input-box {
+      flex: 1; display: flex; align-items: center;
+      border: 1.5px solid var(--blue); border-radius: 22px; height: 42px; padding: 0 12px; background: #fff;
+    }
+    .search-input-box input { flex: 1; border: none; outline: none; font-size: 15px; background: transparent; }
+    .search-input-box .clear {
+      width: 18px; height: 18px; border-radius: 50%; background: #c9ced6; color: #fff;
+      display: none; align-items: center; justify-content: center; font-size: 11px; cursor: pointer; flex-shrink: 0;
+    }
+    .search-input-box .clear.show { display: flex; }
+    .search-go {
+      background: var(--blue); color: #fff; border: none; border-radius: 20px;
+      height: 38px; padding: 0 18px; font-size: 15px; cursor: pointer; flex-shrink: 0;
+    }
+    .his-block { padding: 6px 16px; }
+    .his-title { display: flex; align-items: center; justify-content: space-between; margin: 10px 0 2px; }
+    .his-title b { font-size: 15px; }
+    .his-title span { font-size: 12px; color: var(--text-3); cursor: pointer; }
+    .his-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 13px 2px; border-bottom: 1px solid #f5f6f8; font-size: 15px; color: #333; cursor: pointer;
+    }
+    .his-item i { font-style: normal; color: #9aa1ad; font-size: 14px; }
+    .hot-block { padding: 10px 16px; }
+    .hot-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .hot-tag {
+      background: #f5f6f8; border-radius: 16px; padding: 7px 14px; font-size: 13px; color: #444; cursor: pointer;
+    }
+    .hot-tag.top { background: #fdeeee; color: var(--red); }
+  </style>
+</head>
+<body>
+<div class="phone no-tab search-page">
+
+  <!-- 顶部导航 -->
+  <div class="nav-bar">
+    <a class="back" href="javascript:back()">‹</a>
+    <span>搜索</span>
+  </div>
+
+  <!-- 搜索框（自动聚焦） -->
+  <div class="search-row">
+    <div class="search-input-box">
+      <span style="color:#9aa1ad;margin-right:8px">🔍</span>
+      <input id="searchInput" placeholder="搜索维修服务，如：电视维修" autocomplete="off">
+      <span class="clear" id="clearBtn">✕</span>
+    </div>
+    <button class="search-go" id="searchGo">搜索</button>
+  </div>
+
+  <!-- 历史搜索 -->
+  <div class="his-block">
+    <div class="his-title"><b>历史搜索</b><span id="hisClear">🗑 清空</span></div>
+    <div id="hisList"></div>
+  </div>
+
+  <!-- 热门推荐 -->
+  <div class="hot-block">
+    <div class="his-title"><b>热门搜索</b></div>
+    <div class="hot-tags" id="hotTags"></div>
+  </div>
+
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>

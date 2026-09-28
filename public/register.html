@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>注册 - 阿李工坊</title>
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+<div class="phone no-tab" style="background:transparent;box-shadow:none">
+  <div class="auth-page">
+    <div class="auth-logo">
+      <div class="bird">📝</div>
+      <h2>注册新账号</h2>
+      <p>一键预约专业工程师上门检修</p>
+    </div>
+
+    <div class="auth-card">
+      <div class="ipt-row"><i>👤</i><input type="text" id="username" placeholder="设置登录账号（至少3位）"></div>
+      <div class="ipt-row"><i>🔒</i><input type="password" id="password" placeholder="设置登录密码（至少6位）"></div>
+      <div class="ipt-row"><i>🔒</i><input type="password" id="password2" placeholder="请再次输入密码"></div>
+      <div class="ipt-row"><i>🙂</i><input type="text" id="nickname" placeholder="昵称（选填）"></div>
+      <div class="ipt-row"><i>📱</i><input type="tel" id="phone" placeholder="手机号（选填）"></div>
+      <button class="btn-primary" id="regBtn">注 册</button>
+    </div>
+
+    <div class="auth-extra">
+      已有账号？<a href="login.html">直接登录</a>
+    </div>
+  </div>
+</div>
+<script src="js/common.js"></script>
+<script>
+  document.getElementById('regBtn').onclick = async () => {
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const password2 = document.getElementById('password2').value.trim();
+    const nickname = document.getElementById('nickname').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    if (!username || !password) return toast('账号和密码不能为空');
+    if (password !== password2) return toast('两次输入的密码不一致');
+    const r = await api('/api/auth/register', { method: 'POST', body: { username, password, nickname, phone } });
+    if (r.code === 0) {
+      modal({ icon: '🎉', title: '注册成功', text: '正在跳转到登录页', btn: '去登录', onOk: () => go('login.html') });
+    } else {
+      toast(r.msg);
+    }
+  };
+</script>
+</body>
+</html>

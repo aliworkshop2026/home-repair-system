@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>全部服务 - 阿李工坊</title>
+  <link rel="stylesheet" href="css/mobile.css">
+  <style>
+    /* 服务页顶部搜索区域（浅蓝渐变，对应截图） */
+    .svc-top { background: linear-gradient(180deg,#e8f0fb,#f5f6f8); padding: 12px 12px 0; }
+    .svc-search {
+      background: #fff; border-radius: 22px; height: 42px; display: flex; align-items: center;
+      padding: 0 14px; box-shadow: 0 3px 10px rgba(60,100,160,.08); margin-bottom: 10px;
+    }
+    .svc-search input { flex:1; border:none; font-size:14px; background:transparent; }
+    .svc-search button { background: var(--blue); color:#fff; border-radius: 18px; height:32px; padding:0 16px; font-size:13px; }
+    .svc-search .city { font-weight:600; margin-right:8px; font-size:14px; }
+  </style>
+</head>
+<body>
+<div class="phone">
+
+  <div class="svc-top">
+    <div class="svc-search" id="svcSearch" title="点击搜索">
+      <span class="city" id="svcCityName">北京市 ▾</span>
+      <span style="color:#d7dbe2">|</span>
+      <span style="margin:0 8px;color:#9aa1ad">🔍</span>
+      <input id="kwInput" placeholder="点击搜索维修服务" readonly style="cursor:pointer" />
+      <button id="searchBtn">搜索</button>
+    </div>
+  </div>
+
+  <!-- 城市选择浮层 -->
+  <div class="city-modal" id="cityModal" style="display:none">
+    <div class="city-panel">
+      <div class="city-panel-hd">
+        <b>选择地区</b>
+        <span class="city-close" id="cityClose">✕</span>
+      </div>
+      <div class="city-tabs" id="cityTabs"></div>
+      <div class="city-list" id="cityList"></div>
+    </div>
+  </div>
+
+  <!-- 左右联动服务分类 -->
+  <div class="svc-wrap">
+    <div class="svc-side" id="svcSide"></div>
+    <div class="svc-main" id="svcMain">
+      <div class="loading">加载中...</div>
+    </div>
+  </div>
+
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/services.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>预约维修师傅 - 阿李工坊</title>
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+<div class="phone no-tab">
+  <div class="nav-bar"><a class="back" href="javascript:back()">‹</a><span>预约维修师傅</span></div>
+
+  <!-- 订单信息 -->
+  <div class="card">
+    <div style="display:flex;gap:12px">
+      <img id="oImg" style="width:60px;height:60px;border-radius:10px;object-fit:cover;background:#f4f6f9">
+      <div style="flex:1;min-width:0">
+        <b id="oName" style="font-size:16px"></b>
+        <p id="oFault" style="color:var(--text-2);font-size:12.5px;margin-top:4px;line-height:1.6"></p>
+        <p id="oAddr" style="color:var(--text-2);font-size:12.5px"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 预约时间 -->
+  <div class="section-title" style="margin-bottom:4px"><span class="t-wrap">选择预约时间</span></div>
+  <div class="form-card" style="margin-top:0">
+    <div class="form-row">
+      <label>上门时间</label>
+      <input type="datetime-local" id="appointTime">
+    </div>
+    <div class="form-row">
+      <label>快捷选择</label>
+      <div id="quickTimes" style="display:flex;gap:8px;flex-wrap:wrap;padding:6px 0"></div>
+    </div>
+  </div>
+
+  <!-- 师傅列表 -->
+  <div class="section-title" style="margin-bottom:4px"><span class="t-wrap">选择维修师傅</span></div>
+  <div id="workerList"><div class="loading">师傅加载中...</div></div>
+
+  <div class="submit-wrap">
+    <button class="btn-red" style="height:48px;font-size:17px;width:100%" id="confirmBtn">确认预约 · 去支付</button>
+  </div>
+</div>
+<script src="js/common.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>

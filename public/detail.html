@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>产品详情 - 阿李工坊</title>
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+<div class="phone no-tab" style="padding-bottom:76px">
+
+  <!-- 顶部导航 -->
+  <div class="nav-bar">
+    <a class="back" href="javascript:back()">‹</a>
+    <span>产品详情</span>
+  </div>
+
+  <!-- 主图区 -->
+  <div class="detail-hero">
+    <img id="heroImg" src="" alt="">
+    <div class="hero-mask"></div>
+    <div class="hero-info">
+      <h2 id="srvName">加载中...</h2>
+      <div id="srvTags"></div>
+    </div>
+  </div>
+
+  <!-- 规格与价格 -->
+  <div class="sku-box">
+    <div class="sku-tit">请选择您需要的服务</div>
+    <div class="sku-item" id="skuName">服务</div>
+    <div class="sku-price">
+      <div class="price">
+        <span style="color:var(--red);font-size:14px">券后价 </span>
+        <span class="yen">¥</span><span class="num" id="srvPrice">0</span>
+        <span id="srvUnit" style="font-size:13px">起</span>
+        <span class="price-old" id="srvOld"></span>
+      </div>
+      <div class="sales" id="srvSales"></div>
+    </div>
+  </div>
+
+  <!-- 详情选项卡 -->
+  <div class="detail-tabs">
+    <a class="on" data-tab="content" href="javascript:;">服务内容</a>
+    <a data-tab="review" href="javascript:;">用户评价</a>
+    <a data-tab="fee" href="javascript:;">收费标准</a>
+  </div>
+
+  <!-- 面板1：服务内容 -->
+  <div id="tab-content">
+    <div class="rich-block card" id="srvDetail" style="line-height:1.9"></div>
+
+    <div class="step-block">
+      <h3>标准化检修步骤<br>故障快速修好</h3>
+      <div class="step-grid" id="stepGrid"></div>
+    </div>
+
+    <h3 style="text-align:center;font-size:23px;font-weight:900;margin:22px 0 10px">温馨提示</h3>
+    <div id="tipList"></div>
+
+    <div class="fee-box">
+      <h3 style="color:var(--blue);margin:0 0 8px">深夜加急费说明</h3>
+      <div class="r1">晚间加急费 (20:00-22:00)：<b>30元</b></div>
+      <div class="r2">深夜加急费 (22:00-7:00)：<b>60元</b></div>
+    </div>
+    <div class="brand-foot">
+      阿李工坊
+      <div class="marquee-line"><div class="mq-track" id="detailMq"></div></div>
+    </div>
+  </div>
+
+  <!-- 面板2：用户评价 -->
+  <div id="tab-review" style="display:none;padding:10px 0"></div>
+
+  <!-- 面板3：收费标准（参考平台收费表格样式） -->
+  <div id="tab-fee" style="display:none" class="rich-block">
+    <div id="feeTableBox"></div>
+    <div class="card" style="line-height:2;margin-top:12px">
+      <b style="font-size:16px">价格说明</b>
+      <p style="margin:10px 0 0;color:#555">划线价：商品/服务展示的划横线价格为参考价，该价格由设备成本、人力成本、交通成本、材料损耗成本等多因素共同组成。</p>
+      <p style="color:#555">成交价：商品/服务受市场波动、活动促销、会员优惠券等情况影响，因此成交价≠划线价。</p>
+      <p style="color:#555">*划线价仅为参考价，最终以成交价为准。</p>
+      <p style="color:#555;margin-top:10px">上门费：工程师到达现场后，若服务取消，将产生30元上门费；如果维修发生只收取服务费，不收取上门费。</p>
+    </div>
+  </div>
+
+  <div class="foot-holder"></div>
+
+  <!-- 底部固定操作条 -->
+  <div class="detail-foot">
+    <a class="f-ico" href="consult.html"><i>🎧</i>在线咨询</a>
+    <a class="f-ico" href="tel:02363153464"><i>📞</i>电话咨询</a>
+    <button class="book-btn" id="bookBtn">立即预约</button>
+  </div>
+
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/detail.js"></script>
+</body>
+</html>
