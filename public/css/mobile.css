@@ -896,7 +896,7 @@ input, textarea, select { font-family: inherit; outline: none; }
 
 /* 小对话框：从马嘴巴冒出"马上就来"（马头朝左） */
 .rp-dialog {
-  position: absolute; left: -62px; top: 0;
+  position: absolute; left: -46px; top: 0;
   background: #fff; color: #333; font-size: 13px; font-weight: 800;
   border-radius: 12px; padding: 6px 13px; white-space: nowrap;
   box-shadow: 0 4px 14px rgba(0,0,0,.2);
