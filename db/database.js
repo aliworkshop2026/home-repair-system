@@ -199,7 +199,35 @@ function initDatabase() {
     is_default INTEGER DEFAULT 0,     -- 是否默认地址
     created_at TEXT
   );
+
+  -- 用户优惠券表（新人券/节日券自动发放）
+  CREATE TABLE IF NOT EXISTS coupons (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    title TEXT NOT NULL,              -- 券名称（新人专享券/国庆专享券…）
+    amount REAL NOT NULL,             -- 面额
+    min_amount REAL DEFAULT 0,        -- 使用门槛（满减）
+    status INTEGER DEFAULT 0,         -- 0未使用 1已使用 2已过期
+    expire_at TEXT,                   -- 过期日期
+    created_at TEXT
+  );
+
+  -- 用户投诉/返修/举报工单表
+  CREATE TABLE IF NOT EXISTS tickets (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    type TEXT NOT NULL,               -- complaint投诉 / rework返修 / report举报
+    order_no TEXT,                    -- 关联订单号（可空）
+    title TEXT NOT NULL,
+    content TEXT NOT NULL,
+    status INTEGER DEFAULT 0,         -- 0待处理 1处理中 2已完结
+    reply TEXT,                       -- 平台回复
+    created_at TEXT
+  );
   `);
+
+  // 旧库公告内容过期修正：把写死的节日公告替换为长期有效的通用公告（节日公告由接口按日期动态生成）
+  db.exec(`UPDATE announcements SET content = '新用户注册即领18元优惠券，满150元可用，欢迎体验上门检修服务！' WHERE content LIKE '%国庆假期%'`);
 
   // ======================== 2. 种子数据 ========================
   const userCount = db.prepare('SELECT COUNT(*) AS c FROM users').get().c;

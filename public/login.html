@@ -5,6 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>登录 - 阿李工坊</title>
   <link rel="stylesheet" href="css/mobile.css">
+  <style>
+    /* 登录方式切换 Tab */
+    .auth-tabs { display:flex; margin-bottom:16px; border-bottom:1px solid #eef0f3; }
+    .auth-tabs span {
+      flex:1; text-align:center; padding:10px 0; font-size:15px; color:var(--text-3);
+      cursor:pointer; position:relative; transition:color .15s;
+    }
+    .auth-tabs span.on { color:var(--blue); font-weight:700; }
+    .auth-tabs span.on::after {
+      content:''; position:absolute; left:50%; bottom:-1px; transform:translateX(-50%);
+      width:36px; height:3px; border-radius:2px; background:var(--blue);
+    }
+    /* 验证码行：输入框 + 图片 */
+    .captcha-img {
+      width:100px; height:38px; border-radius:8px; cursor:pointer; flex-shrink:0;
+      border:1px solid #e5e7eb; background:#f4f6f9; object-fit:cover;
+    }
+    /* 其他登录方式 */
+    .other-login { margin-top:26px; text-align:center; }
+    .other-login .ot-title {
+      display:flex; align-items:center; gap:12px; color:var(--text-3); font-size:12.5px; margin-bottom:16px;
+    }
+    .other-login .ot-title::before, .other-login .ot-title::after {
+      content:''; flex:1; height:1px; background:#e8eaee;
+    }
+    .other-ways { display:flex; justify-content:center; gap:34px; }
+    .other-way { display:flex; flex-direction:column; align-items:center; gap:6px; cursor:pointer; transition:transform .15s; }
+    .other-way:hover { transform:translateY(-3px); }
+    .other-way .ow-ico {
+      width:46px; height:46px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+      font-size:22px; box-shadow:0 2px 10px rgba(0,0,0,.08);
+    }
+    .other-way span:last-child { font-size:12px; color:var(--text-2); }
+  </style>
 </head>
 <body>
 <div class="phone no-tab" style="background:transparent;box-shadow:none">
@@ -16,9 +50,47 @@
     </div>
 
     <div class="auth-card">
-      <div class="ipt-row"><i>👤</i><input type="text" id="username" placeholder="请输入账号" value=""></div>
-      <div class="ipt-row"><i>🔒</i><input type="password" id="password" placeholder="请输入密码" value=""></div>
-      <button class="btn-primary" id="loginBtn">登 录</button>
+      <!-- 登录方式切换（默认密码登录） -->
+      <div class="auth-tabs">
+        <span id="tabPwd" class="on">密码登录</span>
+        <span id="tabCaptcha">验证码登录</span>
+      </div>
+
+      <!-- 密码登录 -->
+      <div id="panePwd">
+        <div class="ipt-row"><i>👤</i><input type="text" id="username" placeholder="请输入账号" value=""></div>
+        <div class="ipt-row"><i>🔒</i><input type="password" id="password" placeholder="请输入密码" value=""></div>
+        <button class="btn-primary" id="loginBtn">登 录</button>
+      </div>
+
+      <!-- 验证码登录（账号 + 图形验证码，免密码） -->
+      <div id="paneCaptcha" style="display:none">
+        <div class="ipt-row"><i>👤</i><input type="text" id="cUsername" placeholder="请输入账号" value=""></div>
+        <div class="ipt-row">
+          <i>🔑</i><input type="text" id="captchaIpt" placeholder="请输入右图验证码" maxlength="4" value="">
+          <img class="captcha-img" id="captchaImg" title="点击刷新验证码" alt="验证码">
+        </div>
+        <button class="btn-primary" id="captchaLoginBtn">登 录</button>
+      </div>
+
+      <!-- 其他登录方式 -->
+      <div class="other-login">
+        <div class="ot-title">其他方式登录</div>
+        <div class="other-ways">
+          <div class="other-way" onclick="thirdLogin('微信')">
+            <span class="ow-ico" style="background:#e9f9ef">💚</span>
+            <span>微信</span>
+          </div>
+          <div class="other-way" onclick="thirdLogin('QQ')">
+            <span class="ow-ico" style="background:#e8f3ff">🐧</span>
+            <span>QQ</span>
+          </div>
+          <div class="other-way" onclick="switchTab('captcha')">
+            <span class="ow-ico" style="background:#fff4e5">🔑</span>
+            <span>验证码</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="auth-extra">
@@ -31,21 +103,65 @@
 </div>
 <script src="js/common.js"></script>
 <script>
-  // 登录提交
+  let captchaId = '';
+
+  /** 刷新图形验证码 */
+  async function refreshCaptcha() {
+    const r = await api('/api/auth/captcha');
+    if (r.code === 0) {
+      captchaId = r.data.id;
+      document.getElementById('captchaImg').src =
+        'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(r.data.svg)));
+    }
+  }
+  document.getElementById('captchaImg').onclick = refreshCaptcha;
+
+  /** 切换登录方式 Tab */
+  function switchTab(which) {
+    const isPwd = which === 'pwd';
+    document.getElementById('tabPwd').classList.toggle('on', isPwd);
+    document.getElementById('tabCaptcha').classList.toggle('on', !isPwd);
+    document.getElementById('panePwd').style.display = isPwd ? '' : 'none';
+    document.getElementById('paneCaptcha').style.display = isPwd ? 'none' : '';
+    if (!isPwd) refreshCaptcha();
+  }
+  document.getElementById('tabPwd').onclick = () => switchTab('pwd');
+  document.getElementById('tabCaptcha').onclick = () => switchTab('captcha');
+
+  /** 第三方登录（演示环境未接入，友好提示） */
+  function thirdLogin(name) {
+    toast(name + '登录暂未接入，请使用密码或验证码登录', 2000);
+  }
+
+  /** 登录成功后的统一跳转 */
+  function afterLogin() {
+    toast('登录成功');
+    const redirect = qs('redirect');
+    setTimeout(() => go(redirect ? decodeURIComponent(redirect) : 'index.html'), 600);
+  }
+
+  // 密码登录
   document.getElementById('loginBtn').onclick = async () => {
     const username = document.getElementById('username').value.trim();
     const password = document.getElementById('password').value.trim();
     if (!username || !password) return toast('请输入账号和密码');
     const r = await api('/api/auth/login', { method: 'POST', body: { username, password } });
-    if (r.code === 0) {
-      toast('登录成功');
-      const redirect = qs('redirect');
-      setTimeout(() => go(redirect ? decodeURIComponent(redirect) : 'index.html'), 600);
-    } else {
-      toast(r.msg);
-    }
+    if (r.code === 0) afterLogin();
+    else toast(r.msg);
   };
   document.getElementById('password').onkeydown = e => { if (e.key === 'Enter') document.getElementById('loginBtn').click(); };
+
+  // 验证码登录
+  document.getElementById('captchaLoginBtn').onclick = async () => {
+    const username = document.getElementById('cUsername').value.trim();
+    const captcha = document.getElementById('captchaIpt').value.trim();
+    if (!username) return toast('请输入账号');
+    if (!captcha) return toast('请输入图形验证码');
+    const r = await api('/api/auth/login-captcha', { method: 'POST', body: { username, captchaId, captcha } });
+    if (r.code === 0) afterLogin();
+    else { toast(r.msg); refreshCaptcha(); document.getElementById('captchaIpt').value = ''; }
+  };
+  document.getElementById('captchaIpt').onkeydown = e => { if (e.key === 'Enter') document.getElementById('captchaLoginBtn').click(); };
 </script>
 </body>
 </html>

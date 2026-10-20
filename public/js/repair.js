@@ -64,3 +64,46 @@ document.getElementById('submitBtn').onclick = async () => {
 
 loadService();
 requireLogin();
+
+/* ==================== 已有地址选择弹层 ==================== */
+const addrMask = document.getElementById('addrMask');
+const addrPickList = document.getElementById('addrPickList');
+
+/** 打开地址选择弹层：加载当前用户在地址管理中保存的地址 */
+async function openAddrPicker() {
+  const user = await requireLogin();
+  if (!user) return;
+  const r = await api('/api/addresses');
+  const list = r.data || [];
+  if (!list.length) {
+    addrPickList.innerHTML = `
+      <div style="text-align:center;padding:34px 0;color:var(--text-3);font-size:13.5px">
+        <div style="font-size:44px;margin-bottom:10px">📍</div>
+        还没有保存过地址<br>点击下方"新增地址"先添加一个吧
+      </div>`;
+  } else {
+    addrPickList.innerHTML = list.map(a => `
+      <div class="addr-pick-item" data-id="${a.id}"
+           data-full="${a.city}${a.address}${a.detail || ''}" data-phone="${a.phone}"
+           style="padding:14px 4px;border-bottom:1px solid #f0f1f3;cursor:pointer">
+        <div style="font-size:15px;font-weight:600">${a.contact}　<span style="color:var(--text-2);font-weight:400">${a.phone}</span>
+          ${a.is_default ? '<span style="background:var(--blue);color:#fff;font-size:11px;border-radius:4px;padding:1px 6px;margin-left:6px;font-weight:400">默认</span>' : ''}
+        </div>
+        <div style="font-size:13px;color:var(--text-2);margin-top:4px">${a.city} ${a.address} ${a.detail || ''}</div>
+      </div>`).join('');
+    addrPickList.querySelectorAll('.addr-pick-item').forEach(el => {
+      el.onclick = () => {
+        document.getElementById('address').value = el.dataset.full;
+        const phoneIpt = document.getElementById('phone');
+        if (phoneIpt && !phoneIpt.value) phoneIpt.value = el.dataset.phone; // 顺手带出联系电话
+        addrMask.style.display = 'none';
+        toast('已填入所选地址');
+      };
+    });
+  }
+  addrMask.style.display = 'flex';
+}
+
+document.getElementById('pickAddrBtn').onclick = openAddrPicker;
+document.getElementById('addrMaskClose').onclick = () => addrMask.style.display = 'none';
+addrMask.addEventListener('click', e => { if (e.target === addrMask) addrMask.style.display = 'none'; });

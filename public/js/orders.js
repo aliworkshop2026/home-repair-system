@@ -85,12 +85,24 @@ function callWorker(phone) {
   location.href = 'tel:' + phone;
 }
 
-/** 取消订单 */
+/** 取消订单（已支付订单取消后提示退款到账） */
 async function cancelOrder(id) {
   if (!confirm('确定取消该订单吗？')) return;
   const r = await api(`/api/orders/${id}/cancel`, { method: 'POST' });
-  toast(r.msg);
-  if (r.code === 0) loadList();
+  if (r.code === 0) {
+    if (r.data && r.data.refund) {
+      modal({
+        icon: '💰', title: '订单已取消',
+        text: `钱款已退回您的账户（退款金额 ¥${r.data.amount}），请注意查收`,
+        btn: '知道了'
+      });
+    } else {
+      toast(r.msg);
+    }
+    loadList();
+  } else {
+    toast(r.msg);
+  }
 }
 
 loadList();

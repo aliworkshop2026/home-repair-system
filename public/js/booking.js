@@ -31,6 +31,16 @@ async function loadOrder() {
   const r = await api('/api/orders/' + orderId);
   if (r.code !== 0) { toast(r.msg); return; }
   order = r.data;
+  if (order.status === 1) {
+    // 已预约但未支付：预约尚未生效，引导去支付
+    modal({
+      icon: '💰', title: '订单待支付',
+      text: '该订单已预约师傅但尚未支付，支付成功后预约才正式生效',
+      btn: '去支付',
+      onOk: () => go('pay.html?id=' + orderId)
+    });
+    return;
+  }
   if (order.status !== 0) {
     toast('该订单已预约');
     setTimeout(() => go('orders.html?tab=repair'), 800);
@@ -92,7 +102,12 @@ document.getElementById('confirmBtn').onclick = async () => {
     body: { worker_id: selectedWorker, appoint_time }
   });
   if (r.code === 0) {
-    modal({ icon: '✅', title: '预约成功', text: '请完成模拟支付，师傅将按预约时间上门', btn: '立即支付', onOk: () => go('pay.html?id=' + orderId) });
+    modal({
+      icon: '💰', title: '预约已提交，待支付',
+      text: '注意：预约尚未生效！完成支付后师傅才会按约上门，未支付的订单可随时取消',
+      btn: '立即支付',
+      onOk: () => go('pay.html?id=' + orderId)
+    });
   } else {
     toast(r.msg);
   }

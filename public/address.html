@@ -55,10 +55,15 @@
       <div class="card" style="margin:12px;padding:16px">
         <div style="display:flex;justify-content:space-between;align-items:flex-start">
           <div style="flex:1">
-            <div style="font-size:16px;font-weight:600;margin-bottom:6px">${a.contact} ${a.phone}</div>
+            <div style="font-size:16px;font-weight:600;margin-bottom:6px">${a.contact} ${a.phone}
+              ${a.is_default ? '<span style="background:var(--blue);color:#fff;font-size:11px;border-radius:4px;padding:1px 6px;margin-left:6px;font-weight:400">默认</span>' : ''}
+            </div>
             <div style="font-size:14px;color:var(--text-2)">${a.city} ${a.address} ${a.detail || ''}</div>
           </div>
-          <span style="color:var(--text-3);font-size:13px;cursor:pointer;margin-left:12px" onclick="editAddr(${a.id})">编辑</span>
+          <div style="display:flex;gap:14px;margin-left:12px;flex-shrink:0">
+            <span style="color:var(--text-3);font-size:13px;cursor:pointer" onclick="editAddr(${a.id})">编辑</span>
+            <span style="color:var(--red);font-size:13px;cursor:pointer" onclick="delAddr(${a.id})">删除</span>
+          </div>
         </div>
       </div>
     `).join('');
@@ -66,6 +71,14 @@
 
   function editAddr(id) {
     go('address-add.html?id=' + id);
+  }
+
+  /** 删除地址（确认后调用接口，删完刷新列表） */
+  async function delAddr(id) {
+    if (!confirm('确定删除这个地址吗？')) return;
+    const r = await api('/api/addresses/' + id, { method: 'DELETE' });
+    toast(r.msg);
+    if (r.code === 0) setTimeout(() => location.reload(), 500);
   }
 </script>
 </body>

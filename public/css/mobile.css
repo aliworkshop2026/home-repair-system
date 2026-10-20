@@ -851,12 +851,6 @@ input, textarea, select { font-family: inherit; outline: none; }
   width: 160px; height: 26px; border: 2px solid rgba(255,220,130,.8); border-bottom: none;
   border-radius: 100px 100px 0 0;
 }
-/* 顶部高光 */
-.redpack::after {
-  content: ''; position: absolute; left: -30%; top: -60%; width: 60%; height: 130%;
-  background: linear-gradient(105deg, rgba(255,255,255,0) 40%, rgba(255,255,255,.14) 50%, rgba(255,255,255,0) 60%);
-  transform: rotate(12deg); pointer-events: none;
-}
 @keyframes rpPop {
   0%   { transform: scale(.3) translateY(40px); opacity: 0; }
   60%  { transform: scale(1.06) translateY(-4px); opacity: 1; }
@@ -949,3 +943,43 @@ input, textarea, select { font-family: inherit; outline: none; }
   color: #fff; font-size: 17px; line-height: 1; cursor: pointer;
   animation: rpPop .45s .25s cubic-bezier(.34,1.56,.64,1) both;
 }
+
+/* ==================== 全站悬停交互（光标放上反馈） ==================== */
+/* 首页分类小图标：上浮放大 + 阴影 */
+.cat-item { cursor: pointer; transition: transform .18s ease; }
+.cat-item .cat-tile { transition: transform .18s ease, box-shadow .18s ease; }
+.cat-item:hover .cat-tile { transform: translateY(-4px) scale(1.08); box-shadow: 0 8px 18px rgba(0,0,0,.14); }
+.cat-item:hover { color: var(--blue); }
+
+/* 维修服务推荐 / 团购 / 热销卡片：上浮 + 加深阴影 */
+.rec-card, .goods-card, .hot-card { cursor: pointer; transition: transform .18s ease, box-shadow .18s ease; }
+.rec-card:hover, .goods-card:hover, .hot-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,0,0,.12); }
+.rec-card img, .goods-card img, .hot-card img { transition: transform .25s ease; }
+.rec-card:hover img, .goods-card:hover img, .hot-card:hover img { transform: scale(1.05); }
+
+/* 客服联系卡 */
+.service-card { transition: transform .18s ease, box-shadow .18s ease; }
+.service-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0,0,0,.12); }
+
+/* 师傅选择卡片 */
+.worker-item { cursor: pointer; transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease; }
+.worker-item:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,.10); }
+
+/* 列表菜单项（我的页面 / 客服弹层） */
+.m-item { transition: background .15s ease; }
+.m-item:hover { background: #f2f7ff; }
+.svc-option { transition: background .15s ease; }
+.svc-option:hover { background: #f7f8fa; }
+
+/* 订单卡片 / 地址卡片轻微反馈 */
+.order-card { transition: box-shadow .18s ease; }
+.order-card:hover { box-shadow: 0 8px 20px rgba(0,0,0,.10); }
+
+/* 底部 Tab 图标 */
+.tabbar a { transition: transform .15s ease; }
+.tabbar a:hover .tab-ico { transform: scale(1.15); display: inline-block; }
+
+/* 各类可点按钮 */
+button, .btn-primary, .btn-red, .btn-plain, .btn-gray { transition: filter .15s ease, transform .12s ease; }
+button:hover, .btn-primary:hover, .btn-red:hover { filter: brightness(1.06); }
+button:active, .btn-primary:active, .btn-red:active { transform: scale(.97); }

@@ -194,10 +194,19 @@ async function loadBanners() {
 }
 loadBanners();
 
-/* ---------------- 公告滚动 ---------------- */
+/* ---------------- 公告滚动（首条公告由服务端按当天日期实时生成） ---------------- */
 api('/api/announcements').then(r => {
   const text = (r.data || []).map(a => a.content).join('　　　');
   document.getElementById('noticeText').textContent = text;
+});
+
+/* ---------------- 节日活动促销条（节日期间自动显示当前节日优惠） ---------------- */
+api('/api/holiday').then(r => {
+  const h = r.data;
+  if (h && h.active) {
+    document.getElementById('holidayStrip').style.display = '';
+    document.getElementById('holidayPromo').textContent = '🎉 ' + h.promo;
+  }
 });
 
 /* ---------------- 推荐卡片（双列大图） ---------------- */

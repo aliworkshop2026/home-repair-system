@@ -126,14 +126,21 @@ router.post('/:id/review', (req, res) => {
   res.json({ code: 0, msg: '评价提交成功' });
 });
 
-// ============ 7. 取消订单 ============
+// ============ 7. 取消订单（已支付的自动原路退款） ============
 router.post('/:id/cancel', (req, res) => {
   const order = db.prepare('SELECT * FROM orders WHERE id = ? AND user_id = ?')
     .get(req.params.id, req.user.id);
   if (!order) return res.json({ code: 1, msg: '订单不存在' });
   if (order.status >= 3) return res.json({ code: 1, msg: '当前状态不可取消' });
+
+  const refund = order.pay_status === 1; // 已支付订单取消需退款
   db.prepare('UPDATE orders SET status = 4 WHERE id = ?').run(order.id);
-  res.json({ code: 0, msg: '订单已取消' });
+
+  res.json({
+    code: 0,
+    msg: refund ? '订单已取消，钱款已退回您的账户' : '订单已取消',
+    data: { refund, amount: refund ? order.price : 0 }
+  });
 });
 
 module.exports = router;

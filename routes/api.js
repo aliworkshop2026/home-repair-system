@@ -1,20 +1,91 @@
 /**
- * 公共数据接口：轮播图、公告、分类、服务项目、师傅、评价
+ * 公共数据接口：轮播图、公告、分类、服务项目、师傅、评价、节日活动、用户资产
  */
 const express = require('express');
-const { db } = require('../db/database');
+const { db, now } = require('../db/database');
+const { requireUser } = require('../middleware/auth');
+const { currentHoliday, upcomingHoliday, dynamicAnnouncement } = require('../utils/holiday');
 
 const router = express.Router();
 
-// ============ 轮播图列表 ============
+// ============ 轮播图列表（节日期间自动把节日主题页插到第一张，节日结束自动下线） ============
 router.get('/banners', (req, res) => {
   const list = db.prepare('SELECT * FROM banners ORDER BY sort ASC').all();
+  const h = currentHoliday();
+  if (h) {
+    list.unshift({ id: 0, title: h.bannerTitle, sub_title: h.bannerSub, image: h.bannerImg });
+  }
   res.json({ code: 0, data: list });
 });
 
-// ============ 公告列表 ============
+// ============ 公告列表（首条按日期实时生成：节日中/临近节日/时令提示） ============
 router.get('/announcements', (req, res) => {
   const list = db.prepare('SELECT * FROM announcements ORDER BY sort ASC').all();
+  list.unshift({ id: 0, content: dynamicAnnouncement() });
+  res.json({ code: 0, data: list });
+});
+
+// ============ 当前节日活动信息（前端展示促销条/优惠提示用） ============
+router.get('/holiday', (req, res) => {
+  const h = currentHoliday();
+  const up = upcomingHoliday();
+  res.json({
+    code: 0,
+    data: {
+      active: !!h,
+      name: h ? h.name : null,
+      bannerTitle: h ? h.bannerTitle : null,
+      promo: h ? h.promo : null,
+      coupon: h ? h.coupon : null,
+      upcoming: up || null
+    }
+  });
+});
+
+/* ==================== 用户资产（优惠券/积分/保修卡/服务次数，随使用自动更新） ==================== */
+
+/** 给用户发券（同一用户同名券不重复发放） */
+function grantCoupon(userId, title, amount, min, expireAt) {
+  const exists = db.prepare('SELECT id FROM coupons WHERE user_id = ? AND title = ?').get(userId, title);
+  if (exists) return false;
+  db.prepare('INSERT INTO coupons (user_id, title, amount, min_amount, status, expire_at, created_at) VALUES (?,?,?,?,0,?,?)')
+    .run(userId, title, amount, min, expireAt || '', now());
+  return true;
+}
+
+// 我的资产总览：积分 / 优惠券 / 保修卡 / 服务次数
+router.get('/user/stats', requireUser, (req, res) => {
+  const uid = req.user.id;
+
+  // 1) 新人券：注册即送 18 元满150券（与首页红包金额一致）
+  grantCoupon(uid, '新人专享券', 18, 150, '');
+  // 2) 节日券：节日期间进入即自动发放，节日结束7天后过期
+  const h = currentHoliday();
+  if (h) grantCoupon(uid, h.coupon.title, h.coupon.amount, h.coupon.min, h.to + ' 23:59:59');
+
+  // 3) 积分：已完成订单金额 1元=1积分（随订单完成自动累积）
+  const done = db.prepare(`SELECT price, finish_time, created_at FROM orders WHERE user_id = ? AND status = 3`).all(uid);
+  const points = Math.floor(done.reduce((s, o) => s + (o.price || 0), 0));
+  const serviceCount = done.length;
+
+  // 4) 保修卡：近90天内完成的订单，同部位故障保修90天（每张卡对应一单）
+  const cutoff = new Date(Date.now() - 90 * 86400000);
+  const warranty = done.filter(o => {
+    const t = new Date((o.finish_time || o.created_at || '').replace(' ', 'T'));
+    return !isNaN(t) && t >= cutoff;
+  }).length;
+
+  // 5) 可用优惠券数（自动把过期的标记掉）
+  db.prepare(`UPDATE coupons SET status = 2 WHERE status = 0 AND expire_at != '' AND expire_at < ?`).run(now());
+  const couponCount = db.prepare('SELECT COUNT(*) AS c FROM coupons WHERE user_id = ? AND status = 0').get(uid).c;
+
+  res.json({ code: 0, data: { points, coupons: couponCount, warranty, serviceCount } });
+});
+
+// 我的优惠券列表
+router.get('/coupons', requireUser, (req, res) => {
+  db.prepare(`UPDATE coupons SET status = 2 WHERE status = 0 AND expire_at != '' AND expire_at < ?`).run(now());
+  const list = db.prepare('SELECT * FROM coupons WHERE user_id = ? ORDER BY status ASC, id DESC').all(req.user.id);
   res.json({ code: 0, data: list });
 });
 

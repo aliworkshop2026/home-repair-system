@@ -34,6 +34,7 @@ app.use('/api', require('./routes/api'));              // 轮播图/公告/分�
 app.use('/api/orders', require('./routes/orders'));    // 报修/预约/支付/评价
 app.use('/api/messages', require('./routes/messages'));// 在线咨询留言
 app.use('/api/addresses', require('./routes/addresses'));// 用户地址管理
+app.use('/api/tickets', require('./routes/tickets'));    // 投诉/返修/举报工单
 app.use('/api/admin', require('./routes/admin'));      // 管理员后台
 
 // 5. 健康检查

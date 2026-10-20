@@ -25,6 +25,28 @@
     </div>
   </div>
 
+  <!-- 我的资产（优惠券/积分/保修卡/服务次数，随使用自动更新） -->
+  <div class="card" id="assetCard" style="display:none;padding:16px 8px">
+    <div style="display:flex;text-align:center">
+      <a href="coupons.html" style="flex:1;cursor:pointer">
+        <div style="font-size:20px;font-weight:800;color:var(--red)" id="stCoupons">0</div>
+        <div style="font-size:12px;color:var(--text-2);margin-top:2px">🎟️ 优惠券</div>
+      </a>
+      <a href="javascript:void(0)" style="flex:1;cursor:pointer" onclick="toast('积分规则：每完成1元订单积1分')">
+        <div style="font-size:20px;font-weight:800;color:#ff9500" id="stPoints">0</div>
+        <div style="font-size:12px;color:var(--text-2);margin-top:2px">⭐ 积分</div>
+      </a>
+      <a href="javascript:void(0)" style="flex:1;cursor:pointer" onclick="toast('已完成订单同部位故障保修90天')">
+        <div style="font-size:20px;font-weight:800;color:#07c160" id="stWarranty">0</div>
+        <div style="font-size:12px;color:var(--text-2);margin-top:2px">🛡️ 保修卡</div>
+      </a>
+      <a href="orders.html?tab=done" style="flex:1;cursor:pointer">
+        <div style="font-size:20px;font-weight:800;color:var(--blue)" id="stService">0</div>
+        <div style="font-size:12px;color:var(--text-2);margin-top:2px">🔧 服务次数</div>
+      </a>
+    </div>
+  </div>
+
   <!-- 我的订单 -->
   <div class="card me-order-card">
     <div class="oc-hd">
@@ -37,6 +59,19 @@
       <a href="orders.html?tab=done"><i>✅</i>已完成</a>
       <a href="consult.html"><i>💬</i>我的咨询</a>
     </div>
+  </div>
+
+  <!-- 售后服务（投诉/返修/举报） -->
+  <div class="card me-menu" style="padding:0">
+    <a class="m-item" href="my-tickets.html?type=complaint">
+      <span class="mi-ico">📮</span>我的投诉<span class="arrow">›</span>
+    </a>
+    <a class="m-item" href="my-tickets.html?type=rework">
+      <span class="mi-ico">🔄</span>我的返修<span class="arrow">›</span>
+    </a>
+    <a class="m-item" href="my-tickets.html?type=report">
+      <span class="mi-ico">🚩</span>我的举报<span class="arrow">›</span>
+    </a>
   </div>
 
   <!-- 功能菜单 -->
@@ -134,6 +169,15 @@
     document.getElementById('logoutItem').style.display = '';
     // 显示服务地址入口
     document.getElementById('meAddr').style.display = '';
+    // 加载我的资产（优惠券/积分/保修卡/服务次数）
+    const st = await api('/api/user/stats');
+    if (st.code === 0) {
+      document.getElementById('assetCard').style.display = '';
+      document.getElementById('stCoupons').textContent = st.data.coupons;
+      document.getElementById('stPoints').textContent = st.data.points;
+      document.getElementById('stWarranty').textContent = st.data.warranty;
+      document.getElementById('stService').textContent = st.data.serviceCount;
+    }
   })();
 
   /** 客服弹窗 */

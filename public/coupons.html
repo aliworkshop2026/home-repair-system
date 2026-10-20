@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>我的优惠券 - 阿李工坊</title>
+  <link rel="stylesheet" href="css/mobile.css">
+  <style>
+    .cp-card {
+      position:relative; margin:12px; border-radius:14px; overflow:hidden;
+      background:linear-gradient(135deg,#ff7a5c,#f23a2f); color:#fff;
+      display:flex; box-shadow:0 4px 14px rgba(242,58,47,.25);
+    }
+    .cp-card.off { background:#c8ccd4; box-shadow:none; }
+    .cp-left { width:108px; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:18px 0; border-right:2px dashed rgba(255,255,255,.5); }
+    .cp-amt { font-size:30px; font-weight:900; }
+    .cp-amt i { font-style:normal; font-size:15px; }
+    .cp-min { font-size:11px; opacity:.85; margin-top:2px; }
+    .cp-right { flex:1; padding:14px; display:flex; flex-direction:column; justify-content:center; }
+    .cp-title { font-size:15.5px; font-weight:700; }
+    .cp-info { font-size:12px; opacity:.85; margin-top:6px; line-height:1.6; }
+    .cp-state { position:absolute; right:12px; top:12px; font-size:11.5px; border:1px solid rgba(255,255,255,.7); border-radius:10px; padding:1px 8px; }
+  </style>
+</head>
+<body>
+<div class="phone no-tab">
+  <div class="nav-bar"><a class="back" href="profile.html">‹</a><span>我的优惠券</span></div>
+  <div id="cpList"><div class="loading">加载中...</div></div>
+</div>
+<script src="js/common.js"></script>
+<script>
+  (async function () {
+    const user = await requireLogin();
+    if (!user) return;
+    const r = await api('/api/coupons');
+    const list = r.data || [];
+    const box = document.getElementById('cpList');
+    if (!list.length) {
+      box.innerHTML = `<div class="empty"><span class="e-ico">🎟️</span>暂无优惠券<br>
+        <div style="font-size:12.5px;color:var(--text-3);margin-top:6px">新人注册、节日期间均可自动获得优惠券</div></div>`;
+      return;
+    }
+    const stateText = { 0: '可使用', 1: '已使用', 2: '已过期' };
+    box.innerHTML = list.map(c => `
+      <div class="cp-card ${c.status !== 0 ? 'off' : ''}">
+        <div class="cp-left">
+          <div class="cp-amt"><i>¥</i>${c.amount}</div>
+          <div class="cp-min">满${c.min_amount}可用</div>
+        </div>
+        <div class="cp-right">
+          <div class="cp-title">${c.title}</div>
+          <div class="cp-info">
+            全平台服务通用<br>
+            ${c.expire_at ? '有效期至：' + c.expire_at.slice(0, 10) : '长期有效'}
+          </div>
+        </div>
+        <span class="cp-state">${stateText[c.status]}</span>
+      </div>`).join('');
+  })();
+</script>
+</body>
+</html>

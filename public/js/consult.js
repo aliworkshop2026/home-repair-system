@@ -51,7 +51,7 @@ function showTyping() {
   return row;
 }
 
-/** 页面初始化：仅检查登录态，不预加载任何聊天记录 */
+/** 页面初始化：检查登录态并加载最近聊天记录（历史持久保存在服务器，切换页面/重新登录都不丢失） */
 async function init() {
   const user = await currentUser();
   if (!user) {
@@ -60,8 +60,32 @@ async function init() {
     }, 300);
     return;
   }
-  // 已登录：不预加载历史对话，等待用户主动发送
+  await loadHistory(false); // 默认加载最近 10 条，点"查看所有聊天记录"展开全部
 }
+
+/** 从服务器加载聊天记录
+ *  @param {boolean} all true=加载全部；false=仅最近10条
+ */
+async function loadHistory(all) {
+  const r = await api('/api/messages');
+  if (r.code !== 0) return;
+  const list = r.data || [];
+  const show = all ? list : list.slice(-10);
+
+  // 清空旧气泡（保留"查看所有"提示条）
+  body.querySelectorAll('.msg-row').forEach(el => el.remove());
+
+  const tip = body.querySelector('.chat-history-tip');
+  if (list.length > 10 && !all) {
+    tip.style.display = ''; // 还有更多历史：显示"查看所有"入口
+  } else {
+    tip.style.display = 'none';
+  }
+  show.forEach(m => appendMsg(m.role === 'user' ? 'user' : 'admin', m.content));
+}
+
+/** 点击"点击查看所有聊天记录"：展开全部历史 */
+document.querySelector('.chat-history-tip').addEventListener('click', () => loadHistory(true));
 
 let sending = false; // 防止连发
 
