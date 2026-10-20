@@ -109,3 +109,62 @@ const CITY = '北京市';
 document.addEventListener('error', (e) => {
   if (e.target.tagName === 'IMG') e.target.style.opacity = 0;
 }, true);
+
+/* =========================================================
+   全局下拉刷新：页面顶部下拉超过阈值后松手即刷新
+   页面如需禁用，在引入 common.js 前设置 window.DISABLE_PULL_REFRESH = true
+   ========================================================= */
+(function () {
+  if (window.DISABLE_PULL_REFRESH) return;
+  if (!('ontouchstart' in window)) return; // 仅触屏设备启用
+
+  const bar = document.createElement('div');
+  bar.id = 'ptrBar';
+  bar.innerHTML = '<span id="ptrTxt">↓ 下拉刷新</span>';
+  (document.body || document.documentElement).appendChild(bar);
+  const txt = bar.querySelector('#ptrTxt');
+
+  const THRESHOLD = 70;      // 触发刷新的下拉距离（px）
+  let startY = 0, dist = 0, pulling = false, refreshing = false;
+
+  /** 触摸点是否位于一个可继续向上滚动的容器内（如聊天消息区），是则不接管 */
+  function inScrollable(el) {
+    while (el && el !== document.body && el !== document.documentElement) {
+      const oy = getComputedStyle(el).overflowY;
+      if ((oy === 'auto' || oy === 'scroll') && el.scrollHeight > el.clientHeight && el.scrollTop > 0) return true;
+      el = el.parentElement;
+    }
+    return false;
+  }
+
+  window.addEventListener('touchstart', (e) => {
+    if (refreshing) return;
+    if (window.scrollY <= 0 && e.touches.length === 1 && !inScrollable(e.target)) {
+      startY = e.touches[0].clientY;
+      pulling = true;
+      dist = 0;
+    }
+  }, { passive: true });
+
+  window.addEventListener('touchmove', (e) => {
+    if (!pulling || refreshing) return;
+    dist = e.touches[0].clientY - startY;
+    if (dist <= 0 || window.scrollY > 0) { bar.style.height = '0px'; return; }
+    const h = Math.min(dist / 2.2, 96);
+    bar.style.height = h + 'px';
+    txt.textContent = dist > THRESHOLD ? '↑ 松开立即刷新' : '↓ 下拉刷新';
+  }, { passive: true });
+
+  window.addEventListener('touchend', () => {
+    if (!pulling || refreshing) return;
+    pulling = false;
+    if (dist > THRESHOLD) {
+      refreshing = true;
+      bar.style.height = '44px';
+      txt.innerHTML = '<span class="ptr-spin">🔄</span>&nbsp;正在刷新…';
+      setTimeout(() => location.reload(), 350);
+    } else {
+      bar.style.height = '0px';
+    }
+  });
+})();

@@ -944,6 +944,33 @@ input, textarea, select { font-family: inherit; outline: none; }
   animation: rpPop .45s .25s cubic-bezier(.34,1.56,.64,1) both;
 }
 
+/* ---------------- 我的页面：资产四格（参考主流App排版） ---------------- */
+.asset-row { display: flex; text-align: center; }
+.as-item { flex: 1; cursor: pointer; padding: 2px 0; }
+.as-num { font-size: 21px; font-weight: 800; color: var(--text); line-height: 1.3; }
+.as-lb { font-size: 12.5px; color: var(--text-2); margin-top: 3px; white-space: nowrap; }
+
+/* 我的页面：投诉/返修/举报 一行三列 */
+.aft-row { display: flex; }
+.aft-item {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  font-size: 14px; color: var(--text); cursor: pointer; padding: 4px 0;
+}
+.aft-item .af-ico { font-size: 16px; margin-right: 6px; }
+
+/* ---------------- 下拉刷新指示条 ---------------- */
+#ptrBar {
+  position: fixed; top: 0; left: 50%; transform: translateX(-50%);
+  width: 100%; max-width: 480px; z-index: 400;
+  display: flex; align-items: center; justify-content: center;
+  height: 0; overflow: hidden;
+  background: var(--blue-light); color: var(--blue);
+  font-size: 13px; font-weight: 600;
+  transition: height .18s ease;
+}
+#ptrBar .ptr-spin { display: inline-block; animation: ptrRot 1s linear infinite; }
+@keyframes ptrRot { to { transform: rotate(360deg); } }
+
 /* ==================== 全站悬停交互（光标放上反馈） ==================== */
 /* 首页分类小图标：上浮放大 + 阴影 */
 .cat-item { cursor: pointer; transition: transform .18s ease; }
@@ -983,3 +1010,21 @@ input, textarea, select { font-family: inherit; outline: none; }
 button, .btn-primary, .btn-red, .btn-plain, .btn-gray { transition: filter .15s ease, transform .12s ease; }
 button:hover, .btn-primary:hover, .btn-red:hover { filter: brightness(1.06); }
 button:active, .btn-primary:active, .btn-red:active { transform: scale(.97); }
+
+/* 全部服务页：服务小卡片与左侧分类项悬停 */
+.svc-cell { transition: transform .18s ease, box-shadow .18s ease; }
+.svc-cell:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,0,0,.12); }
+.svc-cell .c-img img { transition: transform .25s ease; }
+.svc-cell:hover .c-img img { transform: scale(1.06); }
+.svc-cell:hover .c-nm { color: var(--blue); }
+.svc-side .side-item { cursor: pointer; transition: background .15s ease, color .15s ease, transform .15s ease; }
+.svc-side .side-item:hover { background: #eef4ff; color: var(--blue); transform: translateX(2px); }
+.svc-search { transition: box-shadow .18s ease; }
+.svc-search:hover { box-shadow: 0 6px 16px rgba(60,100,160,.16); }
+
+/* 我的页面资产格 / 售后三列 悬停 */
+.as-item { transition: transform .15s ease; }
+.as-item:hover { transform: translateY(-2px); }
+.as-item:hover .as-lb { color: var(--blue); }
+.aft-item { transition: background .15s ease, color .15s ease; border-radius: 10px; }
+.aft-item:hover { background: #f2f7ff; color: var(--blue); }

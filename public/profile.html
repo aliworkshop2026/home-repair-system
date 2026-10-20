@@ -25,24 +25,24 @@
     </div>
   </div>
 
-  <!-- 我的资产（优惠券/积分/保修卡/服务次数，随使用自动更新） -->
-  <div class="card" id="assetCard" style="display:none;padding:16px 8px">
-    <div style="display:flex;text-align:center">
-      <a href="coupons.html" style="flex:1;cursor:pointer">
-        <div style="font-size:20px;font-weight:800;color:var(--red)" id="stCoupons">0</div>
-        <div style="font-size:12px;color:var(--text-2);margin-top:2px">🎟️ 优惠券</div>
+  <!-- 我的资产（优惠券/积分/保修卡/服务次卡，随使用自动更新） -->
+  <div class="card" id="assetCard" style="display:none;padding:18px 0 16px">
+    <div class="asset-row">
+      <a class="as-item" href="coupons.html">
+        <div class="as-num" id="stCoupons">0</div>
+        <div class="as-lb">优惠券</div>
       </a>
-      <a href="javascript:void(0)" style="flex:1;cursor:pointer" onclick="toast('积分规则：每完成1元订单积1分')">
-        <div style="font-size:20px;font-weight:800;color:#ff9500" id="stPoints">0</div>
-        <div style="font-size:12px;color:var(--text-2);margin-top:2px">⭐ 积分</div>
+      <a class="as-item" href="javascript:void(0)" onclick="toast('积分规则：每完成1元订单积1分')">
+        <div class="as-num" id="stPoints">0</div>
+        <div class="as-lb">积分</div>
       </a>
-      <a href="javascript:void(0)" style="flex:1;cursor:pointer" onclick="toast('已完成订单同部位故障保修90天')">
-        <div style="font-size:20px;font-weight:800;color:#07c160" id="stWarranty">0</div>
-        <div style="font-size:12px;color:var(--text-2);margin-top:2px">🛡️ 保修卡</div>
+      <a class="as-item" href="javascript:void(0)" onclick="toast('已完成订单同部位故障保修90天')">
+        <div class="as-num" id="stWarranty">0</div>
+        <div class="as-lb">保修卡</div>
       </a>
-      <a href="orders.html?tab=done" style="flex:1;cursor:pointer">
-        <div style="font-size:20px;font-weight:800;color:var(--blue)" id="stService">0</div>
-        <div style="font-size:12px;color:var(--text-2);margin-top:2px">🔧 服务次数</div>
+      <a class="as-item" href="orders.html?tab=done">
+        <div class="as-num" id="stService">0</div>
+        <div class="as-lb">服务次卡</div>
       </a>
     </div>
   </div>
@@ -61,17 +61,13 @@
     </div>
   </div>
 
-  <!-- 售后服务（投诉/返修/举报） -->
-  <div class="card me-menu" style="padding:0">
-    <a class="m-item" href="my-tickets.html?type=complaint">
-      <span class="mi-ico">📮</span>我的投诉<span class="arrow">›</span>
-    </a>
-    <a class="m-item" href="my-tickets.html?type=rework">
-      <span class="mi-ico">🔄</span>我的返修<span class="arrow">›</span>
-    </a>
-    <a class="m-item" href="my-tickets.html?type=report">
-      <span class="mi-ico">🚩</span>我的举报<span class="arrow">›</span>
-    </a>
+  <!-- 售后服务（投诉/返修/举报，一行三列） -->
+  <div class="card" style="padding:14px 0">
+    <div class="aft-row">
+      <a class="aft-item" href="my-tickets.html?type=complaint"><span class="af-ico">✏️</span>我的投诉</a>
+      <a class="aft-item" href="my-tickets.html?type=rework"><span class="af-ico">🔁</span>我的返修</a>
+      <a class="aft-item" href="my-tickets.html?type=report"><span class="af-ico">🚩</span>我的举报</a>
+    </div>
   </div>
 
   <!-- 功能菜单 -->
