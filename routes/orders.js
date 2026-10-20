@@ -91,20 +91,37 @@ router.post('/:id/book', (req, res) => {
   res.json({ code: 0, msg: '预约成功，请完成支付' });
 });
 
-// ============ 5. 模拟支付（不接真实支付，直接置为已支付/待检修） ============
+// ============ 5. 模拟支付（不接真实支付，直接置为已支付/待检修；支持选优惠券抵扣） ============
 router.post('/:id/pay', (req, res) => {
   const order = db.prepare('SELECT * FROM orders WHERE id = ? AND user_id = ?')
     .get(req.params.id, req.user.id);
   if (!order) return res.json({ code: 1, msg: '订单不存在' });
   if (order.status !== 1) return res.json({ code: 1, msg: '当前订单无需支付' });
 
-  db.prepare(`UPDATE orders SET pay_status = 1, pay_time = ?, status = 2 WHERE id = ?`)
-    .run(now(), order.id);
+  const baseAmount = order.price > 0 ? order.price : 30; // 自助报修无预估价时按30元上门检测费
+  const couponId = Number((req.body || {}).coupon_id) || 0;
+  let coupon = null;
+  if (couponId) {
+    coupon = db.prepare('SELECT * FROM coupons WHERE id = ? AND user_id = ?').get(couponId, req.user.id);
+    if (!coupon) return res.json({ code: 1, msg: '优惠券不存在' });
+    if (coupon.status !== 0) return res.json({ code: 1, msg: '该优惠券不可用' });
+    if (coupon.expire_at && coupon.expire_at < now()) return res.json({ code: 1, msg: '该优惠券已过期' });
+    if (baseAmount < coupon.min_amount) return res.json({ code: 1, msg: `该券需满${coupon.min_amount}元可用` });
+  }
+
+  const payAmount = coupon ? Math.max(1, baseAmount - coupon.amount) : baseAmount; // 抵扣后至少付1元
+  db.prepare(`UPDATE orders SET pay_status = 1, pay_time = ?, status = 2, coupon_id = ?, pay_amount = ? WHERE id = ?`)
+    .run(now(), couponId, payAmount, order.id);
+  if (coupon) db.prepare('UPDATE coupons SET status = 1 WHERE id = ?').run(coupon.id);
   // 师傅接单量 +1
   if (order.worker_id) {
     db.prepare('UPDATE workers SET order_count = order_count + 1 WHERE id = ?').run(order.worker_id);
   }
-  res.json({ code: 0, msg: '支付成功，师傅将按预约时间上门检修' });
+  res.json({
+    code: 0,
+    msg: coupon ? `支付成功，优惠券已抵扣${coupon.amount}元` : '支付成功，师傅将按预约时间上门检修',
+    data: { pay_amount: payAmount, discount: coupon ? coupon.amount : 0 }
+  });
 });
 
 // ============ 6. 提交评价（仅已完成订单） ============
@@ -135,11 +152,15 @@ router.post('/:id/cancel', (req, res) => {
 
   const refund = order.pay_status === 1; // 已支付订单取消需退款
   db.prepare('UPDATE orders SET status = 4 WHERE id = ?').run(order.id);
+  // 支付时用过优惠券的，取消后券退回账户
+  if (refund && order.coupon_id) {
+    db.prepare('UPDATE coupons SET status = 0 WHERE id = ? AND user_id = ? AND status = 1').run(order.coupon_id, req.user.id);
+  }
 
   res.json({
     code: 0,
     msg: refund ? '订单已取消，钱款已退回您的账户' : '订单已取消',
-    data: { refund, amount: refund ? order.price : 0 }
+    data: { refund, amount: refund ? (order.pay_amount || order.price) : 0 }
   });
 });
 

@@ -35,6 +35,20 @@ const DEFS = [
     promo: '春节不打烊：满99减20团圆券已到账，紧急报修优先上门'
   },
   {
+    name: '情人节', fixed: ['02-12', '02-15'],
+    bannerTitle: '情人节安家季', bannerSub: '为爱守护小窝 · 领12元甜蜜券',
+    bannerImg: img('情人节家电维修服务海报，粉色玫瑰爱心元素，温馨浪漫商业横幅'),
+    coupon: { title: '情人节专享券', amount: 12, min: 66 },
+    promo: '情人节甜蜜季：满66减12甜蜜券已到账，给TA一个舒心的家'
+  },
+  {
+    name: '妇女节', fixed: ['03-06', '03-09'],
+    bannerTitle: '三八女神节', bannerSub: '解放双手 · 领8元女神券',
+    bannerImg: img('三八妇女节家电清洗促销海报，粉色康乃馨，明亮厨房，商业横幅'),
+    coupon: { title: '女神节专享券', amount: 8, min: 49 },
+    promo: '女神节快乐：满49减8女神券已到账，清洗维修解放双手'
+  },
+  {
     name: '清明', fixed: ['04-03', '04-06'],
     bannerTitle: '清明踏青季', bannerSub: '出行前家电安检 · 领5元春日券',
     bannerImg: img('清明春日电维修服务海报，青山绿水淡色春天，简洁商业横幅'),
@@ -49,6 +63,27 @@ const DEFS = [
     promo: '五一焕新周：满89减15，空调油烟机清洗正当时'
   },
   {
+    name: '母亲节', fixed: ['05-09', '05-14'],
+    bannerTitle: '感恩母亲节', bannerSub: '替妈妈分担家务 · 领10元感恩券',
+    bannerImg: img('母亲节家电清洗服务海报，康乃馨温馨粉色，干净厨房，商业横幅'),
+    coupon: { title: '母亲节专享券', amount: 10, min: 59 },
+    promo: '母亲节感恩季：满59减10感恩券已到账，替妈妈把家电清洗干净'
+  },
+  {
+    name: '儿童节', fixed: ['05-31', '06-02'],
+    bannerTitle: '六一童趣季', bannerSub: '家电安全护成长 · 领6元童心券',
+    bannerImg: img('六一儿童节家电安全检查海报，彩色气球积木卡通元素，活泼商业横幅'),
+    coupon: { title: '儿童节专享券', amount: 6, min: 39 },
+    promo: '六一儿童节：满39减6童心券已到账，家电用电安全守护孩子成长'
+  },
+  {
+    name: '父亲节', fixed: ['06-14', '06-21'],
+    bannerTitle: '感恩父亲节', bannerSub: '家电检修不让爸爸操心 · 领10元孝心券',
+    bannerImg: img('父亲节家电维修服务海报，蓝色领带工具箱元素，沉稳商业横幅'),
+    coupon: { title: '父亲节专享券', amount: 10, min: 59 },
+    promo: '父亲节快乐：满59减10孝心券已到账，家电检修交给专业师傅'
+  },
+  {
     name: '端午', lunar: true,
     bannerTitle: '端午安康', bannerSub: '粽情一夏 · 领10元安康券',
     bannerImg: img('端午节家电维修服务海报，粽子龙舟元素，绿色清新商业横幅'),
@@ -61,6 +96,13 @@ const DEFS = [
     bannerImg: img('中秋节家电维修服务海报，圆月玉兔桂花，暖色商业横幅'),
     coupon: { title: '中秋专享券', amount: 10, min: 59 },
     promo: '中秋团圆季：满59减10月圆券已到账，家电体检迎佳节'
+  },
+  {
+    name: '教师节', fixed: ['09-08', '09-11'],
+    bannerTitle: '感恩教师节', bannerSub: '恩师家电我守护 · 领8元谢师券',
+    bannerImg: img('教师节家电维修服务海报，黑板粉笔书本元素，暖色商业横幅'),
+    coupon: { title: '教师节专享券', amount: 8, min: 49 },
+    promo: '教师节感恩季：满49减8谢师券已到账，家电检修上门无忧'
   },
   {
     name: '国庆', fixed: ['09-29', '10-07'],
@@ -153,4 +195,46 @@ function dynamicAnnouncement() {
   return seasonTip();
 }
 
-module.exports = { currentHoliday, upcomingHoliday, dynamicAnnouncement };
+/** 领券中心：按当天日期动态生成可领取的优惠券模板
+ *  节日期间 = 节日三档券；平时 = 每日轮换券 + 常驻券；节前7天内追加预热券 */
+function couponCenter() {
+  const today = new Date();
+  const todayStr = fmt(today);
+  const exp3 = fmt(new Date(Date.now() + 3 * 86400000)) + ' 23:59:59';
+  const exp7 = fmt(new Date(Date.now() + 7 * 86400000)) + ' 23:59:59';
+  const list = [];
+
+  // 1) 节日期间：主券 + 小额券 + 大额券（节日结束当天过期）
+  const h = currentHoliday();
+  if (h) {
+    list.push({ key: 'holiday-main', tag: h.name + '限定', title: h.coupon.title, amount: h.coupon.amount, min: h.coupon.min, expire: h.to + ' 23:59:59' });
+    list.push({ key: 'holiday-small', tag: h.name + '加量', title: h.name + '小额券', amount: Math.max(3, Math.round(h.coupon.amount / 3)), min: Math.max(29, Math.round(h.coupon.min / 3)), expire: h.to + ' 23:59:59' });
+    list.push({ key: 'holiday-big', tag: h.name + '大额', title: h.name + '大额券', amount: h.coupon.amount * 2, min: h.coupon.min * 2, expire: h.to + ' 23:59:59' });
+  } else {
+    // 2) 节前 7 天内：预热券
+    const up = upcomingHoliday();
+    if (up && up.days <= 7) {
+      list.push({ key: 'warmup', tag: up.name + '预热', title: up.name + '预热券', amount: 5, min: 39, expire: up.from + ' 23:59:59' });
+    }
+  }
+
+  // 3) 每日轮换券：按星期几换主题（一周七天不重样，3天有效）
+  const daily = [
+    { tag: '周日特惠', title: '周日检修券', amount: 8, min: 69 },
+    { tag: '周一清洗日', title: '周一清洗券', amount: 6, min: 49 },
+    { tag: '周二维修日', title: '周二维修券', amount: 6, min: 49 },
+    { tag: '周三疏通日', title: '周三疏通券', amount: 5, min: 39 },
+    { tag: '周四安检日', title: '周四安检券', amount: 5, min: 39 },
+    { tag: '周五焕新日', title: '周五焕新券', amount: 8, min: 69 },
+    { tag: '周六省心日', title: '周六省心券', amount: 8, min: 69 }
+  ][today.getDay()];
+  list.push({ key: 'daily-' + today.getDay(), tag: daily.tag + '·每日轮换', title: daily.title, amount: daily.amount, min: daily.min, expire: exp3 });
+
+  // 4) 常驻券：天天可领（7天有效）
+  list.push({ key: 'base-59-5', tag: '日常福利', title: '天天领·满59减5', amount: 5, min: 59, expire: exp7 });
+  list.push({ key: 'base-129-12', tag: '大额精选', title: '天天领·满129减12', amount: 12, min: 129, expire: exp7 });
+
+  return list;
+}
+
+module.exports = { currentHoliday, upcomingHoliday, dynamicAnnouncement, couponCenter };

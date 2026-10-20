@@ -32,6 +32,12 @@
     </div>
   </div>
 
+  <!-- 优惠券抵扣（支付页可选，抵扣后按实付金额结算） -->
+  <div class="card" id="couponRow" style="display:flex;justify-content:space-between;align-items:center;cursor:pointer">
+    <span style="color:var(--text-2)">🎟️ 优惠券</span>
+    <span id="couponSel" style="color:var(--text-3);font-size:13px">加载中…</span>
+  </div>
+
   <!-- 模拟支付方式（不接入真实支付） -->
   <div class="card" style="padding:0;overflow:hidden">
     <div class="pay-method" data-pay="wechat">
@@ -56,6 +62,17 @@
 
   <div class="submit-wrap" style="padding-top:4px">
     <button class="btn-red" style="height:50px;font-size:18px;width:100%" id="payBtn">立即支付</button>
+  </div>
+</div>
+
+<!-- 优惠券选择弹层（底部弹出） -->
+<div class="modal-mask" id="couponMask" style="display:none" onclick="if(event.target===this)hideCouponSheet()">
+  <div style="background:#fff;border-radius:16px 16px 0 0;padding:18px 16px calc(20px + env(safe-area-inset-bottom));position:absolute;bottom:0;left:0;right:0;max-width:480px;margin:0 auto;max-height:70vh;overflow-y:auto">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+      <b style="font-size:16px">选择优惠券</b>
+      <span style="font-size:20px;color:#999;cursor:pointer" onclick="hideCouponSheet()">✕</span>
+    </div>
+    <div id="couponSheetList"></div>
   </div>
 </div>
 <script src="js/common.js"></script>

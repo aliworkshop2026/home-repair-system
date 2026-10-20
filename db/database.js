@@ -68,6 +68,11 @@ function initDatabase() {
   if (!userCols.includes('gender')) db.exec('ALTER TABLE users ADD COLUMN gender TEXT');
   if (!userCols.includes('birthday')) db.exec('ALTER TABLE users ADD COLUMN birthday TEXT');
 
+  // 兼容旧数据库：orders 表补优惠券抵扣相关列（支付选券抵扣后实付金额与用券记录）
+  const orderCols = db.prepare('PRAGMA table_info(orders)').all().map(c => c.name);
+  if (!orderCols.includes('coupon_id')) db.exec('ALTER TABLE orders ADD COLUMN coupon_id INTEGER DEFAULT 0');
+  if (!orderCols.includes('pay_amount')) db.exec('ALTER TABLE orders ADD COLUMN pay_amount REAL DEFAULT 0');
+
   db.exec(`
 
   -- 管理员表

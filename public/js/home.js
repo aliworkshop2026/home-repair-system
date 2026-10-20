@@ -29,12 +29,37 @@ renderTabbar('home');
   };
 })();
 
-/* ---------------- 红包优惠券弹窗（开屏广告结束后立即弹出，会话内仅一次） ---------------- */
-function showRedpack() {
+/* ---------------- 红包优惠券弹窗（按当天日期/节日实时换肤，每天首次进入弹一次） ---------------- */
+async function showRedpack() {
   const mask = document.getElementById('redpackMask');
   if (!mask) return;
-  if (sessionStorage.getItem('alwRedpackShown')) { mask.remove(); return; }
-  sessionStorage.setItem('alwRedpackShown', '1');
+  const todayKey = 'alwRedpackShown_' + new Date().toISOString().slice(0, 10);
+  if (localStorage.getItem(todayKey)) { mask.remove(); return; }
+  localStorage.setItem(todayKey, '1');
+
+  // 默认新人券；节日期间自动换成当日节日券
+  let rp = { brand: '🐴 阿李工坊 · 限时福利', type: '新人专享券 · 全平台通用', amt: 18, min: 150, tag: '满150可用专区' };
+  try {
+    const r = await api('/api/holiday');
+    const h = r.data;
+    if (h && h.active) {
+      rp = {
+        brand: '🐴 阿李工坊 · ' + h.name + '福利',
+        type: h.coupon.title + ' · 全平台通用',
+        amt: h.coupon.amount,
+        min: h.coupon.min,
+        tag: '满' + h.coupon.min + '可用专区'
+      };
+    }
+  } catch (e) { /* 网络异常时用默认券 */ }
+
+  document.getElementById('rpBrand').textContent = rp.brand;
+  document.getElementById('rpType').textContent = rp.type;
+  document.getElementById('rpAmt').textContent = rp.amt;
+  const cond = document.getElementById('rpCond');
+  cond.textContent = '满' + rp.min + '可用';
+  cond.onclick = () => location.href = 'services.html?tag=' + encodeURIComponent(rp.tag) + '&min=' + rp.min;
+
   mask.style.display = 'flex';
   document.getElementById('rpClose').onclick = () => mask.remove();
 }

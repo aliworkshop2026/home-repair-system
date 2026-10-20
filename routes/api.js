@@ -4,7 +4,7 @@
 const express = require('express');
 const { db, now } = require('../db/database');
 const { requireUser } = require('../middleware/auth');
-const { currentHoliday, upcomingHoliday, dynamicAnnouncement } = require('../utils/holiday');
+const { currentHoliday, upcomingHoliday, dynamicAnnouncement, couponCenter } = require('../utils/holiday');
 
 const router = express.Router();
 
@@ -87,6 +87,31 @@ router.get('/coupons', requireUser, (req, res) => {
   db.prepare(`UPDATE coupons SET status = 2 WHERE status = 0 AND expire_at != '' AND expire_at < ?`).run(now());
   const list = db.prepare('SELECT * FROM coupons WHERE user_id = ? ORDER BY status ASC, id DESC').all(req.user.id);
   res.json({ code: 0, data: list });
+});
+
+// ============ 领券中心（模板按当天日期/节日实时生成，每天不一样） ============
+router.get('/coupon-center', requireUser, (req, res) => {
+  const uid = req.user.id;
+  const mine = db.prepare('SELECT title FROM coupons WHERE user_id = ?').all(uid).map(c => c.title);
+  const list = couponCenter().map(t => ({ ...t, claimed: mine.includes(t.title) }));
+  const h = currentHoliday();
+  res.json({
+    code: 0,
+    data: {
+      holiday: h ? { name: h.name, bannerTitle: h.bannerTitle, bannerSub: h.bannerSub, promo: h.promo } : null,
+      upcoming: upcomingHoliday(),
+      coupons: list
+    }
+  });
+});
+
+// 领券中心：领取指定券（key 必须是当天模板里的，防止乱领）
+router.post('/coupons/claim', requireUser, (req, res) => {
+  const key = String((req.body || {}).key || '');
+  const tpl = couponCenter().find(t => t.key === key);
+  if (!tpl) return res.json({ code: 1, msg: '该优惠券已下架，明天再来看看吧' });
+  const ok = grantCoupon(req.user.id, tpl.title, tpl.amount, tpl.min, tpl.expire);
+  res.json({ code: 0, msg: ok ? '领取成功，已放入「我的优惠券」' : '这张券您已经领过了' });
 });
 
 // ============ 分类树 ============
